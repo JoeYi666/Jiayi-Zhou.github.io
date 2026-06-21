@@ -1,14 +1,11 @@
-# Welcome to Jekyll!
+# Jiayi Zhou's Academic Homepage
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
+# 基于 AcadHomepage 模板 (https://github.com/RayeRen/acad-homepage.github.io)
 
 # Site Settings
-title                    : "Lorem ipsum"
-description              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
-repository               : "RayeRen/acad-homepage.github.io"
+title                    : "Jiayi Zhou (周家屹)"
+description              : "Ph.D. Candidate at Institutes of Science and Development, Chinese Academy of Sciences. Research on crypto finance, stablecoin economics, DeFi, systemic risk, and machine learning in finance."
+repository               : "Jiayi-Zhou/Jiayi-Zhou.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -21,15 +18,15 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Lorem ipsum"
-  avatar           : "images/android-chrome-512x512.png"
-  bio              : "Lorem ipsum College"
+  name             : "Jiayi Zhou (周家屹)"
+  avatar           : "images/personalphoto.jpg"
+  bio              : "Ph.D. Candidate @ UCAS / CASISD"
   location         : "Beijing, China"
   employer         :
-  pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "Lorem@ipsum.com"
-  researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
+  pubmed           :
+  googlescholar    : "https://scholar.google.com.hk/citations?user=qcxrzQcAAAAJ&hl=zh-CN"
+  email            : "zhoujiayi23@mails.ucas.ac.cn"
+  researchgate     : "https://www.researchgate.net/profile/Jiayi-Zhou-48"
   uri              :
   bitbucket        :
   codepen          :
@@ -37,21 +34,21 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : # e.g., "github username"
+  github           : "Jiayi-Zhou"
   google_plus      :
   keybase          :
   instagram        :
-  impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  impactstory      :
   lastfm           :
-  linkedin         : # e.g., "linkedin username"
-  dblp             : # e.g., "https://dblp.org/pid/xx/xxxx.html"
-  orcid            : # e.g., "https://orcid.org/xxxx"
+  linkedin         :
+  dblp             :
+  orcid            : "https://orcid.org/0009-0006-6143-2650"
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    :
   steam            :
   tumblr           :
-  twitter          : 
+  twitter          :
   vine             :
   weibo            :
   xing             :
