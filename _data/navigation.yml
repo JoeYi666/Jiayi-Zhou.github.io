@@ -1,28 +1,28 @@
 # main links links
 main:
   - title: "About Me"
-    url: "/#about-me"
+    url: "#about-me"
 
   - title: "News"
-    url: "/#news"
+    url: "#-news"
 
   - title: "Publications"
-    url: "/#publications"
+    url: "#-publications"
 
   - title: "Patents"
-    url: "/#patents"
+    url: "#-patents"
 
   - title: "Research Experience"
-    url: "/#research-experience"
+    url: "#-research-experience"
 
   - title: "Educations"
-    url: "/#educations"
+    url: "#-educations"
 
   - title: "Skills & Methods"
-    url: "/#skills--methods"
+    url: "#-skills--methods"
 
   - title: "Certifications"
-    url: "/#certifications"
+    url: "#-certifications"
 
   - title: "References"
-    url: "/#references"
+    url: "#-references"
