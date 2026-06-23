@@ -93,10 +93,10 @@ My research focuses on **crypto finance and stablecoin economics**, spanning dec
 # 🏊 Hobbies
 
 **Swimming**
-- 熟练掌握四种泳姿：自由泳 (Freestyle)、蛙泳 (Breaststroke)、仰泳 (Backstroke)、蝶泳 (Butterfly)
+- Proficient in all four competitive strokes: Freestyle, Breaststroke, Backstroke, and Butterfly
 
 **Movies**
-- 资深影迷，观影超过 1000 部，热爱电影艺术与叙事
+- Avid cinephile with 1,000+ films watched; passionate about cinematic art and storytelling
 
 # 💬 References
 Available upon request.
