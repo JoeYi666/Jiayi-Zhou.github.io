@@ -72,9 +72,9 @@ My research focuses on **crypto finance and stablecoin economics**, spanning dec
 
 **Programming & Tools**
 - **Python** (proficient): data processing, econometric modeling, machine learning, deep learning
-- **AI-Assisted Development**: Claude Code, GitHub Copilot — proficient in LLM-driven coding workflows for research automation
+- **AI-Assisted Development**: Claude Code, GitHub Copilot — proficient in LLM-driven coding workflows for research automation; skilled in MCP (Model Context Protocol) tool development and integration
 - **Version Control**: Git, GitHub — experienced in repository management and reproducible research pipelines
-- **Data Platforms**: Bloomberg Terminal (BMC certified), Glassnode (on-chain analytics), DeFiLlama (DeFi metrics), TradingView (market data)
+- **Data Platforms**: Bloomberg Terminal (BMC certified), Glassnode (on-chain analytics), DeFiLlama (DeFi metrics), TradingView (market data & technical analysis)
 - **LaTeX**, Microsoft Office
 
 **Quantitative Methods**
@@ -89,6 +89,14 @@ My research focuses on **crypto finance and stablecoin economics**, spanning dec
 
 # 📜 Certifications
 - *2023.05*, **Bloomberg Market Concepts (BMC)** — Bloomberg
+
+# 🏊 Hobbies
+
+**Swimming**
+- 熟练掌握四种泳姿：自由泳 (Freestyle)、蛙泳 (Breaststroke)、仰泳 (Backstroke)、蝶泳 (Butterfly)
+
+**Movies**
+- 资深影迷，观影超过 1000 部，热爱电影艺术与叙事
 
 # 💬 References
 Available upon request.
