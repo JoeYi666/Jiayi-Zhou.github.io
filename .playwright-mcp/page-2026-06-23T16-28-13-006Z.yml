@@ -1,0 +1,251 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e5]:
+    - button [ref=e6] [cursor=pointer]
+    - list [ref=e8]:
+      - listitem [ref=e9]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: "#about-me"
+      - listitem [ref=e11]:
+        - link "About Me" [ref=e12] [cursor=pointer]:
+          - /url: "#about-me"
+      - listitem [ref=e13]:
+        - link "News" [ref=e14] [cursor=pointer]:
+          - /url: "#-news"
+      - listitem [ref=e15]:
+        - link "Publications" [ref=e16] [cursor=pointer]:
+          - /url: "#-publications"
+      - listitem [ref=e17]:
+        - link "Patents" [ref=e18] [cursor=pointer]:
+          - /url: "#-patents"
+      - listitem [ref=e19]:
+        - link "Research Experience" [ref=e20] [cursor=pointer]:
+          - /url: "#-research-experience"
+      - listitem [ref=e21]:
+        - link "Educations" [ref=e22] [cursor=pointer]:
+          - /url: "#-educations"
+  - main [ref=e23]:
+    - generic [ref=e25]:
+      - img "Jiayi Zhou (周家屹)" [ref=e27]
+      - generic [ref=e28]:
+        - heading "Jiayi Zhou (周家屹)" [level=3] [ref=e29]
+        - paragraph [ref=e30]: Ph.D. Candidate @ UCAS / CASISD
+      - generic [ref=e31] [cursor=pointer]:
+        - list [ref=e32]:
+          - listitem [ref=e33]:
+            - generic [ref=e34]: Ph.D. Candidate at Institutes of Science and Development, Chinese Academy of Sciences. Research on crypto finance, stablecoin economics, DeFi, systemic risk, and machine learning in finance.
+          - listitem [ref=e35]:
+            - generic [ref=e36]: 
+            - text: Beijing, China
+          - listitem [ref=e37]:
+            - link "Email" [ref=e38]:
+              - /url: mailto:zhoujiayi23@mails.ucas.ac.cn
+              - generic [ref=e39]: 
+              - text: Email
+          - listitem [ref=e40]:
+            - link "ResearchGate" [ref=e41]:
+              - /url: https://www.researchgate.net/profile/Jiayi-Zhou-48
+              - generic [ref=e42]: 
+              - text: ResearchGate
+          - listitem [ref=e43]:
+            - link "Github" [ref=e44]:
+              - /url: https://github.com/Jiayi-Zhou
+              - generic [ref=e45]: 
+              - text: Github
+          - listitem [ref=e46]:
+            - link " Google Scholar" [ref=e47]:
+              - /url: https://scholar.google.com.hk/citations?user=qcxrzQcAAAAJ&hl=zh-CN
+              - generic [ref=e48]: 
+              - text: Google Scholar
+          - listitem [ref=e49]:
+            - link " ORCID" [ref=e50]:
+              - /url: https://orcid.org/0009-0006-6143-2650
+              - generic [ref=e51]: 
+              - text: ORCID
+        - text:     
+    - article [ref=e52]:
+      - generic [ref=e54]:
+        - paragraph [ref=e55]
+        - paragraph [ref=e57]: I am a Ph.D. candidate at the Institutes of Science and Development, Chinese Academy of Sciences (CASISD), affiliated with the School of Public Policy and Management, University of Chinese Academy of Sciences (UCAS). My supervisor is Prof. Jian-Feng Guo.
+        - paragraph [ref=e58]:
+          - text: My research focuses on
+          - strong [ref=e59]: crypto finance and stablecoin economics
+          - text: ", spanning decentralized finance (DeFi), systemic risk and financial stability, international financial markets, and machine learning / causal inference in finance. My doctoral dissertation examines the impact of USD stablecoins on international financial markets through a multi-method empirical framework."
+        - paragraph [ref=e60]:
+          - link [ref=e61] [cursor=pointer]:
+            - /url: https://scholar.google.com.hk/citations?user=qcxrzQcAAAAJ&hl=zh-CN
+            - img [ref=e62]
+        - heading "🔥 News" [level=1] [ref=e63]
+        - list [ref=e64]:
+          - listitem [ref=e65]:
+            - emphasis [ref=e66]: "2026.01"
+            - text: ": 🎉🎉 U.S. Patent Application No. 19/346,554 filed — “Industry Development State Assessment Device and Apparatus Based on Dissipative Structural Model”."
+          - listitem [ref=e67]:
+            - emphasis [ref=e68]: "2025.06"
+            - text: ": 🎉 Manuscript submitted to"
+            - emphasis [ref=e69]: International Review of Financial Analysis
+            - text: "— “Evolution of Crypto Financial Risk: From Code Vulnerabilities to Macroeconomic Spillovers” (FINANA-D-26-00631)."
+          - listitem [ref=e70]:
+            - emphasis [ref=e71]: "2025.02"
+            - text: ": 🎉 Paper published in"
+            - emphasis [ref=e72]: Big Data and Cognitive Computing
+            - text: — “Ranking Influential Non-Content Factors on Scientific Papers’ Citation Impact”.
+        - heading "📝 Publications" [level=1] [ref=e73]
+        - generic [ref=e74]:
+          - generic [ref=e76]:
+            - generic [ref=e77]: Under Review
+            - img "crypto risk" [ref=e78]
+          - generic [ref=e79]:
+            - paragraph [ref=e80]:
+              - 'link "Evolution of Crypto Financial Risk: From Code Vulnerabilities to Macroeconomic Spillovers" [ref=e81] [cursor=pointer]':
+                - /url: ""
+            - paragraph [ref=e82]:
+              - strong [ref=e83]: Jiayi-Yi Zhou
+              - text: ", Jie-Jing Li, Bo-Bo Xu, Yu-Ran Ma*, Jian-Feng Guo*"
+            - paragraph [ref=e84]:
+              - emphasis [ref=e85]: International Review of Financial Analysis
+              - text: (Under Review), Manuscript No. FINANA-D-26-00631
+            - list [ref=e86]:
+              - listitem [ref=e87]: Developed a modular BERTopic framework to conduct topic modeling on 891 crypto-finance publications, identifying 19 core research themes spanning risk identification, measurement, transmission, hedging, and governance.
+              - listitem [ref=e88]: Mapped topic clusters against a hand-collected database of 1,980 crypto risk events (2012–2025) to construct an end-to-end risk research framework.
+        - list [ref=e89]:
+          - listitem [ref=e90]:
+            - 'link "Ranking Influential Non-Content Factors on Scientific Papers’ Citation Impact: A Multidomain Comparative Analysis" [ref=e91] [cursor=pointer]':
+              - /url: https://doi.org/10.3390/bdcc9020030
+            - text: ", Zhu, J.,"
+            - strong [ref=e92]: Zhou, J.-Y.
+            - text: ", Pan, J., Gu, F., & Guo, J.-F.*,"
+            - emphasis [ref=e93]: Big Data and Cognitive Computing
+            - text: ", 9(2), 30, 2025."
+          - listitem [ref=e94]:
+            - text: Analysis of China’s Oil and Gas Imports and Exports from 2018 to 2022,
+            - strong [ref=e95]: Zhou, J.-Y.
+            - text: ", et al.,"
+            - emphasis [ref=e96]: International Petroleum Economics
+            - text: ", 2023. (in Chinese)"
+          - listitem [ref=e97]:
+            - text: A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics,
+            - strong [ref=e98]: Zhou, J.-Y.
+            - text: ", et al.,"
+            - emphasis [ref=e99]: Chinese Journal of Management Science
+            - text: ", 2022. (in Chinese)"
+        - heading "🏆 Patents" [level=1] [ref=e100]
+        - list [ref=e101]:
+          - listitem [ref=e102]:
+            - text: Guo, J.-F.,
+            - strong [ref=e103]: Zhou, J.-Y.
+            - text: ", Cao, Q., Liu, S., & Pan, J. (2026)."
+            - emphasis [ref=e104]: Industry Development State Assessment Device and Apparatus Based on Dissipative Structural Model
+            - text: . U.S. Patent Application No. 19/346,554, filed Jan. 22, 2026.
+        - heading "🔬 Research Experience" [level=1] [ref=e105]
+        - paragraph [ref=e106]:
+          - strong [ref=e107]: "Doctoral Dissertation: The Impact of USD Stablecoins on International Financial Markets"
+          - text: —
+          - emphasis [ref=e108]: Independent Researcher
+          - emphasis [ref=e109]: Sep. 2023 – Present
+        - list [ref=e110]:
+          - listitem [ref=e111]:
+            - text: Constructed the
+            - strong [ref=e112]: Incremental-Stock-Flow-Consistent (ISFC)
+            - text: analytical framework to model stablecoin issuers’ balance sheets, revealing their accounting isomorphism with commercial banks alongside institutional heterogeneity.
+          - listitem [ref=e113]:
+            - text: Applied
+            - strong [ref=e114]: Random Forest, XGBoost, and SHAP
+            - text: to identify key drivers of stablecoin issuance across macro, crypto-market, regulatory, and network-effect dimensions; developed
+            - strong [ref=e115]: LSTM/GRU and Transformer
+            - text: models for multi-scenario supply forecasting.
+          - listitem [ref=e116]:
+            - text: Employed
+            - strong [ref=e117]: LP-IV with Elastic Net residual instruments
+            - text: to identify causal effects of stablecoin reserve allocation on U.S. Treasury yields and commercial paper spreads; integrated
+            - strong [ref=e118]: Diebold-Yilmaz spillover indices
+            - text: and
+            - strong [ref=e119]: TVP-VAR
+            - text: to quantify time-varying volatility transmission to bond markets.
+          - listitem [ref=e120]:
+            - text: Designed
+            - strong [ref=e121]: Difference-in-Differences (DiD), triple-difference, and synthetic control
+            - text: strategies with
+            - strong [ref=e122]: IV-2SLS
+            - text: (on-chain activity and regulatory events as instruments) to estimate stablecoins’ impact on interbank lending, money market funds, and monetary policy rate pass-through.
+          - listitem [ref=e123]:
+            - text: Built
+            - strong [ref=e124]: cross-border stablecoin flow networks
+            - text: using on-chain data; applied
+            - strong [ref=e125]: PageRank, Louvain community detection, and cascade failure simulations
+            - text: to analyze digital dollarization dynamics and foreign exchange volatility spillovers.
+          - listitem [ref=e126]:
+            - text: Applied
+            - strong [ref=e127]: Hansen (1999) panel threshold models
+            - text: to test currency substitution effects across emerging and advanced economies; employed
+            - strong [ref=e128]: RDD
+            - text: for regulatory threshold identification and
+            - strong [ref=e129]: event studies
+            - text: on SVB-USDC depeg and GENIUS/CLARITY Act shocks.
+          - listitem [ref=e130]:
+            - text: "Data sources:"
+            - strong [ref=e131]: Glassnode, DeFiLlama, TradingView
+            - text: ; all empirical work implemented in
+            - strong [ref=e132]: Python
+            - text: .
+        - heading "🎓 Educations" [level=1] [ref=e133]
+        - list [ref=e134]:
+          - listitem [ref=e135]:
+            - emphasis [ref=e136]: 2023.09 – Present
+            - text: ","
+            - strong [ref=e137]: Ph.D. Candidate
+            - text: "in Public Policy and Management, University of Chinese Academy of Sciences / Institutes of Science and Development, CAS. Advisor: Prof. Jian-Feng Guo. Dissertation:"
+            - emphasis [ref=e138]: "The Impact of USD Stablecoins on International Financial Markets: Research and Empirical Analysis"
+            - text: .
+          - listitem [ref=e139]:
+            - emphasis [ref=e140]: 2019.09 – 2023.06
+            - text: ","
+            - strong [ref=e141]: Bachelor of Management
+            - text: ", School of Economics and Management, China University of Petroleum, Beijing."
+        - heading "💻 Skills & Methods" [level=1] [ref=e142]
+        - paragraph [ref=e143]:
+          - strong [ref=e144]: Programming & Tools
+        - list [ref=e145]:
+          - listitem [ref=e146]:
+            - strong [ref=e147]: Python
+            - text: "(proficient): data processing, econometric modeling, machine learning, deep learning"
+          - listitem [ref=e148]:
+            - strong [ref=e149]: AI-Assisted Development
+            - text: ": Claude Code, GitHub Copilot — proficient in LLM-driven coding workflows for research automation"
+          - listitem [ref=e150]:
+            - strong [ref=e151]: Version Control
+            - text: ": Git, GitHub — experienced in repository management and reproducible research pipelines"
+          - listitem [ref=e152]:
+            - strong [ref=e153]: Data Platforms
+            - text: ": Bloomberg Terminal (BMC certified), Glassnode (on-chain analytics), DeFiLlama (DeFi metrics), TradingView (market data)"
+          - listitem [ref=e154]:
+            - strong [ref=e155]: LaTeX
+            - text: ", Microsoft Office"
+        - paragraph [ref=e156]:
+          - strong [ref=e157]: Quantitative Methods
+        - list [ref=e158]:
+          - listitem [ref=e159]:
+            - strong [ref=e160]: ML / DL
+            - text: ": Random Forest, XGBoost, SHAP, BERTopic, LSTM, GRU, Transformer"
+          - listitem [ref=e161]:
+            - strong [ref=e162]: Causal Inference & Econometrics
+            - text: ": DiD, IV-2SLS, LP-IV, SVAR-IV, RDD, Synthetic Control, Panel Threshold Models (Hansen 1999), Event Studies"
+          - listitem [ref=e163]:
+            - strong [ref=e164]: Time Series & Spillover Analysis
+            - text: ": TVP-VAR, Diebold-Yilmaz Spillover Index, VECM, CoVaR/MES"
+          - listitem [ref=e165]:
+            - strong [ref=e166]: Network Analysis
+            - text: ": Complex network modeling, PageRank, Louvain community detection, cascade failure simulation"
+        - paragraph [ref=e167]:
+          - strong [ref=e168]: Languages
+        - list [ref=e169]:
+          - listitem [ref=e170]: "Chinese: Native"
+          - listitem [ref=e171]: "English: TOEFL — proficient in academic reading, writing, and communication"
+        - heading "📜 Certifications" [level=1] [ref=e172]
+        - list [ref=e173]:
+          - listitem [ref=e174]:
+            - emphasis [ref=e175]: "2023.05"
+            - text: ","
+            - strong [ref=e176]: Bloomberg Market Concepts (BMC)
+            - text: — Bloomberg
+        - heading "💬 References" [level=1] [ref=e177]
+        - paragraph [ref=e178]: Available upon request.

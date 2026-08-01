@@ -5,6 +5,7 @@
 # Site Settings
 title                    : "Jiayi Zhou (周家屹)"
 description              : "Ph.D. Candidate at Institutes of Science and Development, Chinese Academy of Sciences. Research on crypto finance, stablecoin economics, DeFi, systemic risk, and machine learning in finance."
+description_zh           : "中国科学院科技战略咨询研究院博士研究生。研究方向：加密金融、稳定币经济学、DeFi、系统性风险与金融机器学习。"
 repository               : "Jiayi-Zhou/Jiayi-Zhou.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -21,6 +22,7 @@ author:
   name             : "Jiayi Zhou (周家屹)"
   avatar           : "images/personalphoto.jpg"
   bio              : "Ph.D. Candidate @ UCAS / CASISD"
+  bio_zh           : "博士生 @ 中国科学院大学 / 中科院战略咨询院"
   location         : "Beijing, China"
   employer         :
   pubmed           :

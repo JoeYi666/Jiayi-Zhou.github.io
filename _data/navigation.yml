@@ -1,31 +1,37 @@
-# main links links
+# main links — bilingual titles; url anchors must match the ids in _pages/about.md
 main:
-  - title: "About Me"
+  - title: "About"
+    title_zh: "简介"
     url: "#about-me"
 
+  - title: "Philosophy"
+    title_zh: "研究理念"
+    url: "#philosophy"
+
   - title: "News"
-    url: "#-news"
+    title_zh: "动态"
+    url: "#news"
 
   - title: "Publications"
-    url: "#-publications"
+    title_zh: "发表"
+    url: "#publications"
 
   - title: "Patents"
-    url: "#-patents"
+    title_zh: "专利"
+    url: "#patents"
 
-  - title: "Research Experience"
-    url: "#-research-experience"
+  - title: "Research"
+    title_zh: "科研"
+    url: "#research"
 
-  - title: "Educations"
-    url: "#-educations"
+  - title: "Education"
+    title_zh: "教育"
+    url: "#education"
 
-  - title: "Skills & Methods"
-    url: "#-skills--methods"
-
-  - title: "Certifications"
-    url: "#-certifications"
+  - title: "Skills"
+    title_zh: "技能"
+    url: "#skills"
 
   - title: "Hobbies"
-    url: "#-hobbies"
-
-  - title: "References"
-    url: "#-references"
+    title_zh: "爱好"
+    url: "#hobbies"

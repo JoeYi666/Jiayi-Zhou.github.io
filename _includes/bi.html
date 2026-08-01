@@ -1,0 +1,8 @@
+{% comment %}
+  Bilingual renderer.
+  Usage: {% include bi.html en=item.en zh=item.zh %}
+  Renders both language versions side by side in the DOM; CSS shows only the
+  active one based on <html data-lang="en|zh">.
+{% endcomment %}
+<div class="i18n i18n-en" data-lang-block="en">{{ include.en | markdownify }}</div>
+<div class="i18n i18n-zh" data-lang-block="zh">{{ include.zh | markdownify }}</div>
