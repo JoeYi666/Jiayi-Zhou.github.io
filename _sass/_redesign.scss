@@ -133,11 +133,12 @@ body {
 .hero__inner {
   position: relative;
   z-index: 2;
-  max-width: 52rem;
-  padding: 5.5rem 2rem 5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5.5rem 1em 5rem;
 
   @include breakpoint($medium) {
-    padding: 7rem 3rem 6rem;
+    padding: 7rem 1em 6rem;
   }
 }
 
@@ -597,4 +598,104 @@ body {
   .edu-list__period {
     flex-basis: auto;
   }
+}
+
+/* --------------------------------------------------------------------------
+   Top navigation (replaces greedy-nav)
+   -------------------------------------------------------------------------- */
+.topnav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.topnav__home {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink) !important;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.topnav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar { display: none; }
+
+  li { flex: 0 0 auto; }
+
+  a {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.86rem;
+    letter-spacing: 0.02em;
+    color: var(--text-soft);
+    white-space: nowrap;
+
+    &:hover { color: var(--gold); }
+  }
+}
+
+#lang-toggle { flex: 0 0 auto; }
+
+/* --------------------------------------------------------------------------
+   Single-column layout: sidebar content moved into the hero
+   -------------------------------------------------------------------------- */
+.sidebar { display: none; }
+
+@include breakpoint($large) {
+  .page {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Hero layout with portrait
+   -------------------------------------------------------------------------- */
+.hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero__text {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 46rem;
+}
+
+.hero__avatar {
+  flex: 0 0 auto;
+  display: none;
+
+  @include breakpoint($medium) {
+    display: block;
+  }
+
+  img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 0 6px rgba(201, 162, 39, 0.15), 0 12px 32px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.hero__btn--icon {
+  padding: 0.6em 0.75em;
 }

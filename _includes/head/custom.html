@@ -2,7 +2,8 @@
 <script>
   (function () {
     try {
-      var l = localStorage.getItem('site-lang');
+      var q = new URLSearchParams(window.location.search).get('lang');
+      var l = (q === 'zh' || q === 'en') ? q : localStorage.getItem('site-lang');
       if (l === 'zh' || l === 'en') {
         document.documentElement.setAttribute('data-lang', l);
         document.documentElement.setAttribute('lang', l === 'zh' ? 'zh-CN' : 'en');

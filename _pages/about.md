@@ -21,6 +21,7 @@ redirect_from:
 <section class="hero" id="about">
   <canvas id="hero-network" aria-hidden="true"></canvas>
   <div class="hero__inner">
+    <div class="hero__text">
     <div class="hero__kicker">
       <span class="i18n" data-lang-block="en">{{ site.author.employer | default: "Crypto Finance · Stablecoin Economics · Biophysical Economics" }}</span>
       <span class="i18n" data-lang-block="zh">加密金融 · 稳定币经济学 · 生物物理经济学</span>
@@ -46,6 +47,12 @@ redirect_from:
       <a class="hero__btn hero__btn--gold" href="{{ site.author.googlescholar }}"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
       <a class="hero__btn" href="mailto:{{ site.author.email }}"><i class="fas fa-envelope"></i> Email</a>
       <a class="hero__btn" href="https://github.com/{{ site.author.github }}"><i class="fab fa-github"></i> GitHub</a>
+      <a class="hero__btn hero__btn--icon" href="{{ site.author.orcid }}" aria-label="ORCID"><i class="ai ai-orcid"></i></a>
+      <a class="hero__btn hero__btn--icon" href="{{ site.author.researchgate }}" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+    </div>
+    </div>
+    <div class="hero__avatar">
+      <img src="{{ site.author.avatar }}" alt="{{ site.author.name }}">
     </div>
   </div>
 </section>
@@ -120,19 +127,21 @@ redirect_from:
         <img src='images/500x300.png' alt="crypto risk" width="100%">
       </div>
     </div>
-    <div class='paper-box-text' markdown="1">
-
-<span class="i18n" data-lang-block="en">**{{ h.publications.featured.title }}**</span>
-<span class="i18n" data-lang-block="zh">**{{ h.publications.featured.title_zh }}**</span>
-
-{{ h.publications.featured.authors | markdownify }}
-
-<span class="i18n" data-lang-block="en">{{ h.publications.featured.venue_en | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span>
-<span class="i18n" data-lang-block="zh">{{ h.publications.featured.venue_zh | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span>
-
-{% for pt in h.publications.featured.points %}
-- <span class="i18n" data-lang-block="en">{{ pt.en | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span><span class="i18n" data-lang-block="zh">{{ pt.zh | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span>
-{% endfor %}
+    <div class='paper-box-text'>
+      <p class="paper-box-text__title">
+        <span class="i18n" data-lang-block="en"><strong>{{ h.publications.featured.title }}</strong></span>
+        <span class="i18n" data-lang-block="zh"><strong>{{ h.publications.featured.title_zh }}</strong></span>
+      </p>
+      <p>{{ h.publications.featured.authors | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</p>
+      <p class="paper-box-text__venue">
+        <span class="i18n" data-lang-block="en">{{ h.publications.featured.venue_en | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span>
+        <span class="i18n" data-lang-block="zh">{{ h.publications.featured.venue_zh | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span>
+      </p>
+      <ul>
+        {% for pt in h.publications.featured.points %}
+        <li><span class="i18n" data-lang-block="en">{{ pt.en | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span><span class="i18n" data-lang-block="zh">{{ pt.zh | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span></li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 
