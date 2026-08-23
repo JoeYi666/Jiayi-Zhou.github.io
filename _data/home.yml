@@ -58,51 +58,65 @@ about:
         我的博士论文通过多方法实证框架，系统考察美元稳定币对国际金融市场的影响。
 
 # ---------------------------------------------------------------------------
-# Research Philosophy 研究理念（经济学思想）
+# Research Philosophy 研究理念
 # ---------------------------------------------------------------------------
 philosophy:
   cards:
-    - title_en: "Value as Negentropy"
-      title_zh: "价值即负熵"
+    - title_en: "ISFC & the Money View"
+      title_zh: "ISFC 与货币视角"
       en: >-
-        All incremental value creation is an entropy-reduction process:
-        expending energy, time, and intellect to filter a handful of ordered
-        outcomes from a vast possibility space — ΔS = log₂(Difficulty).
-        Proof-of-Work is its canonical mathematical paradigm; top-journal
-        publication follows the same logic.
+        I ground stablecoin research in Incremental-Stock-Flow-Consistent
+        (ISFC) modeling and Perry Mehrling's Money View. Treating issuers,
+        commercial banks, and shadow banks as nodes on a common balance-sheet
+        network lets me trace how digital dollars are created, circulated, and
+        destroyed — money as a social ledger of intertemporal obligations.
       zh: >-
-        一切增量价值的产生，本质上都是熵减过程：消耗能量、时间与智力，
-        在巨大的可能性空间中筛选出极少数符合目标函数的有序结果
-        ——ΔS = log₂(Difficulty)。工作量证明（PoW）是其数学范本，
-        顶刊发表亦遵循同一逻辑。
-    - title_en: "Money–Energy Coupling"
-      title_zh: "货币—能源耦合"
+        我将稳定币研究建立在增量—存量—流量一致（ISFC）框架与 Perry
+        Mehrling 的货币视角（Money View）之上。把发行方、商业银行与影子银行
+        视为同一张资产负债表网络上的节点，可以追踪数字美元如何被创造、流转与
+        销毁——货币即跨期债务的社会记账。
+
+    - title_en: "Causal Inference & Reproducibility"
+      title_zh: "因果推断与可复现性"
       en: >-
-        Money and energy are two conserved quantities of one
-        conservation–dissipation dynamics at different logical layers:
-        energy is the physical-layer invariant, credit money the
-        social-layer ledger of intertemporal energy allocation — the
-        biophysical foundation beneath all monetary phenomena.
+        Causal identification comes before prediction. I combine
+        difference-in-differences, instrumental variables, regression
+        discontinuity, synthetic control, and double-machine-learning methods to
+        isolate mechanisms. Every project ships with a variable dictionary,
+        sample restrictions, robustness checks, and a replication package.
       zh: >-
-        货币与能源是同一套守恒—耗散动力学在不同逻辑层级上的两种守恒量：
-        能源是物理层的守恒量，信用货币是社会层面对能量跨期配置的记账杠杆
-        ——这是一切货币现象背后的生物物理基础。
-    - title_en: "Networks & Dissipative Structures"
-      title_zh: "网络与耗散结构"
+        因果识别优先于预测。我综合运用双重差分、工具变量、断点回归、合成控制
+        与双重机器学习等方法来隔离机制。每个项目都附带变量字典、样本限制、
+        稳健性检验与复现包。
+
+    - title_en: "First Principles"
+      title_zh: "第一性原理"
       en: >-
-        An economy is a directed graph of value flows: a balance sheet is
-        the data structure of a node's social relations; preferential
-        attachment drives cumulative concentration, until the dissipative
-        structure can no longer be sustained and the system rebalances.
+        I reason from first principles: money is a ledger for intertemporal
+        energy allocation; a balance sheet encodes a node's social relations;
+        systemic risk is the fragility of the network structure that emerges
+        when those relations tighten.
       zh: >-
-        经济体是一张价值流动的有向图：资产负债表是刻画节点社会关系的
-        数据结构；偏好依附驱动价值的累积性集中，直至耗散结构无法维系、
-        系统发生相变并重新平衡。
+        我从第一性原理出发：货币是跨期能量配置的记账杠杆；资产负债表编码了
+        节点的社会关系；系统性风险则源于这些关系过度收紧后网络结构的脆弱性。
+
+    - title_en: "AI-Augmented Research"
+      title_zh: "AI 增强科研"
+      en: >-
+        Large language models and AI coding tools are infrastructure for
+        research automation — literature review, data cleaning, code
+        generation, and causal-inference workflows. Human judgment and
+        auditable logs remain the final checkpoint.
+      zh: >-
+        大语言模型与 AI 编程工具是科研自动化的基础设施，服务于文献梳理、
+        数据清洗、代码生成与因果推断工作流。人工判断与可审计日志始终是最终
+        把关节点。
+
   quote:
-    zh_text: "天之道，损有余而补不足；人之道则不然，损不足以奉有余。"
-    zh_source: "《道德经·帛书复原本》"
-    en_text: "For unto every one that hath shall be given, and he shall have abundance: but from him that hath not shall be taken away even that which he hath."
-    en_source: "Matthew 25:29 (KJV)"
+    zh_text: "科学，就是相信专家也会无知。"
+    zh_source: "理查德·费曼"
+    en_text: "Science is the belief in the ignorance of experts."
+    en_source: "Richard Feynman"
 
 # ---------------------------------------------------------------------------
 # News 最新动态（date 两种语言共用；en/zh 为内容）
@@ -116,14 +130,6 @@ news:
     zh: >-
       🎉🎉 美国专利申请 No. 19/346,554 已提交——
       "基于耗散结构模型的产业发展状态评估装置与设备"。
-  - date: "2025.06"
-    en: >-
-      🎉 Manuscript submitted to *International Review of Financial
-      Analysis* — "Evolution of Crypto Financial Risk: From Code
-      Vulnerabilities to Macroeconomic Spillovers" (FINANA-D-26-00631).
-    zh: >-
-      🎉 论文投稿至 *International Review of Financial Analysis*——
-      "加密金融风险的演化：从代码漏洞到宏观外溢"（FINANA-D-26-00631）。
   - date: "2025.02"
     en: >-
       🎉 Paper published in *Big Data and Cognitive Computing* — "Ranking
@@ -138,29 +144,35 @@ news:
 # ---------------------------------------------------------------------------
 publications:
   featured:
-    badge_en: "Under Review"
-    badge_zh: "审稿中"
-    title: "Evolution of Crypto Financial Risk: From Code Vulnerabilities to Macroeconomic Spillovers"
-    title_zh: "加密金融风险的演化：从代码漏洞到宏观外溢"
-    authors: '**Jiayi-Yi Zhou**, Jie-Jing Li, Bo-Bo Xu, Yu-Ran Ma\*, Jian-Feng Guo\*'
-    venue_en: "*International Review of Financial Analysis* (Under Review), Manuscript No. FINANA-D-26-00631"
-    venue_zh: "*International Review of Financial Analysis*（审稿中），稿件编号 FINANA-D-26-00631"
+    badge_en: "SSRN"
+    badge_zh: "SSRN"
+    title: "A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research"
+    title_zh: "加密金融风险研究的系统文献计量与主题建模综述"
+    authors: '**Jiayi Zhou**, Jingjing Li, Binbin Xu, Yanran Ma, Jianfeng Guo'
+    venue_en: "SSRN Working Paper, January 31, 2026. [SSRN](https://ssrn.com/abstract=7225798) · [DOI](http://dx.doi.org/10.2139/ssrn.7225798)"
+    venue_zh: "SSRN 工作论文，2026 年 1 月 31 日。[SSRN](https://ssrn.com/abstract=7225798) · [DOI](http://dx.doi.org/10.2139/ssrn.7225798)"
     points:
       - en: >-
-          Developed a modular BERTopic framework to conduct topic modeling on
-          891 crypto-finance publications, identifying 19 core research themes
+          Conducted a systematic bibliometric review of crypto financial risk
+          research, mapping its intellectual structure, keyword evolution, and
+          emerging research fronts.
+        zh: >-
+          对加密金融风险研究进行系统文献计量综述，刻画其知识结构、关键词
+          演进与新兴研究前沿。
+      - en: >-
+          Applied a modular BERTopic pipeline to identify core research themes
           spanning risk identification, measurement, transmission, hedging,
           and governance.
         zh: >-
-          构建模块化 BERTopic 框架，对 891 篇加密金融文献进行主题建模，
-          识别出覆盖风险识别、度量、传染、对冲与治理的 19 个核心研究主题。
+          应用模块化 BERTopic 流程，识别覆盖风险识别、度量、传染、对冲与
+          治理的核心研究主题。
       - en: >-
-          Mapped topic clusters against a hand-collected database of 1,980
-          crypto risk events (2012–2025) to construct an end-to-end risk
-          research framework.
+          Linked topic clusters to a hand-collected database of crypto risk
+          events (2012–2025) to connect literature gaps with empirical
+          reality and propose an end-to-end risk research framework.
         zh: >-
-          将主题聚类与手工整理的 1,980 起加密风险事件数据库（2012–2025）
-          相互映射，构建端到端的风险研究框架。
+          将主题聚类与手工整理的加密风险事件数据库（2012–2025）相联系，
+          弥合文献空白与经验现实之间的差距，并提出端到端的风险研究框架。
   list:
     - en: >-
         [Ranking Influential Non-Content Factors on Scientific Papers'
@@ -179,11 +191,11 @@ publications:
       zh: >-
         2018—2022 年中国油气进出口分析，**周家屹**等，《国际石油经济》，2023。
     - en: >-
-        A Model for Calculating the Value of Carbon Emission Rights Based on
-        the Ideas of Biophysical Economics, **Zhou, J.-Y.**, et al.,
+        [A Model for Calculating the Value of Carbon Emission Rights Based on
+        the Ideas of Biophysical Economics](https://doi.org/10.16381/j.cnki.issn1003-207x.2021.1684), **Zhou, J.-Y.**, et al.,
         *Chinese Journal of Management Science*, 2022. (in Chinese)
       zh: >-
-        基于生物物理经济学思想的碳排放权价值测算模型，**周家屹**等，
+        [基于生物物理经济学思想的碳排放权价值测算模型研究](https://doi.org/10.16381/j.cnki.issn1003-207x.2021.1684)，**周家屹**等，
         《中国管理科学》，2022。
 
 # ---------------------------------------------------------------------------

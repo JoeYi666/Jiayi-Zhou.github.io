@@ -10,13 +10,6 @@ redirect_from:
 
 {% assign h = site.data.home %}
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
 <!-- ============================== HERO ============================== -->
 <section class="hero" id="about">
   <canvas id="hero-network" aria-hidden="true"></canvas>
@@ -65,9 +58,6 @@ redirect_from:
   {% for p in h.about.paragraphs %}
     {% include bi.html en=p.en zh=p.zh %}
   {% endfor %}
-  <p>
-    <a href='{{ site.author.googlescholar }}'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations" alt="Google Scholar citations"></a>
-  </p>
 </section>
 
 <!-- ======================= RESEARCH PHILOSOPHY ======================= -->
@@ -75,8 +65,8 @@ redirect_from:
 <section class="section philosophy">
   <h2 class="section__title"><span class="i18n" data-lang-block="en">Research Philosophy</span><span class="i18n" data-lang-block="zh">研究理念</span></h2>
   <p class="section__lede">
-    <span class="i18n" data-lang-block="en">First-principles economics: value, money, and energy as one conservation–dissipation dynamics.</span>
-    <span class="i18n" data-lang-block="zh">第一性原理的经济学：价值、货币与能源，同属一套守恒—耗散动力学。</span>
+    <span class="i18n" data-lang-block="en">Empirical finance meets monetary theory: from balance-sheet mechanics to causal inference and reproducible, AI-augmented research.</span>
+    <span class="i18n" data-lang-block="zh">实证金融与货币理论相结合：从资产负债表机制到因果推断、可复现与 AI 增强的科研。</span>
   </p>
   <div class="philosophy__grid">
     {% for card in h.philosophy.cards %}
