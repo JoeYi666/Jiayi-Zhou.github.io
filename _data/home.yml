@@ -56,6 +56,13 @@ about:
         我的研究聚焦**加密金融与稳定币经济学**，涵盖去中心化金融（DeFi）、
         系统性风险与金融稳定、国际金融市场，以及金融中的机器学习与因果推断。
         我的博士论文通过多方法实证框架，系统考察美元稳定币对国际金融市场的影响。
+    - en: >-
+        A Bitcoiner at heart, I stay active in the Chinese-speaking crypto
+        community and keep close track of Bitcoin and the broader digital-asset
+        ecosystem.
+      zh: >-
+        我是一名 Bitcoiner，积极参与华语加密社区，持续关注比特币及更广泛的
+        数字资产生态。
 
 # ---------------------------------------------------------------------------
 # Research Philosophy 研究理念
@@ -408,6 +415,10 @@ hobbies:
     name_zh: "GIS 与卫星影像"
     en: "GIS enthusiast who enjoys exploring the world through satellite imagery and spatial data."
     zh: "GIS 爱好者，喜欢通过卫星影像与空间数据观察世界。"
+  - name_en: "Reading & History"
+    name_zh: "阅读与历史"
+    en: "Avid reader with a focus on history, especially the history of the Chinese Communist Party and ancient Chinese history."
+    zh: "热爱阅读，尤好历史；熟悉中国共产党党史与中国古代历史。"
   - name_en: "Chinese Political Economy"
     name_zh: "中国政治经济研究"
     en: "Building a Neo4j graph database of Chinese party-state institutions, mapping bureaus, public institutions, SOEs, universities, and hospitals under the Party, military, State Council, NPC, and CPPCC systems, along with their functions, relationships, and power structures."

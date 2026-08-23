@@ -402,6 +402,14 @@ body {
   border-bottom: 1px solid var(--hairline) !important;
 }
 
+.paper-box-text__badge {
+  margin-bottom: 0.35rem !important;
+
+  .badge {
+    display: inline-block;
+  }
+}
+
 .paper-box-image img {
   box-shadow: 0 6px 18px rgba(12, 24, 38, 0.18) !important;
   border-radius: 4px;

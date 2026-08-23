@@ -112,7 +112,7 @@ redirect_from:
 
   <div class='paper-box'>
     <div class='paper-box-text'>
-      <p>
+      <p class="paper-box-text__badge">
         <span class="badge"><span class="i18n" data-lang-block="en">{{ h.publications.featured.badge_en }}</span><span class="i18n" data-lang-block="zh">{{ h.publications.featured.badge_zh }}</span></span>
       </p>
       <p class="paper-box-text__title">
