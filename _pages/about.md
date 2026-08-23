@@ -111,13 +111,10 @@ redirect_from:
   <h2 class="section__title"><span class="i18n" data-lang-block="en">Publications</span><span class="i18n" data-lang-block="zh">学术发表</span></h2>
 
   <div class='paper-box'>
-    <div class='paper-box-image'>
-      <div>
-        <div class="badge"><span class="i18n" data-lang-block="en">{{ h.publications.featured.badge_en }}</span><span class="i18n" data-lang-block="zh">{{ h.publications.featured.badge_zh }}</span></div>
-        <img src='images/500x300.png' alt="crypto risk" width="100%">
-      </div>
-    </div>
     <div class='paper-box-text'>
+      <p>
+        <span class="badge"><span class="i18n" data-lang-block="en">{{ h.publications.featured.badge_en }}</span><span class="i18n" data-lang-block="zh">{{ h.publications.featured.badge_zh }}</span></span>
+      </p>
       <p class="paper-box-text__title">
         <span class="i18n" data-lang-block="en"><strong>{{ h.publications.featured.title }}</strong></span>
         <span class="i18n" data-lang-block="zh"><strong>{{ h.publications.featured.title_zh }}</strong></span>

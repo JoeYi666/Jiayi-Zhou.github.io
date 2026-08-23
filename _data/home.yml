@@ -279,11 +279,15 @@ research:
         效应；采用**断点回归（RDD）**识别监管门槛效应，并针对 SVB-USDC
         脱锚与 GENIUS/CLARITY 法案冲击开展**事件研究**。
     - en: >-
-        Data sources: **Glassnode, DeFiLlama, TradingView**; all empirical
-        work implemented in **Python**.
+        Data sources: **Glassnode, DeFiLlama, TradingView**; empirical workflow
+        built on **Python** and the [StatsPAI](https://github.com/brycewang-stanford/StatsPAI)
+        library; follow the [empirical paper workflow](https://github.com/brycewang-stanford/Paper-WorkFlow)
+        for reproducible research.
       zh: >-
-        数据来源：**Glassnode、DeFiLlama、TradingView**；全部实证工作基于
-        **Python** 实现。
+        数据来源：**Glassnode、DeFiLlama、TradingView**；实证工作流基于 **Python**
+        与 [StatsPAI](https://github.com/brycewang-stanford/StatsPAI) 库构建，
+        并遵循 [实证论文写作工作流](https://github.com/brycewang-stanford/Paper-WorkFlow)
+        以保证研究可复现。
 
 # ---------------------------------------------------------------------------
 # Education 教育经历
@@ -400,6 +404,14 @@ hobbies:
     name_zh: "电影"
     en: "Avid cinephile with 1,000+ films watched; passionate about cinematic art and storytelling."
     zh: "资深影迷，观影量逾 1,000 部；热爱电影艺术与叙事美学。"
+  - name_en: "GIS & Satellite Imagery"
+    name_zh: "GIS 与卫星影像"
+    en: "GIS enthusiast who enjoys exploring the world through satellite imagery and spatial data."
+    zh: "GIS 爱好者，喜欢通过卫星影像与空间数据观察世界。"
+  - name_en: "Chinese Political Economy"
+    name_zh: "中国政治经济研究"
+    en: "Building a Neo4j graph database of Chinese party-state institutions, mapping bureaus, public institutions, SOEs, universities, and hospitals under the Party, military, State Council, NPC, and CPPCC systems, along with their functions, relationships, and power structures."
+    zh: "使用 Neo4j 构建中国党政军学民机构数据库，系统整理党中央、中央军委、国务院、人大、政协等系统下属司局及事业单位，以及央企、高校、医院等组织的职能、关系与权力结构。"
 
 # ---------------------------------------------------------------------------
 # References 推荐人
