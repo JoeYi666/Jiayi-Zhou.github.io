@@ -707,3 +707,378 @@ body {
 .hero__btn--icon {
   padding: 0.6em 0.75em;
 }
+
+.hero__actions--center {
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   Theme mode variables
+   -------------------------------------------------------------------------- */
+html.dark {
+  --ink:        #f0f4fa;
+  --navy:       #b8d4f0;
+  --navy-soft:  #8ebbe6;
+  --gold:       #e4b946;
+  --gold-soft:  #f0ce7a;
+  --paper:      #0f1724;
+  --paper-warm: #141e2e;
+  --text:       #d8dee6;
+  --text-soft:  #a3adbc;
+  --hairline:   #2a3446;
+}
+
+/* --------------------------------------------------------------------------
+   Theme toggle button
+   -------------------------------------------------------------------------- */
+.topnav__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 0 0 auto;
+}
+
+#theme-toggle {
+  font-size: 1rem;
+  line-height: 1;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  color: var(--navy);
+  background: transparent;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: var(--gold);
+    color: var(--paper);
+  }
+}
+
+.theme-toggle__icon {
+  display: inline;
+}
+
+html[data-theme="light"] .theme-toggle__icon:not(.theme-toggle__icon--light),
+html[data-theme="dark"] .theme-toggle__icon:not(.theme-toggle__icon--dark),
+html[data-theme="system"] .theme-toggle__icon:not(.theme-toggle__icon--system) {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Active navigation link
+   -------------------------------------------------------------------------- */
+.topnav__links a.is-active {
+  color: var(--gold) !important;
+  border-bottom: 2px solid var(--gold);
+}
+
+/* --------------------------------------------------------------------------
+   Page subtitles
+   -------------------------------------------------------------------------- */
+.section__subtitle {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Paper cards (publications page)
+   -------------------------------------------------------------------------- */
+.paper-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.3rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.paper-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.paper-card__year {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--gold);
+}
+
+.paper-card__type {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 0.15em 0.7em;
+}
+
+.paper-card__type--wp {
+  color: var(--navy-soft);
+  border-color: var(--navy-soft);
+}
+
+.paper-card__title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.4rem;
+}
+
+.paper-card__authors,
+.paper-card__venue {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 0.4rem;
+}
+
+.paper-card__description {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0.7rem 0;
+}
+
+.paper-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.paper-card__link,
+.paper-card__toggle {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--navy);
+  background: transparent;
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 0.4em 0.9em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+}
+
+.paper-card__link {
+  color: var(--navy-soft);
+}
+
+.paper-card__detail {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--hairline);
+
+  &[hidden] { display: none; }
+
+  pre {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    font-size: 0.78rem;
+    overflow-x: auto;
+  }
+}
+
+.paper-card__detail-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Patent cards
+   -------------------------------------------------------------------------- */
+.patent-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--hairline);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.patent-card__status {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 0.15em 0.7em;
+  margin-bottom: 0.6rem;
+}
+
+.patent-card__title {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.3rem;
+}
+
+.patent-card__meta {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-bottom: 0.4rem;
+}
+
+.patent-card__authors {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 0.4rem;
+}
+
+.patent-card__description {
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Contact page
+   -------------------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact-card {
+  background: var(--paper-warm);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 1.2rem 1.3rem;
+
+  h3 {
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    margin: 0 0 0.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  a {
+    color: var(--navy-soft);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(29, 58, 95, 0.25);
+
+    &:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+  }
+}
+
+.contact-social-hint {
+  text-align: center;
+  color: var(--text-soft);
+  margin: 2rem 0 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Interest list (research page)
+   -------------------------------------------------------------------------- */
+.interest-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem 1.5rem;
+  margin: 1rem 0;
+  padding-left: 1.2em;
+
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  li {
+    color: var(--text);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Dark mode adjustments for shared components
+   -------------------------------------------------------------------------- */
+html.dark {
+  body { background: var(--paper); color: var(--text); }
+
+  .masthead {
+    background: rgba(15, 23, 36, 0.88);
+    border-bottom-color: var(--hairline);
+  }
+
+  .page__content a {
+    color: var(--navy-soft);
+    border-bottom-color: rgba(142, 187, 230, 0.3);
+
+    &:hover { color: var(--gold); border-bottom-color: var(--gold); }
+  }
+
+  .page__content strong { color: var(--ink); }
+
+  .philosophy__card,
+  .skills-card,
+  .paper-card,
+  .patent-card,
+  .contact-card {
+    background: var(--paper-warm);
+    border-color: var(--hairline);
+  }
+
+  .philosophy__card h3,
+  .skills-card h3,
+  .paper-card__title,
+  .patent-card__title,
+  .section__subtitle,
+  .paper-card__detail-label {
+    color: var(--navy);
+  }
+
+  .paper-card__toggle,
+  .paper-card__link {
+    color: var(--navy-soft);
+    border-color: var(--hairline);
+
+    &:hover { color: var(--gold); border-color: var(--gold); }
+  }
+
+  .paper-card__detail pre {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .page__footer {
+    background: #070c14 !important;
+  }
+}

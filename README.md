@@ -12,7 +12,7 @@
 - **所有者 GitHub 主页**：https://github.com/JoeYi666
 - **谷歌学术主页**：https://scholar.google.com/citations?user=qcxrzQcAAAAJ&hl=zh-CN
 
-本站是基于 [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) 模板深度定制的版本，原始布局已被替换为以 [`_data/home.yml`](_data/home.yml) 为数据源的英中双语单页设计。
+本站是基于 [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) 模板深度定制的版本，原始单页布局已被替换为以 `_data/*.yml` 为数据源的中英双语多页设计。
 
 ---
 
@@ -22,28 +22,56 @@
 .
 ├── _config.yml              # 站点元数据、作者信息、SEO、构建设置
 ├── _data/
-│   ├── home.yml             # 主页主要内容（全部栏目，中英双语）
+│   ├── about.yml            # About 页面内容（Hero、简介、理念、动态、教育、爱好）
+│   ├── research.yml         # Research 页面内容
+│   ├── publications.yml     # Publications 页面内容（含 Working Papers）
+│   ├── patents.yml          # Patents 页面内容
+│   ├── skills.yml           # Skills 页面内容
+│   ├── contact.yml          # Contact 页面内容
 │   └── navigation.yml       # 顶部导航链接
 ├── _pages/
-│   └── about.md             # 主页模板；从 _data/home.yml 读取数据
+│   ├── about.md             # 主页（/）
+│   ├── research.md          # 研究页面（/research/）
+│   ├── publications.md      # 学术发表页面（/publications/）
+│   ├── patents.md           # 专利页面（/patents/）
+│   ├── skills.md            # 技能页面（/skills/）
+│   └── contact.md           # 联系页面（/contact/）
 ├── _includes/
 │   ├── bi.html              # 双语内容渲染用 include
-│   ├── masthead.html        # 顶部导航栏 + 语言切换按钮
-│   ├── head/custom.html     # 字体、favicon、MathJax、语言偏好恢复脚本
+│   ├── masthead.html        # 顶部导航栏 + 语言/主题切换按钮
+│   ├── head/custom.html     # 字体、favicon、MathJax、语言/主题偏好恢复脚本
 │   └── ...
 ├── assets/
 │   ├── js/i18n.js           # 语言切换逻辑
+│   ├── js/theme.js          # 主题切换逻辑（light/dark/system）
+│   ├── js/publications.js   # Publications 页面展开/折叠逻辑
 │   └── css/                 # 编译后的样式（源文件在 _sass/）
 ├── _sass/
-│   └── _redesign.scss       # 自定义主题样式，包括语言隐藏规则
+│   └── _redesign.scss       # 自定义主题样式，包括语言隐藏规则与暗色模式
 ├── images/                  # 头像、favicon、论文配图
+├── files/papers/            # 论文 PDF 文件
 ├── run_server.sh            # 本地开发：bundle exec jekyll liveserve
 ├── README.md                # 本文件（中文主要维护手册）
 └── docs/
     └── README-en.md         # 英文参考版
 ```
 
-你最常编辑的两个文件是 [`_config.yml`](_config.yml)（作者资料）和 [`_data/home.yml`](_data/home.yml)（页面内容）。
+你最常编辑的文件是 [`_config.yml`](_config.yml)（作者资料）和各页面数据文件（`_data/*.yml`）。
+
+---
+
+## 站点结构
+
+| 页面 | 访问路径 | 数据文件 |
+|---|---|---|
+| About | `/` | [`_data/about.yml`](_data/about.yml) |
+| Research | `/research/` | [`_data/research.yml`](_data/research.yml) |
+| Publications | `/publications/` | [`_data/publications.yml`](_data/publications.yml) |
+| Patents | `/patents/` | [`_data/patents.yml`](_data/patents.yml) |
+| Skills | `/skills/` | [`_data/skills.yml`](_data/skills.yml) |
+| Contact | `/contact/` | [`_data/contact.yml`](_data/contact.yml) |
+
+导航顺序由 [`_data/navigation.yml`](_data/navigation.yml) 控制。
 
 ---
 
@@ -51,7 +79,7 @@
 
 本站通过**单一数据源双语模型**支持英文与中文：
 
-1. **数据源**：[`_data/home.yml`](_data/home.yml) 将每条内容都以相邻的 `en:` 和 `zh:` 字段成对存储。例如：
+1. **数据源**：每个 `_data/*.yml` 文件将每条内容都以相邻的 `en:` 和 `zh:` 字段成对存储。例如：
 
    ```yaml
    about:
@@ -68,9 +96,9 @@
 
    这会生成两个分别带有 `data-lang-block="en"` 和 `data-lang-block="zh"` 属性的 `<div>` 块。
 
-3. **语言切换器**：[`assets/js/i18n.js`](assets/js/i18n.js) 切换 `<html data-lang="en|zh">` 属性，并将选择持久化到 `localStorage`。[`_includes/head/custom.html`](_includes/head/custom.html) 中的内联脚本会在首屏绘制前恢复访客偏好，避免语言闪烁。
+4. **主题切换器**：[`assets/js/theme.js`](assets/js/theme.js) 提供 **light / dark / system** 三种模式，持久化到 `localStorage`。[`_includes/head/custom.html`](_includes/head/custom.html) 中的内联脚本会在首屏绘制前恢复主题偏好，避免闪烁。
 
-4. **CSS 过滤**：[`_sass/_redesign.scss`](_sass/_redesign.scss) 隐藏非当前语言的内容：
+5. **CSS 过滤**：[`_sass/_redesign.scss`](_sass/_redesign.scss) 隐藏非当前语言的内容，并定义亮/暗两套配色：
 
    ```scss
    html[data-lang="en"] [data-lang-block="zh"] { display: none !important; }
@@ -79,7 +107,7 @@
 
 ### 单一数据源原则
 
-- 在 [`_data/home.yml`](_data/home.yml) 中，**务必同时修改同一条目的 `en:` 和 `zh:`**，不要只添加英文。
+- 在 `_data/*.yml` 中，**务必同时修改同一条目的 `en:` 和 `zh:`**，不要只添加英文。
 - 英文文本作为结构基准；中文文本应传达相同含义。
 - 两个字段都支持 Markdown 语法（`**加粗**`、`[链接](url)`、列表等）。
 
@@ -96,28 +124,51 @@
 - `author.googlescholar`、`author.github`、`author.researchgate`、`author.orcid`
 - `repository`：必须保持为 `Jiayi-Zhou/Jiayi-Zhou.github.io`，否则谷歌学术爬虫和 CDN 路径会失效。
 
-### 更新主页各栏目
+### 更新各页面内容
 
-编辑 [`_data/home.yml`](_data/home.yml)。每个栏目对应 [`_pages/about.md`](_pages/about.md) 中的一个代码块：
+每个页面都有独立的数据文件，编辑对应文件即可：
 
-| `home.yml` 中的栏目 | 渲染出的页面栏目 | 编辑说明 |
+| 页面 | 数据文件 | 常用字段 |
 |---|---|---|
-| `hero` | 首屏姓名、副标题、标语、关键词 | 更新文字与关键词。 |
-| `about.paragraphs` | About Me / 个人简介 | 增删中英段落。 |
-| `philosophy.cards` + `philosophy.quote` | Research Philosophy / 研究理念 | 编辑卡片与引用。 |
-| `news` | News / 最新动态 | 最新动态放在最上方。 |
-| `publications.featured` + `publications.list` | Publications / 学术发表 | 更新代表作与普通论文列表。 |
-| `patents` | Patents / 专利 | 添加或更新专利。 |
-| `research` | Research Experience / 科研经历 | 更新标题、角色、时间段、要点。 |
-| `education` | Education / 教育经历 | 添加学历。 |
-| `skills.groups` | Skills & Methods / 技能与方法 | 重组分组与条目。 |
-| `certifications` | Certifications / 证书 | 添加证书。 |
-| `hobbies` | Hobbies / 兴趣爱好 | 添加爱好。 |
-| `references` | References / 推荐人 | 更新可获得性说明。 |
+| About | [`_data/about.yml`](_data/about.yml) | `hero`、`about.paragraphs`、`philosophy.cards`、`news`、`education`、`hobbies`、`references` |
+| Research | [`_data/research.yml`](_data/research.yml) | `intro`、`projects`、`interests.items` |
+| Publications | [`_data/publications.yml`](_data/publications.yml) | `published`（已发表论文）、`working_papers`（工作论文） |
+| Patents | [`_data/patents.yml`](_data/patents.yml) | `list` |
+| Skills | [`_data/skills.yml`](_data/skills.yml) | `groups`、`certifications.items` |
+| Contact | [`_data/contact.yml`](_data/contact.yml) | `intro`、`locations` |
+
+### 添加或编辑论文
+
+在 [`_data/publications.yml`](_data/publications.yml) 中，已发表论文放入 `published:`，工作论文放入 `working_papers:`。每篇论文的字段包括：
+
+```yaml
+published:
+  - id: zhou2025ranking
+    year: 2025
+    type: "journal"
+    type_en: "Journal Article"
+    type_zh: "期刊论文"
+    title: "English title"
+    title_zh: "中文标题"
+    authors: "**Jiayi Zhou**, et al."
+    authors_zh: "**周家屹**等"
+    venue_en: "*Journal*, 2025."
+    venue_zh: "《期刊》，2025。"
+    description_en: "Short contribution summary in English."
+    description_zh: "中文主要工作与贡献简述。"
+    abstract_en: "English abstract."
+    abstract_zh: "中文摘要。"
+    doi: "10.xxxx/xxxxx"
+    pdf: "/files/papers/zhou2025ranking.pdf"
+    bibtex: |
+      @article{...}
+```
+
+论文 PDF 请放入 [`files/papers/`](files/papers/)，文件名与 `pdf` 字段保持一致。
 
 ### 添加或编辑最新动态
 
-在 `news:` 列表顶部新增一条：
+在 [`_data/about.yml`](_data/about.yml) 的 `news:` 列表顶部新增一条：
 
 ```yaml
 news:
@@ -144,21 +195,24 @@ publications:
 
 ### 更新导航
 
-编辑 [`_data/navigation.yml`](_data/navigation.yml)。每条导航包含 `title`（英文）、`title_zh`（中文）和 `url`（锚点 ID，必须与 [`_pages/about.md`](_pages/about.md) 中的 `id` 对应）。
+编辑 [`_data/navigation.yml`](_data/navigation.yml)。每条导航包含 `title`（英文）、`title_zh`（中文）和 `url`（页面路径，如 `/research/`）。
 
-### 添加新栏目
+### 添加新页面
 
-1. 在 [`_data/home.yml`](_data/home.yml) 中新增双语数据。
-2. 在 [`_pages/about.md`](_pages/about.md) 中参照现有栏目新增 HTML 区块。
-3. 添加锚点 `<span class='anchor' id='your-section'></span>`。
-4. 如需在导航中显示，在 [`_data/navigation.yml`](_data/navigation.yml) 中添加条目。
-5. 同步更新 `README.md` 与 `docs/README-en.md` 以记录新栏目。
+1. 在 `_data/` 下新建双语数据文件（如 `_data/newpage.yml`）。
+2. 在 [`_pages/`](_pages/) 下新建 Markdown 页面文件（如 `_pages/newpage.md`），设置 `permalink`。
+3. 如需在导航中显示，在 [`_data/navigation.yml`](_data/navigation.yml) 中添加条目。
+4. 同步更新 `README.md` 与 `docs/README-en.md` 以记录新页面。
+
+### 主题模式
+
+点击顶部导航栏的主题按钮可在 **system → light → dark → system** 间循环切换。选择会持久化到 `localStorage`，并在刷新后保持。
 
 ### Markdown 与 HTML include 混用
 
 - 数据文件支持 Markdown；[`_includes/bi.html`](_includes/bi.html) 会自动调用 `markdownify`。
 - 如果需要在 HTML 属性或特殊结构中嵌入双语文本，请使用 [`_includes/bi.html`](_includes/bi.html) 或成对的 `span`/`div` 语言块。
-- 在 [`_pages/about.md`](_pages/about.md) 中，保持 HTML 结构完整，并确保每个可见文本都有 `en` 和 `zh` 版本。
+- 在页面模板中，保持 HTML 结构完整，并确保每个可见文本都有 `en` 和 `zh` 版本。
 
 ---
 
@@ -186,13 +240,13 @@ bash run_server.sh
 
 修改源文件后，Jekyll 会自动重新构建并刷新页面。
 
-### 验证两种语言
+### 验证清单
 
-点击右上角的 **中文 / EN** 按钮，确认：
-
-- 每个栏目都完整切换，没有中英文混排。
-- 导航标签随语言变化。
-- 新增内容在两种语言下都正常显示。
+- 访问 `/`、`/research/`、`/publications/`、`/patents/`、`/skills/`、`/contact/`，确认各页面渲染正常。
+- 点击顶部导航每个链接，确认跳转正确。
+- 在多个页面切换语言，确认只显示选中语言且选择跨页面保持一致。
+- 切换主题并刷新，确认无闪烁；system 模式随 OS 主题变化。
+- 在 `/publications/` 确认：已发表论文、Working Papers、每篇描述、可展开摘要/BibTeX、DOI/PDF 链接均正常。
 
 ---
 
@@ -252,9 +306,10 @@ bash run_server.sh
 
 大部分视觉样式位于 [`_sass/_redesign.scss`](_sass/_redesign.scss)。主要区域包括：
 
-- 调色板与首屏样式。
+- 调色板与亮/暗模式变量。
 - `[data-lang-block]` 语言隐藏规则。
-- 导航栏、页眉与语言切换按钮（`#lang-toggle`）。
+- 导航栏、页眉、语言切换按钮（`#lang-toggle`）与主题切换按钮（`#theme-toggle`）。
+- Publications、Patents、Skills、Contact 等多页面卡片样式。
 
 首屏网络动画渲染在 [`_pages/about.md`](_pages/about.md) 的 `<canvas id="hero-network">` 上，对应 JavaScript 已打包在站点资源中。
 
@@ -267,7 +322,7 @@ bash run_server.sh
 ### Jekyll 构建报错
 
 - 运行 `bundle exec jekyll build` 查看完整错误日志。
-- 常见原因：[`_data/home.yml`](_data/home.yml) 的 YAML 缩进错误、未闭合的引号、或缺失的 Liquid 标签。
+- 常见原因：`_data/*.yml` 的 YAML 缩进错误、未闭合的引号、或缺失的 Liquid 标签。
 
 ### 语言无法切换
 
@@ -275,9 +330,14 @@ bash run_server.sh
 - 确认 `_sass/_redesign.scss` 中包含 `[data-lang-block]` 隐藏规则。
 - 确认 [`_includes/masthead.html`](_includes/masthead.html) 中的按钮具有 `id="lang-toggle"`。
 
+### 主题切换无效或出现闪烁
+
+- 确认 `assets/js/theme.js` 已加载（见 [`_includes/scripts.html`](_includes/scripts.html)）。
+- 确认 [`_includes/head/custom.html`](_includes/head/custom.html) 中的内联主题脚本位于 `<head>` 内、且在首屏绘制前执行。
+
 ### 出现中英文混排
 
-- 确保 [`_data/home.yml`](_data/home.yml) 中每个条目都同时包含 `en:` 和 `zh:`。
+- 确保 `_data/*.yml` 中每个条目都同时包含 `en:` 和 `zh:`。
 - 确保双语文本都统一使用 [`_includes/bi.html`](_includes/bi.html) 渲染，而不是内联 `{{ ... | markdownify }}`。
 
 ### 中文字体未加载
@@ -297,10 +357,11 @@ bash run_server.sh
 
 ### 每次内容更新前
 
-- [ ] 我在 [`_data/home.yml`](_data/home.yml) 中同时修改了每条改动的 `en:` 和 `zh:`。
+- [ ] 我在对应的 `_data/*.yml` 中同时修改了每条改动的 `en:` 和 `zh:`。
 - [ ] YAML 缩进正确（每级 2 空格）。
 - [ ] 我已使用 `bash run_server.sh` 在本地预览。
 - [ ] 我点击了语言切换按钮，确认两种语言都正常渲染。
+- [ ] 我在多个页面间切换，确认语言和主题选择跨页面保持一致。
 
 ### 每次部署前
 
@@ -320,10 +381,10 @@ bash run_server.sh
 
 ## 如何保持两份 README 同步
 
-- **中文版为主要维护文档**：本仓库的日常维护以 `README.md` 为准，新增栏目或调整结构时先在这里修改。
-- **英文版为辅助参考**：`README.md` 是中文版的一一对应翻译，应保持相同的标题层级、章节顺序与事实内容。
+- **中文版为主要维护文档**：本仓库的日常维护以 `README.md` 为准，新增页面或调整结构时先在这里修改。
+- **英文版为辅助参考**：`docs/README-en.md` 是中文版的一一对应翻译，应保持相同的标题层级、章节顺序与事实内容。
 - **路径与命令保持一致**：仅翻译自然语言说明，文件路径和命令不改动。
-- **最近同步日期**：2026-08-23。
+- **最近同步日期**：2026-08-25。
 
 如有疑问，以 `README.md` 的内容为准。
 

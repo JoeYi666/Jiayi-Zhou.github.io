@@ -1,0 +1,21 @@
+# ============================================================================
+# Contact 页面内容 —— 中英双语单一数据源
+# ============================================================================
+
+intro:
+  en: "Feel free to reach out for research collaboration, questions about my work, or just to discuss crypto finance and monetary economics."
+  zh: "欢迎就研究合作、论文问题或加密金融与货币经济学话题与我联系。"
+
+locations:
+  - label_en: "Affiliation"
+    label_zh: "工作单位"
+    value_en: "Institutes of Science and Development, Chinese Academy of Sciences"
+    value_zh: "中国科学院科技战略咨询研究院"
+  - label_en: "Address"
+    label_zh: "地址"
+    value_en: "Beijing, China"
+    value_zh: "中国 · 北京"
+
+social_hint:
+  en: "You can also find me on:"
+  zh: "也可通过以下平台找到我："

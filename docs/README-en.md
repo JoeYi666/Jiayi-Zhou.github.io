@@ -12,7 +12,7 @@ This repository hosts the source code of **Jiayi Zhou's (周家屹) academic per
 - **Owner's GitHub profile**: https://github.com/JoeYi666
 - **Google Scholar**: https://scholar.google.com/citations?user=qcxrzQcAAAAJ&hl=zh-CN
 
-The site is a heavily customized fork of the [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) template. The original layout has been replaced with a bilingual, single-page design driven by data in [`_data/home.yml`](../_data/home.yml).
+The site is a heavily customized fork of the [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) template. The original single-page layout has been replaced with a bilingual, multi-page design driven by data in `_data/*.yml`.
 
 ---
 
@@ -22,36 +22,64 @@ The site is a heavily customized fork of the [AcadHomepage](https://github.com/R
 .
 ├── _config.yml              # Site metadata, author info, SEO, build settings
 ├── _data/
-│   ├── home.yml             # Main homepage content (all sections, bilingual)
+│   ├── about.yml            # About page content (hero, bio, philosophy, news, education, hobbies)
+│   ├── research.yml         # Research page content
+│   ├── publications.yml     # Publications page content (including Working Papers)
+│   ├── patents.yml          # Patents page content
+│   ├── skills.yml           # Skills page content
+│   ├── contact.yml          # Contact page content
 │   └── navigation.yml       # Top navigation links
 ├── _pages/
-│   └── about.md             # Homepage template; pulls data from _data/home.yml
+│   ├── about.md             # Home page (/)
+│   ├── research.md          # Research page (/research/)
+│   ├── publications.md      # Publications page (/publications/)
+│   ├── patents.md           # Patents page (/patents/)
+│   ├── skills.md            # Skills page (/skills/)
+│   └── contact.md           # Contact page (/contact/)
 ├── _includes/
 │   ├── bi.html              # Bilingual content renderer include
-│   ├── masthead.html        # Top navigation bar + language toggle button
-│   ├── head/custom.html     # Fonts, favicon, MathJax, language-preference script
+│   ├── masthead.html        # Top navigation bar + language/theme toggle buttons
+│   ├── head/custom.html     # Fonts, favicon, MathJax, language/theme restore scripts
 │   └── ...
 ├── assets/
 │   ├── js/i18n.js           # Language switcher logic
+│   ├── js/theme.js          # Theme switcher logic (light/dark/system)
+│   ├── js/publications.js   # Publications expand/collapse logic
 │   └── css/                 # Compiled styles (source in _sass/)
 ├── _sass/
-│   └── _redesign.scss       # Custom theme styles, including language hiding
+│   └── _redesign.scss       # Custom theme styles, language hiding rules, dark mode
 ├── images/                  # Avatar, favicon, paper thumbnails
+├── files/papers/            # Paper PDF files
 ├── run_server.sh            # Local development: bundle exec jekyll liveserve
 ├── README.md                # Chinese primary handbook
 └── docs/
     └── README-en.md         # This file (English reference version)
 ```
 
-The two files you will edit most often are [`_config.yml`](../_config.yml) (author profile) and [`_data/home.yml`](../_data/home.yml) (page content).
+The files you will edit most often are [`_config.yml`](../_config.yml) (author profile) and the per-page data files in `_data/`.
+
+---
+
+## Site structure
+
+| Page | URL | Data file |
+|---|---|---|
+| About | `/` | [`_data/about.yml`](../_data/about.yml) |
+| Research | `/research/` | [`_data/research.yml`](../_data/research.yml) |
+| Publications | `/publications/` | [`_data/publications.yml`](../_data/publications.yml) |
+| Patents | `/patents/` | [`_data/patents.yml`](../_data/patents.yml) |
+| Skills | `/skills/` | [`_data/skills.yml`](../_data/skills.yml) |
+| Contact | `/contact/` | [`_data/contact.yml`](../_data/contact.yml) |
+
+Navigation order is controlled by [`_data/navigation.yml`](../_data/navigation.yml).
 
 ---
 
 ## How bilingual support works
 
-The homepage supports English and Chinese through a **single-source bilingual data model**:
+The site supports English and Chinese through a **single-source bilingual data model**:
 
-1. **Data source**: [`_data/home.yml`](../_data/home.yml) stores every piece of content as paired `en:` and `zh:` fields. For example:
+1. **Data source**: each `_data/*.yml` file stores every piece of content as paired `en:` and `zh:` fields. For example:
 
    ```yaml
    about:
@@ -70,7 +98,9 @@ The homepage supports English and Chinese through a **single-source bilingual da
 
 3. **Language switcher**: [`assets/js/i18n.js`](../assets/js/i18n.js) toggles the `<html data-lang="en|zh">` attribute and persists the choice in `localStorage`. [`_includes/head/custom.html`](../_includes/head/custom.html) runs an inline script before first paint to restore the visitor's preference and avoid a flash of the default language.
 
-4. **CSS filtering**: [`_sass/_redesign.scss`](../_sass/_redesign.scss) hides the inactive language:
+4. **Theme switcher**: [`assets/js/theme.js`](../assets/js/theme.js) provides **light / dark / system** modes and persists the choice in `localStorage`. [`_includes/head/custom.html`](../_includes/head/custom.html) runs an inline script before first paint to restore the theme preference and avoid a flash.
+
+5. **CSS filtering**: [`_sass/_redesign.scss`](../_sass/_redesign.scss) hides the inactive language and defines light/dark color palettes:
 
    ```scss
    html[data-lang="en"] [data-lang-block="zh"] { display: none !important; }
@@ -79,7 +109,7 @@ The homepage supports English and Chinese through a **single-source bilingual da
 
 ### Single-source-of-truth rule
 
-- **Always edit `en:` and `zh:` together** in the same entry of [`_data/home.yml`](../_data/home.yml). Never add an English-only entry.
+- **Always edit `en:` and `zh:` together** in the same entry of `_data/*.yml`. Never add an English-only entry.
 - The English text is the structural source of truth; the Chinese text should convey the same meaning.
 - Markdown syntax (`**bold**`, `[links](url)`, lists) is supported in both fields.
 
@@ -96,28 +126,51 @@ Edit [`_config.yml`](../_config.yml):
 - `author.googlescholar`, `author.github`, `author.researchgate`, `author.orcid`
 - `repository`: must remain `Jiayi-Zhou/Jiayi-Zhou.github.io` for the Google Scholar crawler and CDN path to work.
 
-### Update homepage sections
+### Update page content
 
-Edit [`_data/home.yml`](../_data/home.yml). Each section corresponds to a block in [`_pages/about.md`](../_pages/about.md):
+Each page has its own data file; edit the corresponding file:
 
-| Section in `home.yml` | Rendered section | What to edit |
+| Page | Data file | Common fields |
 |---|---|---|
-| `hero` | Name, subtitle, tagline, keywords | Update text and keywords. |
-| `about.paragraphs` | About Me / 个人简介 | Add/remove bilingual paragraphs. |
-| `philosophy.cards` + `philosophy.quote` | Research Philosophy / 研究理念 | Edit cards and quote. |
-| `news` | News / 最新动态 | Add newest items at the top. |
-| `publications.featured` + `publications.list` | Publications / 学术发表 | Update featured paper and list. |
-| `patents` | Patents / 专利 | Add or update patents. |
-| `research` | Research Experience / 科研经历 | Update title, role, period, bullet points. |
-| `education` | Education / 教育经历 | Add degrees. |
-| `skills.groups` | Skills & Methods / 技能与方法 | Reorganize groups/items. |
-| `certifications` | Certifications / 证书 | Add certificates. |
-| `hobbies` | Hobbies / 兴趣爱好 | Add hobbies. |
-| `references` | References / 推荐人 | Update availability note. |
+| About | [`_data/about.yml`](../_data/about.yml) | `hero`, `about.paragraphs`, `philosophy.cards`, `news`, `education`, `hobbies`, `references` |
+| Research | [`_data/research.yml`](../_data/research.yml) | `intro`, `projects`, `interests.items` |
+| Publications | [`_data/publications.yml`](../_data/publications.yml) | `published`, `working_papers` |
+| Patents | [`_data/patents.yml`](../_data/patents.yml) | `list` |
+| Skills | [`_data/skills.yml`](../_data/skills.yml) | `groups`, `certifications.items` |
+| Contact | [`_data/contact.yml`](../_data/contact.yml) | `intro`, `locations` |
+
+### Add or edit a publication
+
+In [`_data/publications.yml`](../_data/publications.yml), place peer-reviewed papers under `published:` and working papers under `working_papers:`. Each paper entry includes:
+
+```yaml
+published:
+  - id: zhou2025ranking
+    year: 2025
+    type: "journal"
+    type_en: "Journal Article"
+    type_zh: "期刊论文"
+    title: "English title"
+    title_zh: "中文标题"
+    authors: "**Jiayi Zhou**, et al."
+    authors_zh: "**周家屹**等"
+    venue_en: "*Journal*, 2025."
+    venue_zh: "《期刊》，2025。"
+    description_en: "Short contribution summary in English."
+    description_zh: "中文主要工作与贡献简述。"
+    abstract_en: "English abstract."
+    abstract_zh: "中文摘要。"
+    doi: "10.xxxx/xxxxx"
+    pdf: "/files/papers/zhou2025ranking.pdf"
+    bibtex: |
+      @article{...}
+```
+
+Place PDF files in [`files/papers/`](../files/papers/) and match the filename with the `pdf` field.
 
 ### Add or edit news
 
-Append a new item to the top of the `news:` list:
+Add a new item to the top of the `news:` list in [`_data/about.yml`](../_data/about.yml):
 
 ```yaml
 news:
@@ -129,36 +182,26 @@ news:
     zh: "..."
 ```
 
-### Add or edit publications
-
-For a regular list item, add a bilingual entry under `publications.list:`:
-
-```yaml
-publications:
-  list:
-    - en: "[Title](https://doi.org/...), **Zhou, J.-Y.**, ..., *Journal*, 2026."
-      zh: "[标题](https://doi.org/...)，**周家屹**等，《期刊》，2026。"
-```
-
-For the featured paper, update `publications.featured` (title, authors, venue, bullet points, badges).
-
 ### Update navigation
 
-Edit [`_data/navigation.yml`](../_data/navigation.yml). Each entry has `title` (English), `title_zh` (Chinese), and `url` (anchor ID that must match an `id` in [`_pages/about.md`](../_pages/about.md)).
+Edit [`_data/navigation.yml`](../_data/navigation.yml). Each entry has `title` (English), `title_zh` (Chinese), and `url` (page path, e.g. `/research/`).
 
-### Add a new section
+### Add a new page
 
-1. Add the bilingual data to [`_data/home.yml`](../_data/home.yml).
-2. Add a new HTML section in [`_pages/about.md`](../_pages/about.md) using the existing sections as a template.
-3. Add an anchor `<span class='anchor' id='your-section'></span>`.
-4. Add a navigation entry in [`_data/navigation.yml`](../_data/navigation.yml) if needed.
-5. Update both `README.md` and `docs/README-en.md` to document the new section.
+1. Create a new bilingual data file in `_data/` (e.g. `_data/newpage.yml`).
+2. Create a new Markdown page in [`_pages/`](../_pages/) (e.g. `_pages/newpage.md`) with a `permalink`.
+3. Add an entry to [`_data/navigation.yml`](../_data/navigation.yml) if it should appear in the navigation.
+4. Update both `README.md` and `docs/README-en.md` to document the new page.
+
+### Theme modes
+
+Click the theme button in the top navigation to cycle through **system → light → dark → system**. The choice is persisted in `localStorage` and survives refreshes.
 
 ### Markdown and HTML includes
 
 - Data fields support Markdown; [`_includes/bi.html`](../_includes/bi.html) calls `markdownify` automatically.
 - If you need bilingual text inside HTML attributes or special structures, use [`_includes/bi.html`](../_includes/bi.html) or paired `span`/`div` language blocks.
-- In [`_pages/about.md`](../_pages/about.md), keep HTML structures intact and ensure every visible text has both an `en` and a `zh` version.
+- In page templates, keep HTML structures intact and ensure every visible text has both an `en` and a `zh` version.
 
 ---
 
@@ -184,15 +227,15 @@ bash run_server.sh
 
 This runs `bundle exec jekyll liveserve`. Open http://127.0.0.1:4000 in your browser.
 
-If you edit a source file, Jekyll will rebuild and reload the page automatically.
+Jekyll will rebuild and reload the page automatically when you edit a source file.
 
-### Verify both languages
+### Verification checklist
 
-Click the **中文 / EN** button in the top-right corner and confirm:
-
-- Every section switches cleanly without mixed-language text.
-- Navigation labels change language.
-- New content appears in both languages.
+- Visit `/`, `/research/`, `/publications/`, `/patents/`, `/skills/`, `/contact/` and confirm each page renders correctly.
+- Click every link in the top navigation and confirm the routing is correct.
+- Switch languages across multiple pages and confirm only the selected language is shown and the choice persists.
+- Switch themes and refresh; confirm no flash and that system mode follows the OS theme.
+- On `/publications/`, confirm: peer-reviewed papers, Working Papers, descriptions, expandable abstracts/BibTeX, and DOI/PDF links all work.
 
 ---
 
@@ -204,7 +247,7 @@ The site is deployed automatically with GitHub Pages from the `main` branch.
 
    ```bash
    git add .
-   git commit -m "Update homepage content"
+   git commit -m "Update site content"
    ```
 
 2. Push to the remote `main` branch:
@@ -252,9 +295,10 @@ The badge URL in [`_pages/about.md`](../_pages/about.md) points to `gs_data_shie
 
 Most visual styles are in [`_sass/_redesign.scss`](../_sass/_redesign.scss). Key areas:
 
-- Color palette and hero section styles.
+- Color palette and light/dark mode variables.
 - `[data-lang-block]` language hiding rules.
-- Masthead, navigation, and language toggle (`#lang-toggle`).
+- Masthead, navigation, language toggle (`#lang-toggle`), and theme toggle (`#theme-toggle`).
+- Multi-page card styles for Publications, Patents, Skills, and Contact.
 
 The hero network animation is rendered on `<canvas id="hero-network">` in [`_pages/about.md`](../_pages/about.md). The corresponding JavaScript is bundled in the site assets.
 
@@ -267,23 +311,28 @@ For typography, fonts are loaded in [`_includes/head/custom.html`](../_includes/
 ### Jekyll build errors
 
 - Run `bundle exec jekyll build` to see the full error log.
-- Common causes: YAML indentation mistakes in [`_data/home.yml`](../_data/home.yml), unclosed quotes, or missing Liquid tags.
+- Common causes: YAML indentation mistakes in `_data/*.yml`, unclosed quotes, or missing Liquid tags.
 
 ### Language not switching
 
-- Check that `assets/js/i18n.js` is loaded (see [`_includes/scripts.html`](../_includes/scripts.html)).
+- Check that `assets/js/i18n.js` is loaded (see [`_includes/scripts.html`](_includes/scripts.html)).
 - Check that `_sass/_redesign.scss` contains the `[data-lang-block]` hide rules.
-- Verify the button has `id="lang-toggle"` in [`_includes/masthead.html`](../_includes/masthead.html).
+- Verify the button has `id="lang-toggle"` in [`_includes/masthead.html`](_includes/masthead.html).
+
+### Theme switching not working or flashing
+
+- Check that `assets/js/theme.js` is loaded (see [`_includes/scripts.html`](_includes/scripts.html)).
+- Verify the inline theme script in [`_includes/head/custom.html`](_includes/head/custom.html) runs inside `<head>` and before first paint.
 
 ### Mixed-language content
 
-- Ensure every entry in [`_data/home.yml`](../_data/home.yml) has both `en:` and `zh:` fields.
-- Check that [`_includes/bi.html`](../_includes/bi.html) is used consistently instead of inline `{{ ... | markdownify }}` for bilingual text.
+- Ensure every entry in `_data/*.yml` has both `en:` and `zh:` fields.
+- Check that [`_includes/bi.html`](_includes/bi.html) is used consistently instead of inline `{{ ... | markdownify }}` for bilingual text.
 
 ### Chinese fonts not loading
 
 - Confirm network access to `fonts.googleapis.com` and `fonts.gstatic.com`.
-- The `Noto Serif SC` font is loaded in [`_includes/head/custom.html`](../_includes/head/custom.html).
+- The Chinese font `Noto Serif SC` is loaded in [`_includes/head/custom.html`](_includes/head/custom.html).
 
 ### Citation badge not updating
 
@@ -297,10 +346,11 @@ For typography, fonts are loaded in [`_includes/head/custom.html`](../_includes/
 
 ### Before every content update
 
-- [ ] I edited both `en:` and `zh:` fields for every changed entry in [`_data/home.yml`](../_data/home.yml).
+- [ ] I edited both `en:` and `zh:` fields for every changed entry in the relevant `_data/*.yml`.
 - [ ] I used valid YAML indentation (2 spaces per level).
 - [ ] I previewed the site locally with `bash run_server.sh`.
 - [ ] I clicked the language toggle and confirmed both languages render correctly.
+- [ ] I switched pages and confirmed language and theme choices persist across pages.
 
 ### Before every deployment
 
@@ -320,10 +370,10 @@ For typography, fonts are loaded in [`_includes/head/custom.html`](../_includes/
 
 ## How to keep the two READMEs in sync
 
-- **Chinese is the primary maintenance document**: `README.md` is the source of truth for this repository. Add or restructure sections there first.
-- **English is the auxiliary reference**: `README.md` is a one-to-one translation of the Chinese version. Keep the same heading hierarchy, section order, and factual content.
+- **Chinese is the primary maintenance document**: `README.md` is the source of truth for this repository. Add new pages or restructure sections there first.
+- **English is the auxiliary reference**: `docs/README-en.md` is a one-to-one translation of the Chinese version. Keep the same heading hierarchy, section order, and factual content.
 - **Keep paths and commands identical**: only translate natural-language explanations.
-- **Last synced**: 2026-08-23.
+- **Last synced**: 2026-08-25.
 
 When in doubt, refer to `README.md`.
 
@@ -331,7 +381,7 @@ When in doubt, refer to `README.md`.
 
 ## License and acknowledgments
 
-The original [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) template is distributed under the MIT License. This site is a custom redesign with added bilingual support, a data-driven homepage, and a refreshed visual design.
+The original [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) template is distributed under the MIT License. This site is a custom redesign with added bilingual support, a multi-page data-driven structure, and a refreshed visual design.
 
 - Font Awesome is distributed under the SIL OFL 1.1 and MIT License.
 - The redesign is influenced by [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) and [academicpages](https://github.com/academicpages/academicpages.github.io), both under the MIT License.

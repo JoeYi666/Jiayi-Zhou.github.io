@@ -1,0 +1,242 @@
+# ============================================================================
+# Publications 页面内容 —— 中英双语单一数据源
+# ============================================================================
+
+intro:
+  en: "Peer-reviewed publications and ongoing work. Click on a paper to view its abstract and BibTeX entry."
+  zh: "同行评审论文与在研工作。点击论文可查看摘要与 BibTeX 条目。"
+
+published:
+  - id: zhou2025ranking
+    year: 2025
+    type: "journal"
+    type_en: "Journal Article"
+    type_zh: "期刊论文"
+    title: "Ranking Influential Non-Content Factors on Scientific Papers' Citation Impact: A Multidomain Comparative Analysis"
+    title_zh: "科学论文引用影响力的非内容因素排名：一项跨领域比较分析"
+    authors: "Jiannan Zhu, **Jiayi Zhou**, Jing Pan, Feng Gu, & Jian-Feng Guo*"
+    authors_zh: "朱剑楠，**周家屹**，潘静，顾锋，郭剑锋*"
+    venue_en: "*Big Data and Cognitive Computing*, 9(2), 30, 2025."
+    venue_zh: "《Big Data and Cognitive Computing》，9(2)，30，2025。"
+    description_en: >-
+      Compares non-content drivers of citation impact across mathematics,
+      computer science, and management. Using XGBoost, GBDT, Random Forest,
+      and quantile regression, the study finds that author reputation and
+      reference count dominate citation influence, with discipline-specific
+      variation in the relative importance of other factors.
+    description_zh: >-
+      跨数学、计算机科学与管理学三领域比较论文引用的非内容因素。使用
+      XGBoost、GBDT、随机森林与分位数回归，发现作者声望与参考文献数量
+      主导引用影响，其他因素的相对重要性因学科而异。
+    abstract_en: >-
+      This paper investigates the non-content factors that shape scientific
+      papers' citation impact across three disciplines. By combining machine
+      learning and quantile regression, we rank the influence of author
+      reputation, journal metrics, reference count, and collaboration
+      patterns. The results highlight that author prominence and the breadth
+      of references consistently rank highest, while the contribution of
+      other factors varies by field. These findings provide practical
+      guidance for researchers aiming to maximize the visibility of their
+      work without sacrificing scholarly quality.
+    abstract_zh: >-
+      本文研究影响科学论文引用影响力的非内容因素，覆盖三个学科。通过
+      机器学习与分位数回归相结合，我们对作者声望、期刊指标、参考文献
+      数量与合作模式的影响进行排名。结果表明，作者知名度与参考文献
+      广度始终最为重要，其他因素的贡献则因领域而异。研究为研究人员在
+      不牺牲学术质量的前提下提升论文可见度提供了实践参考。
+    doi: "10.3390/bdcc9020030"
+    pdf: "/files/papers/zhou2025ranking.pdf"
+    bibtex: |
+      @article{zhou2025ranking,
+        title={Ranking Influential Non-Content Factors on Scientific Papers' Citation Impact: A Multidomain Comparative Analysis},
+        author={Zhu, Jiannan and Zhou, Jiayi and Pan, Jing and Gu, Feng and Guo, Jian-Feng},
+        journal={Big Data and Cognitive Computing},
+        volume={9},
+        number={2},
+        pages={30},
+        year={2025},
+        publisher={MDPI},
+        doi={10.3390/bdcc9020030}
+      }
+
+  - id: zhou2022carbon
+    year: 2022
+    type: "journal"
+    type_en: "Journal Article"
+    type_zh: "期刊论文"
+    title: "A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics"
+    title_zh: "基于生物物理经济学思想的碳排放权价值测算模型研究"
+    authors: "**Jiayi Zhou**, Jian-Feng Guo, et al."
+    authors_zh: "**周家屹**，郭剑锋等"
+    venue_en: "*Chinese Journal of Management Science*, 2022. (in Chinese)"
+    venue_zh: "《中国管理科学》，2022。"
+    description_en: >-
+      Builds a balance-sheet valuation model for carbon emission rights from
+      a biophysical economics perspective: domestic emissions are treated as
+      assets, global atmospheric capacity as liabilities, and domestic carbon
+      sinks as equity. The paper derives a carbon-pricing accounting identity
+      and discusses its policy implications for China's carbon market.
+    description_zh: >-
+      建立生物物理经济学视角下的碳排放权资产负债表估值模型，将本国排放
+      视为资产、全球大气容量视为负债、国内碳汇视为权益，推导碳价会计
+      恒等式，并讨论其对中国碳市场的政策含义。
+    abstract_en: >-
+      Drawing on biophysical economics, this study reframes carbon emission
+      rights as balance-sheet items. National emissions are valued as assets,
+      the globally shared atmospheric capacity as liabilities, and domestic
+      carbon sinks as equity. We derive an accounting identity that links
+      carbon price to the monetized value of environmental capacity and apply
+      it to China's national carbon market. The model offers a new accounting
+      lens for carbon pricing and emissions budgeting.
+    abstract_zh: >-
+      本文借鉴生物物理经济学思想，将碳排放权重构为资产负债表项目：本国
+      排放量作为资产，全球共有大气容量作为负债，国内碳汇作为权益。我们
+      推导了连接碳价与环境容量货币化价值的会计恒等式，并将其应用于中国
+      全国碳市场。该模型为碳定价与排放预算提供了新的会计视角。
+    doi: "10.16381/j.cnki.issn1003-207x.2021.1684"
+    pdf: "/files/papers/zhou2022carbon.pdf"
+    bibtex: |
+      @article{zhou2022carbon,
+        title={A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics},
+        author={Zhou, Jiayi and Guo, Jian-Feng and others},
+        journal={Chinese Journal of Management Science},
+        year={2022},
+        publisher={Science Press},
+        doi={10.16381/j.cnki.issn1003-207x.2021.1684},
+        note={in Chinese}
+      }
+
+  - id: zhou2023oilgas
+    year: 2023
+    type: "journal"
+    type_en: "Journal Article"
+    type_zh: "期刊论文"
+    title: "Analysis of China's Oil and Gas Imports and Exports from 2018 to 2022"
+    title_zh: "2018—2022 年中国油气进出口状况分析"
+    authors: "**Jiayi Zhou**, et al."
+    authors_zh: "**周家屹**等"
+    venue_en: "*International Petroleum Economics*, 2023. (in Chinese)"
+    venue_zh: "《国际石油经济》，2023。"
+    description_en: >-
+      Analyzes trends in China's crude oil and LNG imports, external
+      dependence, the 2020 import peak, and the 2022 LNG decline. The paper
+      also documents the post-pandemic rise in import costs and its
+      implications for national energy security.
+    description_zh: >-
+      分析中国原油与 LNG 进口趋势、对外依存度、2020 年进口峰值与 2022 年
+      LNG 下降，梳理疫情后进口成本上升态势及其对能源安全的影响。
+    abstract_en: >-
+      This paper examines China's oil and gas trade between 2018 and 2022.
+      We document the continued growth of crude oil imports, the rapid
+      expansion and subsequent contraction of LNG imports, and the
+      corresponding changes in external dependence. The analysis highlights
+      the 2020 import peak, the 2022 LNG decline, and the rising import costs
+      in the post-pandemic period, offering implications for energy security
+      and import diversification strategies.
+    abstract_zh: >-
+      本文考察 2018—2022 年中国油气贸易。我们记录了原油进口的持续增长、
+      LNG 进口的快速扩张与随后的收缩，以及相应对外依存度的变化。分析
+      突出 2020 年进口峰值、2022 年 LNG 下降及疫情后进口成本上升，为
+      能源安全与进口多元化策略提供参考。
+    doi: ""
+    pdf: "/files/papers/zhou2023oilgas.pdf"
+    bibtex: |
+      @article{zhou2023oilgas,
+        title={Analysis of China's Oil and Gas Imports and Exports from 2018 to 2022},
+        author={Zhou, Jiayi and others},
+        journal={International Petroleum Economics},
+        year={2023},
+        note={in Chinese}
+      }
+
+working_papers:
+  - id: zhou2026crypto
+    year: 2026
+    type: "working_paper"
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research"
+    title_zh: "加密金融风险研究的系统文献计量与主题建模综述"
+    authors: "**Jiayi Zhou**, Jingjing Li, Binbin Xu, Yanran Ma, & Jianfeng Guo"
+    authors_zh: "**周家屹**，李晶晶，徐彬彬，马嫣然，郭剑锋"
+    venue_en: "SSRN Working Paper, January 31, 2026."
+    venue_zh: "SSRN 工作论文，2026 年 1 月 31 日。"
+    description_en: >-
+      A systematic bibliometric and BERTopic-based review of 891 crypto
+      financial risk papers and 1,980 risk events (2012–2025). The paper
+      builds an integrated research framework covering risk sources,
+      measurement, contagion, hedging, and governance.
+    description_zh: >-
+      基于 BERTopic 与文献计量，对 891 篇加密金融风险文献和 1,980 起风险
+      事件（2012—2025）进行主题建模，构建覆盖风险来源、测度、传染、对冲
+      与治理的综合研究框架。
+    abstract_en: >-
+      This study conducts a systematic bibliometric review of crypto financial
+      risk research, mapping its intellectual structure, keyword evolution,
+      and emerging research fronts. Using a modular BERTopic pipeline, we
+      identify core themes spanning risk identification, measurement,
+      transmission, hedging, and governance. We further link topic clusters
+      to a hand-collected database of 1,980 crypto risk events from 2012 to
+      2025, bridging the gap between the literature and empirical reality and
+      proposing an end-to-end risk research framework.
+    abstract_zh: >-
+      本研究对加密金融风险研究进行系统文献计量综述，刻画其知识结构、关键词
+      演进与新兴研究前沿。通过模块化 BERTopic 流程，我们识别覆盖风险识别、
+      度量、传染、对冲与治理的核心主题。进一步将主题聚类与 2012—2025 年
+      手工整理的 1,980 起加密风险事件数据库相联系，弥合文献空白与经验现实
+      之间的差距，并提出端到端的风险研究框架。
+    doi: "10.2139/ssrn.7225798"
+    pdf: "/files/papers/zhou2026crypto.pdf"
+    bibtex: |
+      @article{zhou2026crypto,
+        title={A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research},
+        author={Zhou, Jiayi and Li, Jingjing and Xu, Binbin and Ma, Yanran and Guo, Jianfeng},
+        journal={SSRN Working Paper},
+        year={2026},
+        doi={10.2139/ssrn.7225798}
+      }
+
+  - id: zhou2026carbonbs
+    year: 2026
+    type: "working_paper"
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "The Balance-Sheet Logic of Carbon Emission Rights"
+    title_zh: "碳排放权的资产负债表逻辑"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Reframes carbon emissions as assets on a sovereign balance sheet,
+      derives a carbon-pricing formula, and applies the framework to China's
+      carbon market and the global carbon budget. The paper argues that
+      carbon pricing is the monetization of environmental capacity
+      allocation.
+    description_zh: >-
+      将碳排放重构为国家资产负债表中的资产项，推导碳定价公式，并应用于
+      中国碳市场与全球碳预算分析。论文提出碳定价本质上是环境容量分配的
+      货币化。
+    abstract_en: >-
+      This paper develops a balance-sheet framework for carbon emission
+      rights. National emissions are treated as assets, the globally shared
+      atmospheric capacity as liabilities, and domestic carbon sinks as
+      equity. We derive a carbon-pricing identity and apply it to China's
+      national carbon market and the global carbon budget. The framework
+      clarifies that carbon markets are fundamentally mechanisms for
+      monetizing the allocation of environmental capacity, with important
+      implications for climate policy and international carbon negotiations.
+    abstract_zh: >-
+      本文构建碳排放权的资产负债表框架。本国排放量视为资产，全球共有大气
+      容量视为负债，国内碳汇视为权益。我们推导碳定价恒等式，并将其应用于
+      中国全国碳市场与全球碳预算。该框架阐明，碳市场本质上是环境容量分配
+      货币化的机制，对气候政策与国际碳谈判具有重要启示。
+    doi: ""
+    pdf: "/files/papers/zhou2026carbonbs.pdf"
+    bibtex: |
+      @article{zhou2026carbonbs,
+        title={The Balance-Sheet Logic of Carbon Emission Rights},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }

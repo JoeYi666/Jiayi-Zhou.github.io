@@ -2,21 +2,28 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav class="topnav">
-        <a class="topnav__home" href="#about" target="_self">
+        <a class="topnav__home" href="/" target="_self">
           <span class="i18n" data-lang-block="en">Jiayi Zhou</span>
           <span class="i18n" data-lang-block="zh">周家屹</span>
         </a>
         <ul class="topnav__links">
           {% for link in site.data.navigation.main %}
             <li>
-              <a href="{{ link.url }}" target="_self">
+              <a href="{{ link.url }}" target="_self" data-nav-link>
                 <span class="i18n" data-lang-block="en">{{ link.title }}</span>
                 {% if link.title_zh %}<span class="i18n" data-lang-block="zh">{{ link.title_zh }}</span>{% endif %}
               </a>
             </li>
           {% endfor %}
         </ul>
-        <button id="lang-toggle" type="button" aria-label="Switch language / 切换语言">中文</button>
+        <div class="topnav__actions">
+          <button id="theme-toggle" type="button" aria-label="Switch theme / 切换主题" title="Switch theme">
+            <span class="theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">☀</span>
+            <span class="theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">🌙</span>
+            <span class="theme-toggle__icon theme-toggle__icon--system" aria-hidden="true">💻</span>
+          </button>
+          <button id="lang-toggle" type="button" aria-label="Switch language / 切换语言">中文</button>
+        </div>
       </nav>
     </div>
   </div>

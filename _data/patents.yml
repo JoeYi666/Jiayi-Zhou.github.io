@@ -1,0 +1,27 @@
+# ============================================================================
+# Patents 页面内容 —— 中英双语单一数据源
+# ============================================================================
+
+intro:
+  en: "Patent applications arising from my research on dissipative-structure modeling and industrial development assessment."
+  zh: "来自耗散结构建模与产业发展状态评估研究的专利申请。"
+
+list:
+  - id: us2026dissipative
+    title_en: "Industry Development State Assessment Device and Apparatus Based on Dissipative Structural Model"
+    title_zh: "基于耗散结构模型的产业发展状态评估装置与设备"
+    inventors_en: "Guo, J.-F., **Zhou, J.-Y.**, Cao, Q., Liu, S., & Pan, J."
+    inventors_zh: "郭剑锋，**周家屹**，曹琪，刘思，潘杰"
+    number: "U.S. Patent Application No. 19/346,554"
+    number_zh: "美国专利申请 No. 19/346,554"
+    date: "Jan. 22, 2026"
+    date_zh: "2026 年 1 月 22 日"
+    status_en: "Filed"
+    status_zh: "已提交"
+    description_en: >-
+      A device and apparatus for assessing industrial development state by
+      modeling industries as dissipative structures, enabling early diagnosis
+      of transition risks and sustainability bottlenecks.
+    description_zh: >-
+      通过将产业建模为耗散结构来评估产业发展状态的装置与设备，可用于早期
+      识别转型风险与可持续性瓶颈。

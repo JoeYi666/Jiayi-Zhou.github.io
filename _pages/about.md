@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-{% assign h = site.data.home %}
+{% assign a = site.data.about %}
 
 <!-- ============================== HERO ============================== -->
 <section class="hero" id="about">
@@ -20,19 +20,19 @@ redirect_from:
       <span class="i18n" data-lang-block="zh">加密金融 · 稳定币经济学 · 生物物理经济学</span>
     </div>
     <h1 class="hero__name">
-      <span class="i18n" data-lang-block="en">{{ h.hero.name_en }} <span class="hero__name-zh">周家屹</span></span>
-      <span class="i18n" data-lang-block="zh">{{ h.hero.name_zh }} <span class="hero__name-en">Jiayi Zhou</span></span>
+      <span class="i18n" data-lang-block="en">{{ a.hero.name_en }} <span class="hero__name-zh">周家屹</span></span>
+      <span class="i18n" data-lang-block="zh">{{ a.hero.name_zh }} <span class="hero__name-en">Jiayi Zhou</span></span>
     </h1>
     <p class="hero__subtitle">
-      <span class="i18n" data-lang-block="en">{{ h.hero.subtitle_en }}</span>
-      <span class="i18n" data-lang-block="zh">{{ h.hero.subtitle_zh }}</span>
+      <span class="i18n" data-lang-block="en">{{ a.hero.subtitle_en }}</span>
+      <span class="i18n" data-lang-block="zh">{{ a.hero.subtitle_zh }}</span>
     </p>
     <p class="hero__tagline">
-      <span class="i18n" data-lang-block="en">{{ h.hero.tagline_en }}</span>
-      <span class="i18n" data-lang-block="zh">{{ h.hero.tagline_zh }}</span>
+      <span class="i18n" data-lang-block="en">{{ a.hero.tagline_en }}</span>
+      <span class="i18n" data-lang-block="zh">{{ a.hero.tagline_zh }}</span>
     </p>
     <div class="hero__keywords">
-      {% for kw in h.hero.keywords %}
+      {% for kw in a.hero.keywords %}
       <span class="hero__chip"><span class="i18n" data-lang-block="en">{{ kw.en }}</span><span class="i18n" data-lang-block="zh">{{ kw.zh }}</span></span>
       {% endfor %}
     </div>
@@ -50,18 +50,15 @@ redirect_from:
   </div>
 </section>
 
-<span class='anchor' id='about-me'></span>
-
 <!-- ============================== ABOUT ============================== -->
 <section class="section">
   <h2 class="section__title"><span class="i18n" data-lang-block="en">About Me</span><span class="i18n" data-lang-block="zh">个人简介</span></h2>
-  {% for p in h.about.paragraphs %}
+  {% for p in a.about.paragraphs %}
     {% include bi.html en=p.en zh=p.zh %}
   {% endfor %}
 </section>
 
 <!-- ======================= RESEARCH PHILOSOPHY ======================= -->
-<span class='anchor' id='philosophy'></span>
 <section class="section philosophy">
   <h2 class="section__title"><span class="i18n" data-lang-block="en">Research Philosophy</span><span class="i18n" data-lang-block="zh">研究理念</span></h2>
   <p class="section__lede">
@@ -69,7 +66,7 @@ redirect_from:
     <span class="i18n" data-lang-block="zh">实证金融与货币理论相结合：从资产负债表机制到因果推断、可复现与 AI 增强的科研。</span>
   </p>
   <div class="philosophy__grid">
-    {% for card in h.philosophy.cards %}
+    {% for card in a.philosophy.cards %}
     <div class="philosophy__card">
       <h3>
         <span class="i18n" data-lang-block="en">{{ card.title_en }}</span>
@@ -81,22 +78,21 @@ redirect_from:
   </div>
   <blockquote class="philosophy__quote">
     <div class="i18n" data-lang-block="zh">
-      <p>{{ h.philosophy.quote.zh_text }}</p>
-      <cite>{{ h.philosophy.quote.zh_source }}</cite>
+      <p>{{ a.philosophy.quote.zh_text }}</p>
+      <cite>{{ a.philosophy.quote.zh_source }}</cite>
     </div>
     <div class="i18n" data-lang-block="en">
-      <p>{{ h.philosophy.quote.en_text }}</p>
-      <cite>{{ h.philosophy.quote.en_source }}</cite>
+      <p>{{ a.philosophy.quote.en_text }}</p>
+      <cite>{{ a.philosophy.quote.en_source }}</cite>
     </div>
   </blockquote>
 </section>
 
 <!-- ============================== NEWS ============================== -->
-<span class='anchor' id='news'></span>
 <section class="section">
   <h2 class="section__title"><span class="i18n" data-lang-block="en">News</span><span class="i18n" data-lang-block="zh">最新动态</span></h2>
   <ul class="news-list">
-    {% for item in h.news %}
+    {% for item in a.news %}
     <li class="news-list__item">
       <span class="news-list__date">{{ item.date }}</span>
       <div class="news-list__body">{% include bi.html en=item.en zh=item.zh %}</div>
@@ -105,85 +101,11 @@ redirect_from:
   </ul>
 </section>
 
-<!-- ========================== PUBLICATIONS ========================== -->
-<span class='anchor' id='publications'></span>
-<section class="section">
-  <h2 class="section__title"><span class="i18n" data-lang-block="en">Publications</span><span class="i18n" data-lang-block="zh">学术发表</span></h2>
-
-  <div class='paper-box'>
-    <div class='paper-box-text'>
-      <p class="paper-box-text__badge">
-        <span class="badge"><span class="i18n" data-lang-block="en">{{ h.publications.featured.badge_en }}</span><span class="i18n" data-lang-block="zh">{{ h.publications.featured.badge_zh }}</span></span>
-      </p>
-      <p class="paper-box-text__title">
-        <span class="i18n" data-lang-block="en"><strong>{{ h.publications.featured.title }}</strong></span>
-        <span class="i18n" data-lang-block="zh"><strong>{{ h.publications.featured.title_zh }}</strong></span>
-      </p>
-      <p>{{ h.publications.featured.authors | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</p>
-      <p class="paper-box-text__venue">
-        <span class="i18n" data-lang-block="en">{{ h.publications.featured.venue_en | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span>
-        <span class="i18n" data-lang-block="zh">{{ h.publications.featured.venue_zh | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span>
-      </p>
-      <ul>
-        {% for pt in h.publications.featured.points %}
-        <li><span class="i18n" data-lang-block="en">{{ pt.en | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span><span class="i18n" data-lang-block="zh">{{ pt.zh | markdownify | strip_newlines | remove: '<p>' | remove: '</p>' }}</span></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-
-  <ul class="pub-list">
-    {% for pub in h.publications.list %}
-    <li>{% include bi.html en=pub.en zh=pub.zh %}</li>
-    {% endfor %}
-  </ul>
-</section>
-
-<!-- ============================= PATENTS ============================ -->
-<span class='anchor' id='patents'></span>
-<section class="section">
-  <h2 class="section__title"><span class="i18n" data-lang-block="en">Patents</span><span class="i18n" data-lang-block="zh">专利</span></h2>
-  <ul class="pub-list">
-    {% for p in h.patents %}
-    <li>{% include bi.html en=p.en zh=p.zh %}</li>
-    {% endfor %}
-  </ul>
-</section>
-
-<!-- ======================= RESEARCH EXPERIENCE ======================= -->
-<span class='anchor' id='research'></span>
-<section class="section">
-  <h2 class="section__title"><span class="i18n" data-lang-block="en">Research Experience</span><span class="i18n" data-lang-block="zh">科研经历</span></h2>
-  <div class="research">
-    <div class="research__head">
-      <div>
-        <strong>
-          <span class="i18n" data-lang-block="en">{{ h.research.title_en }}</span>
-          <span class="i18n" data-lang-block="zh">{{ h.research.title_zh }}</span>
-        </strong>
-        <em>
-          — <span class="i18n" data-lang-block="en">{{ h.research.role_en }}</span><span class="i18n" data-lang-block="zh">{{ h.research.role_zh }}</span>
-        </em>
-      </div>
-      <span class="research__period">
-        <span class="i18n" data-lang-block="en">{{ h.research.period }}</span>
-        <span class="i18n" data-lang-block="zh">{{ h.research.period_zh }}</span>
-      </span>
-    </div>
-    <ul>
-      {% for pt in h.research.points %}
-      <li>{% include bi.html en=pt.en zh=pt.zh %}</li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
 <!-- ============================ EDUCATION =========================== -->
-<span class='anchor' id='education'></span>
 <section class="section">
   <h2 class="section__title"><span class="i18n" data-lang-block="en">Education</span><span class="i18n" data-lang-block="zh">教育经历</span></h2>
   <ul class="edu-list">
-    {% for e in h.education %}
+    {% for e in a.education %}
     <li class="edu-list__item">
       <span class="edu-list__period">
         <span class="i18n" data-lang-block="en">{{ e.period }}</span>
@@ -195,46 +117,10 @@ redirect_from:
   </ul>
 </section>
 
-<!-- ============================= SKILLS ============================= -->
-<span class='anchor' id='skills'></span>
-<section class="section">
-  <h2 class="section__title"><span class="i18n" data-lang-block="en">Skills &amp; Methods</span><span class="i18n" data-lang-block="zh">技能与方法</span></h2>
-  <div class="skills-grid">
-    {% for g in h.skills.groups %}
-    <div class="skills-card">
-      <h3>
-        <span class="i18n" data-lang-block="en">{{ g.name_en }}</span>
-        <span class="i18n" data-lang-block="zh">{{ g.name_zh }}</span>
-      </h3>
-      <ul>
-        {% for it in g.items %}
-        <li>{% include bi.html en=it.en zh=it.zh %}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- ========================= CERTIFICATIONS ========================= -->
-<span class='anchor' id='certifications'></span>
-<section class="section">
-  <h2 class="section__title"><span class="i18n" data-lang-block="en">Certifications</span><span class="i18n" data-lang-block="zh">证书</span></h2>
-  <ul class="edu-list">
-    {% for c in h.certifications %}
-    <li class="edu-list__item">
-      <span class="edu-list__period">{{ c.period }}</span>
-      <div>{% include bi.html en=c.en zh=c.zh %}</div>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-
 <!-- ============================= HOBBIES ============================ -->
-<span class='anchor' id='hobbies'></span>
 <section class="section">
   <h2 class="section__title"><span class="i18n" data-lang-block="en">Hobbies</span><span class="i18n" data-lang-block="zh">兴趣爱好</span></h2>
-  {% for hb in h.hobbies %}
+  {% for hb in a.hobbies %}
   <div class="hobby">
     <strong>
       <span class="i18n" data-lang-block="en">{{ hb.name_en }}</span>
@@ -246,8 +132,7 @@ redirect_from:
 </section>
 
 <!-- =========================== REFERENCES =========================== -->
-<span class='anchor' id='references'></span>
 <section class="section">
   <h2 class="section__title"><span class="i18n" data-lang-block="en">References</span><span class="i18n" data-lang-block="zh">推荐人</span></h2>
-  {% include bi.html en=h.references.en zh=h.references.zh %}
+  {% include bi.html en=a.references.en zh=a.references.zh %}
 </section>

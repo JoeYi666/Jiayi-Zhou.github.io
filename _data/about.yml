@@ -1,0 +1,173 @@
+# ============================================================================
+# About 页面内容 —— 中英双语单一数据源
+# 说明：本文件从原 _data/home.yml 拆分而来，仅供 About 页面使用。
+# ============================================================================
+
+hero:
+  name_en: "Jiayi Zhou"
+  name_zh: "周家屹"
+  subtitle_en: "Ph.D. Candidate · UCAS / CASISD · Beijing"
+  subtitle_zh: "博士研究生 · 中国科学院大学 / 中科院科技战略咨询研究院 · 北京"
+  tagline_en: "Decoding the physics of money — stablecoins, systemic risk, and the energy basis of value."
+  tagline_zh: "以第一性原理探究货币的物理本质 —— 稳定币、系统性风险与价值的能量基础。"
+  keywords:
+    - en: "Stablecoin Economics"
+      zh: "稳定币经济学"
+    - en: "DeFi & Systemic Risk"
+      zh: "DeFi 与系统性风险"
+    - en: "Biophysical Economics"
+      zh: "生物物理经济学"
+    - en: "ML & Causal Inference"
+      zh: "机器学习与因果推断"
+
+about:
+  paragraphs:
+    - en: >-
+        I am a Ph.D. candidate at the Institutes of Science and Development,
+        Chinese Academy of Sciences (CASISD), affiliated with the School of
+        Public Policy and Management, University of Chinese Academy of Sciences
+        (UCAS). My supervisor is Prof. Jian-Feng Guo.
+      zh: >-
+        我是中国科学院科技战略咨询研究院（CASISD）的博士研究生，
+        就读于中国科学院大学公共政策与管理学院，导师为郭剑锋研究员。
+    - en: >-
+        My research focuses on **crypto finance and stablecoin economics**,
+        spanning decentralized finance (DeFi), systemic risk and financial
+        stability, international financial markets, and machine learning /
+        causal inference in finance. My doctoral dissertation examines the
+        impact of USD stablecoins on international financial markets through
+        a multi-method empirical framework.
+      zh: >-
+        我的研究聚焦**加密金融与稳定币经济学**，涵盖去中心化金融（DeFi）、
+        系统性风险与金融稳定、国际金融市场，以及金融中的机器学习与因果推断。
+        我的博士论文通过多方法实证框架，系统考察美元稳定币对国际金融市场的影响。
+    - en: >-
+        A Bitcoiner at heart, I stay active in the Chinese-speaking crypto
+        community and keep close track of Bitcoin and the broader digital-asset
+        ecosystem.
+      zh: >-
+        我是一名 Bitcoiner，积极参与华语加密社区，持续关注比特币及更广泛的
+        数字资产生态。
+
+philosophy:
+  cards:
+    - title_en: "ISFC & the Money View"
+      title_zh: "ISFC 与货币视角"
+      en: >-
+        I ground stablecoin research in Incremental-Stock-Flow-Consistent
+        (ISFC) modeling and Perry Mehrling's Money View. Treating issuers,
+        commercial banks, and shadow banks as nodes on a common balance-sheet
+        network lets me trace how digital dollars are created, circulated, and
+        destroyed — money as a social ledger of intertemporal obligations.
+      zh: >-
+        我将稳定币研究建立在增量—存量—流量一致（ISFC）框架与 Perry
+        Mehrling 的货币视角（Money View）之上。把发行方、商业银行与影子银行
+        视为同一张资产负债表网络上的节点，可以追踪数字美元如何被创造、流转与
+        销毁——货币即跨期债务的社会记账。
+
+    - title_en: "Causal Inference & Reproducibility"
+      title_zh: "因果推断与可复现性"
+      en: >-
+        Causal identification comes before prediction. I combine
+        difference-in-differences, instrumental variables, regression
+        discontinuity, synthetic control, and double-machine-learning methods to
+        isolate mechanisms. Every project ships with a variable dictionary,
+        sample restrictions, robustness checks, and a replication package.
+      zh: >-
+        因果识别优先于预测。我综合运用双重差分、工具变量、断点回归、合成控制
+        与双重机器学习等方法来隔离机制。每个项目都附带变量字典、样本限制、
+        稳健性检验与复现包。
+
+    - title_en: "First Principles"
+      title_zh: "第一性原理"
+      en: >-
+        I reason from first principles: money is a ledger for intertemporal
+        energy allocation; a balance sheet encodes a node's social relations;
+        systemic risk is the fragility of the network structure that emerges
+        when those relations tighten.
+      zh: >-
+        我从第一性原理出发：货币是跨期能量配置的记账杠杆；资产负债表编码了
+        节点的社会关系；系统性风险则源于这些关系过度收紧后网络结构的脆弱性。
+
+    - title_en: "AI-Augmented Research"
+      title_zh: "AI 增强科研"
+      en: >-
+        Large language models and AI coding tools are infrastructure for
+        research automation — literature review, data cleaning, code
+        generation, and causal-inference workflows. Human judgment and
+        auditable logs remain the final checkpoint.
+      zh: >-
+        大语言模型与 AI 编程工具是科研自动化的基础设施，服务于文献梳理、
+        数据清洗、代码生成与因果推断工作流。人工判断与可审计日志始终是最终
+        把关节点。
+
+  quote:
+    zh_text: "科学，就是相信专家也会无知。"
+    zh_source: "理查德·费曼"
+    en_text: "Science is the belief in the ignorance of experts."
+    en_source: "Richard Feynman"
+
+news:
+  - date: "2026.01"
+    en: >-
+      🎉🎉 U.S. Patent Application No. 19/346,554 filed — "Industry
+      Development State Assessment Device and Apparatus Based on Dissipative
+      Structural Model".
+    zh: >-
+      🎉🎉 美国专利申请 No. 19/346,554 已提交——
+      "基于耗散结构模型的产业发展状态评估装置与设备"。
+  - date: "2025.02"
+    en: >-
+      🎉 Paper published in *Big Data and Cognitive Computing* — "Ranking
+      Influential Non-Content Factors on Scientific Papers' Citation
+      Impact".
+    zh: >-
+      🎉 论文发表于 *Big Data and Cognitive Computing*——
+      "科学论文引用影响力的非内容因素排名研究"。
+
+education:
+  - period: "2023.09 – Present"
+    period_zh: "2023.09 至今"
+    en: >-
+      **Ph.D. Candidate** in Public Policy and Management, University of
+      Chinese Academy of Sciences / Institutes of Science and Development,
+      CAS. Advisor: Prof. Jian-Feng Guo. Dissertation: *The Impact of USD
+      Stablecoins on International Financial Markets: Research and Empirical
+      Analysis*.
+    zh: >-
+      **博士研究生**，公共政策与管理专业，中国科学院大学 /
+      中国科学院科技战略咨询研究院。导师：郭剑锋研究员。学位论文：
+      《美元稳定币对国际金融市场的影响：研究与实证分析》。
+  - period: "2019.09 – 2023.06"
+    period_zh: "2019.09 – 2023.06"
+    en: >-
+      **Bachelor of Management**, School of Economics and Management, China
+      University of Petroleum, Beijing.
+    zh: >-
+      **管理学学士**，中国石油大学（北京）经济管理学院。
+
+hobbies:
+  - name_en: "Swimming"
+    name_zh: "游泳"
+    en: "Proficient in all four competitive strokes: Freestyle, Breaststroke, Backstroke, and Butterfly."
+    zh: "熟练掌握全部四种竞技泳姿：自由泳、蛙泳、仰泳与蝶泳。"
+  - name_en: "Movies"
+    name_zh: "电影"
+    en: "Avid cinephile with 1,000+ films watched; passionate about cinematic art and storytelling."
+    zh: "资深影迷，观影量逾 1,000 部；热爱电影艺术与叙事美学。"
+  - name_en: "GIS & Satellite Imagery"
+    name_zh: "GIS 与卫星影像"
+    en: "GIS enthusiast who enjoys exploring the world through satellite imagery and spatial data."
+    zh: "GIS 爱好者，喜欢通过卫星影像与空间数据观察世界。"
+  - name_en: "Reading & History"
+    name_zh: "阅读与历史"
+    en: "Avid reader with a focus on history, especially the history of the Chinese Communist Party and ancient Chinese history."
+    zh: "热爱阅读，尤好历史；熟悉中国共产党党史与中国古代历史。"
+  - name_en: "Chinese Political Economy"
+    name_zh: "中国政治经济研究"
+    en: "Building a Neo4j graph database of Chinese party-state institutions, mapping bureaus, public institutions, SOEs, universities, and hospitals under the Party, military, State Council, NPC, and CPPCC systems, along with their functions, relationships, and power structures."
+    zh: "使用 Neo4j 构建中国党政军学民机构数据库，系统整理党中央、中央军委、国务院、人大、政协等系统下属司局及事业单位，以及央企、高校、医院等组织的职能、关系与权力结构。"
+
+references:
+  en: "Available upon request."
+  zh: "推荐人信息可应要求提供。"

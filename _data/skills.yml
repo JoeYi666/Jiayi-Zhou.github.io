@@ -1,0 +1,88 @@
+# ============================================================================
+# Skills 页面内容 —— 中英双语单一数据源
+# ============================================================================
+
+intro:
+  en: "Methods, tools, and platforms I use in empirical research, from data engineering to causal inference."
+  zh: "实证研究中使用的方法、工具与平台，涵盖数据工程到因果推断。"
+
+groups:
+  - name_en: "Programming & Data Engineering"
+    name_zh: "编程与数据工程"
+    items:
+      - en: "**Python** (proficient): data processing, econometric modeling, ML/DL; reusable empirical-research project templates organizing data, code, tables, figures, logs, and docs"
+        zh: "**Python**（熟练）：数据处理、计量建模、机器学习与深度学习；可复用的实证研究项目模板，一体化组织数据、代码、表格、图形、日志与文档"
+      - en: "**Neo4j & Cypher**: graph databases for value-flow / cross-border payment network modeling"
+        zh: "**Neo4j 与 Cypher**：面向价值流网络与跨境支付网络建模的图数据库"
+      - en: "**Dune SQL**: on-chain data queries and analytics dashboards"
+        zh: "**Dune SQL**：链上数据查询与分析仪表盘"
+      - en: "**Git & GitHub**: version control and reproducible research pipelines"
+        zh: "**Git 与 GitHub**：版本控制与可复现研究流水线"
+      - en: "**HTML/CSS/JS**: academic web presence (this site is hand-built)"
+        zh: "**HTML/CSS/JS**：学术个人主页开发（本站即为手工搭建）"
+      - en: "**LaTeX**, Microsoft Office"
+        zh: "**LaTeX**、Microsoft Office"
+
+  - name_en: "Data Platforms & MCP"
+    name_zh: "数据平台与 MCP"
+    items:
+      - en: "**MCP (Model Context Protocol)**: building and integrating MCP tools to fetch economic & financial data for AI-assisted research workflows"
+        zh: "**MCP（模型上下文协议）**：开发并集成 MCP 工具获取经济金融数据，服务 AI 辅助的科研工作流"
+      - en: "**Bloomberg Terminal** (BMC certified), **Glassnode** (on-chain analytics), **DeFiLlama** (DeFi metrics), **TradingView** (market data)"
+        zh: "**Bloomberg 终端**（BMC 认证）、**Glassnode**（链上分析）、**DeFiLlama**（DeFi 指标）、**TradingView**（市场数据）"
+
+  - name_en: "System Dynamics & Simulation"
+    name_zh: "系统动力学与仿真"
+    items:
+      - en: "**System Dynamics**: **Vensim** and **PySD** for stock-flow modeling of monetary-energy-economic systems"
+        zh: "**系统动力学**：基于 **Vensim** 与 **PySD** 的货币—能源—经济系统存量流量建模"
+      - en: "Dissipative-structure modeling of industrial development (basis of my U.S. patent application)"
+        zh: "产业发展状态的耗散结构建模（美国专利申请的理论基础）"
+      - en: "Agent-based thinking: decomposing natural-language research tasks into agent-executable plans with auditable files, logs, and results"
+        zh: "智能体思维：将自然语言研究任务拆解为 Agent 可执行计划，并要求留下可审计的文件、日志与结果"
+
+  - name_en: "Machine Learning & Deep Learning"
+    name_zh: "机器学习与深度学习"
+    items:
+      - en: "**Full ML pipeline**: problem definition, feature engineering, train/validation/test splits, evaluation metrics, overfitting diagnostics, model interpretation"
+        zh: "**机器学习全流程**：问题定义、特征构造、训练/验证/测试切分、评价指标、过拟合诊断与模型解释"
+      - en: "**Architectures**: MLP, CNN, RNN, LSTM, GRU, seq2seq, Attention, Transformer — understood at the structural level, not by name"
+        zh: "**模型架构**：MLP、CNN、RNN、LSTM、GRU、seq2seq、注意力机制、Transformer——理解其核心结构，而非仅记名称"
+      - en: "**Applied models**: Random Forest, XGBoost, SHAP, BERTopic"
+        zh: "**应用模型**：随机森林、XGBoost、SHAP、BERTopic"
+      - en: "**LLM in research workflows**: pretraining, instruction tuning, alignment, RAG, function calling, MCP and tool use"
+        zh: "**科研工作流中的大语言模型**：预训练、指令微调、对齐、RAG、函数调用、MCP 与工具调用"
+
+  - name_en: "Causal Inference & Econometrics"
+    name_zh: "因果推断与计量经济学"
+    items:
+      - en: "**Identification**: RCT, DiD, PSM, IV, RD, Synthetic Control, **Double Machine Learning (DML)**, Causal Forests — knowing when each design applies, and distinguishing prediction from causal tasks"
+        zh: "**因果识别**：RCT、DiD、PSM、IV、RD、合成控制、**双重机器学习（DML）**、因果森林——掌握各自适用场景，区分预测任务与因果识别任务"
+      - en: "**Time series & spillovers**: LP-IV, SVAR-IV, TVP-VAR, Diebold-Yilmaz Spillover Index, VECM, CoVaR/MES, Panel Threshold (Hansen 1999), Event Studies"
+        zh: "**时间序列与溢出分析**：LP-IV、SVAR-IV、TVP-VAR、Diebold-Yilmaz 溢出指数、VECM、CoVaR/MES、面板门槛模型（Hansen 1999）、事件研究"
+      - en: "**Network analysis**: complex networks, PageRank, Louvain community detection, cascade failure simulation"
+        zh: "**网络分析**：复杂网络建模、PageRank、Louvain 社区发现、级联失效仿真"
+
+  - name_en: "AI-Augmented Research"
+    name_zh: "AI 增强科研"
+    items:
+      - en: "**AI-assisted development**: Claude Code, GitHub Copilot — LLM-driven coding workflows for research automation"
+        zh: "**AI 辅助开发**：Claude Code、GitHub Copilot——以 LLM 驱动的编程工作流实现科研自动化"
+      - en: "**Publication-grade habits**: variable dictionaries, sample restrictions, robustness checks, result interpretation, replication packages, and human review checkpoints"
+        zh: "**发表级研究习惯**：变量字典、样本限制、稳健性检验、结果解释、复现包与人工审阅节点"
+
+  - name_en: "Languages"
+    name_zh: "语言"
+    items:
+      - en: "**Chinese**: Native"
+        zh: "**中文**：母语"
+      - en: "**English**: TOEFL — proficient in academic reading, writing, and communication"
+        zh: "**英语**：TOEFL——熟练的学术阅读、写作与交流能力"
+
+certifications:
+  title_en: "Certifications"
+  title_zh: "证书"
+  items:
+    - period: "2023.05"
+      en: "**Bloomberg Market Concepts (BMC)** — Bloomberg"
+      zh: "**彭博市场概念证书（Bloomberg Market Concepts, BMC）** — Bloomberg"

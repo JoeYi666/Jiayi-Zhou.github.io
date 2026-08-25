@@ -1,0 +1,97 @@
+# ============================================================================
+# Research 页面内容 —— 中英双语单一数据源
+# ============================================================================
+
+intro:
+  en: "My doctoral research situates USD stablecoins in the international monetary system and studies their balance-sheet, price, and network effects on financial markets."
+  zh: "我的博士研究将美元稳定币置于国际货币体系中，系统考察其对金融市场的资产负债表、价格与网络效应。"
+
+projects:
+  - id: dissertation
+    title_en: "Doctoral Dissertation: The Impact of USD Stablecoins on International Financial Markets"
+    title_zh: "博士论文：美元稳定币对国际金融市场的影响"
+    role_en: "Independent Researcher"
+    role_zh: "独立研究者"
+    period: "Sep. 2023 – Present"
+    period_zh: "2023 年 9 月至今"
+    points:
+      - en: >-
+          Constructed the **Incremental-Stock-Flow-Consistent (ISFC)**
+          analytical framework to model stablecoin issuers' balance sheets,
+          revealing their accounting isomorphism with commercial banks
+          alongside institutional heterogeneity.
+        zh: >-
+          构建**增量—存量—流量一致（ISFC）**分析框架，刻画稳定币发行方的
+          资产负债表，揭示其与商业银行在记账逻辑上的同构性及制度异质性。
+      - en: >-
+          Applied **Random Forest, XGBoost, and SHAP** to identify key drivers
+          of stablecoin issuance across macro, crypto-market, regulatory, and
+          network-effect dimensions; developed **LSTM/GRU and Transformer**
+          models for multi-scenario supply forecasting.
+        zh: >-
+          运用**随机森林、XGBoost 与 SHAP**，从宏观、加密市场、监管与网络效应
+          等维度识别稳定币发行的关键驱动因素；构建 **LSTM/GRU 与 Transformer**
+          模型进行多情景供给预测。
+      - en: >-
+          Employed **LP-IV with Elastic Net residual instruments** to identify
+          causal effects of stablecoin reserve allocation on U.S. Treasury
+          yields and commercial paper spreads; integrated **Diebold-Yilmaz
+          spillover indices** and **TVP-VAR** to quantify time-varying
+          volatility transmission to bond markets.
+        zh: >-
+          采用**基于弹性网络残差工具变量的局部投影法（LP-IV）**，识别稳定币
+          储备资产配置对美国国债收益率与商业票据利差的因果效应；结合
+          **Diebold-Yilmaz 溢出指数**与 **TVP-VAR** 模型，量化对债券市场的
+          时变波动传染。
+      - en: >-
+          Designed **Difference-in-Differences (DiD), triple-difference, and
+          synthetic control** strategies with **IV-2SLS** (on-chain activity
+          and regulatory events as instruments) to estimate stablecoins'
+          impact on interbank lending, money market funds, and monetary
+          policy rate pass-through.
+        zh: >-
+          设计**双重差分（DiD）、三重差分与合成控制**策略，辅以 **IV-2SLS**
+          （以链上活跃度与监管事件为工具变量），估计稳定币对银行间拆借、
+          货币市场基金与货币政策利率传导的影响。
+      - en: >-
+          Built **cross-border stablecoin flow networks** using on-chain data;
+          applied **PageRank, Louvain community detection, and cascade failure
+          simulations** to analyze digital dollarization dynamics and foreign
+          exchange volatility spillovers.
+        zh: >-
+          基于链上数据构建**稳定币跨境流动网络**；运用 **PageRank、Louvain
+          社区发现与级联失效仿真**，分析数字美元化动态与汇率波动溢出。
+      - en: >-
+          Applied **Hansen (1999) panel threshold models** to test currency
+          substitution effects across emerging and advanced economies;
+          employed **RDD** for regulatory threshold identification and
+          **event studies** on SVB-USDC depeg and GENIUS/CLARITY Act shocks.
+        zh: >-
+          运用 **Hansen (1999) 面板门槛模型**检验新兴与发达经济体的货币替代
+          效应；采用**断点回归（RDD）**识别监管门槛效应，并针对 SVB-USDC
+          脱锚与 GENIUS/CLARITY 法案冲击开展**事件研究**。
+      - en: >-
+          Data sources: **Glassnode, DeFiLlama, TradingView**; empirical workflow
+          built on **Python** and the [StatsPAI](https://github.com/brycewang-stanford/StatsPAI)
+          library; follow the [empirical paper workflow](https://github.com/brycewang-stanford/Paper-WorkFlow)
+          for reproducible research.
+        zh: >-
+          数据来源：**Glassnode、DeFiLlama、TradingView**；实证工作流基于 **Python**
+          与 [StatsPAI](https://github.com/brycewang-stanford/StatsPAI) 库构建，
+          并遵循 [实证论文写作工作流](https://github.com/brycewang-stanford/Paper-WorkFlow)
+          以保证研究可复现。
+
+interests:
+  title_en: "Research Interests"
+  title_zh: "研究方向"
+  items:
+    - en: "Crypto finance & stablecoin economics"
+      zh: "加密金融与稳定币经济学"
+    - en: "Decentralized finance (DeFi) and systemic risk"
+      zh: "去中心化金融（DeFi）与系统性风险"
+    - en: "International financial markets and digital dollarization"
+      zh: "国际金融市场与数字美元化"
+    - en: "Machine learning and causal inference in finance"
+      zh: "金融机器学习与因果推断"
+    - en: "Biophysical economics and the energy basis of value"
+      zh: "生物物理经济学与价值的能量基础"
