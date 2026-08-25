@@ -17,18 +17,14 @@
   (function () {
     try {
       var stored = localStorage.getItem('site-theme');
-      var mode = (stored === 'light' || stored === 'dark' || stored === 'system') ? stored : 'system';
-      var effective = mode;
-      if (mode === 'system') {
-        effective = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
+      var mode = stored === 'dark' ? 'dark' : 'light';
       var root = document.documentElement;
       root.classList.remove('light', 'dark');
-      root.classList.add(effective);
+      root.classList.add(mode);
       root.setAttribute('data-theme', mode);
     } catch (e) {
       document.documentElement.classList.add('light');
-      document.documentElement.setAttribute('data-theme', 'system');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   })();
 </script>

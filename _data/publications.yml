@@ -1,15 +1,657 @@
 # ============================================================================
-# Publications 页面内容 —— 中英双语单一数据源
+# Research Outputs 页面内容 —— 中英双语单一数据源
 # ============================================================================
 
 intro:
-  en: "Peer-reviewed publications and ongoing work. Click on a paper to view its abstract and BibTeX entry."
-  zh: "同行评审论文与在研工作。点击论文可查看摘要与 BibTeX 条目。"
+  en: "Peer-reviewed publications, working papers, and patent applications. All empirical work is developed as open, reproducible research and will be accompanied by GitHub repositories."
+  zh: "同行评审论文、工作论文与专利申请。所有实证工作均按开放、可复现的研究模式开发，并将配套 GitHub 仓库。"
 
-published:
+section_titles:
+  working_papers:
+    en: "Working Papers"
+    zh: "工作论文"
+  peer_reviewed:
+    en: "Peer-reviewed Publications"
+    zh: "已发表论文"
+  patents:
+    en: "Patents"
+    zh: "专利"
+
+# ----------------------------------------------------------------------------
+# Working Papers（按博士论文章节顺序排列）
+# ----------------------------------------------------------------------------
+working_papers:
+  - id: ssrn-7225798
+    chapter: "Chapter 1"
+    chapter_zh: "第1章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research"
+    title_zh: "加密金融风险研究的系统文献计量与主题建模综述"
+    authors: "**Jiayi Zhou**, Jingjing Li, Binbin Xu, Yanran Ma, & Jianfeng Guo"
+    authors_zh: "**周家屹**，李晶晶，徐彬彬，马嫣然，郭剑锋"
+    venue_en: "SSRN Working Paper, January 31, 2026."
+    venue_zh: "SSRN 工作论文，2026 年 1 月 31 日。"
+    description_en: >-
+      This is the bibliometric backbone of the dissertation. We systematically
+      review 891 crypto financial risk papers and 1,980 hand-collected risk
+      events (2012–2025) using BERTopic and citation-network analysis. The
+      paper builds an integrated risk-research framework spanning risk sources,
+      measurement, contagion, hedging, and governance, and bridges the gap
+      between the literature and empirical reality.
+    description_zh: >-
+      本文是博士论文的文献计量基础。我们使用 BERTopic 与引文网络分析，系统
+      回顾 891 篇加密金融风险文献与 1,980 起手工整理的风险事件（2012—2025），
+      构建覆盖风险来源、测度、传染、对冲与治理的综合研究框架，弥合文献空白
+      与经验现实之间的差距。
+    abstract_en: >-
+      This study conducts a systematic bibliometric review of crypto financial
+      risk research, mapping its intellectual structure, keyword evolution, and
+      emerging research fronts. Using a modular BERTopic pipeline, we identify
+      core themes spanning risk identification, measurement, transmission,
+      hedging, and governance. We further link topic clusters to a hand-collected
+      database of 1,980 crypto risk events from 2012 to 2025, bridging the gap
+      between the literature and empirical reality and proposing an end-to-end
+      risk research framework.
+    abstract_zh: >-
+      本研究对加密金融风险研究进行系统文献计量综述，刻画其知识结构、关键词
+      演进与新兴研究前沿。通过模块化 BERTopic 流程，我们识别覆盖风险识别、
+      度量、传染、对冲与治理的核心主题，并将主题聚类与 2012—2025 年手工整理
+      的 1,980 起加密风险事件数据库相联系，提出端到端的风险研究框架。
+    doi: "10.2139/ssrn.7225798"
+    pdf: ""
+    github: ""
+    bibtex: |
+      @article{zhou2026crypto,
+        title={A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research},
+        author={Zhou, Jiayi and Li, Jingjing and Xu, Binbin and Ma, Yanran and Guo, Jianfeng},
+        journal={SSRN Working Paper},
+        year={2026},
+        doi={10.2139/ssrn.7225798}
+      }
+
+  - id: isfc-framework
+    chapter: "Chapter 2"
+    chapter_zh: "第2章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "ISFC: An Incremental Stock-Flow-Consistent Framework for Stablecoin Balance Sheets"
+    title_zh: "ISFC：面向稳定币资产负债表的增量存量流量一致框架"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Develops the Incremental Stock-Flow-Consistent (ISFC) framework that
+      models stablecoin issuers' balance sheets as dynamic, incremental systems.
+      The framework clarifies the accounting isomorphism between stablecoin
+      platforms and commercial banks while accommodating institutional
+      heterogeneity, laying the theoretical foundation for the empirical
+      chapters that follow.
+    description_zh: >-
+      构建增量存量流量一致（ISFC）框架，将稳定币发行方资产负债表建模为动态
+      增量系统。该框架在兼容机构异质性的前提下，阐明稳定币平台与商业银行的
+      会计同构性，为后续实证章节奠定理论基础。
+    abstract_en: >-
+      This paper develops an Incremental Stock-Flow-Consistent (ISFC) framework
+      for analyzing stablecoin issuers' balance sheets. By treating stablecoin
+      issuance, reserve flows, and redemptions as incremental stock-flow
+      operations, the model reveals the accounting isomorphism between
+      stablecoin platforms and fractional-reserve commercial banks. The
+      framework accommodates heterogeneous reserve practices and provides a
+      consistent accounting language for measuring price, network, and
+      balance-sheet effects in subsequent empirical work.
+    abstract_zh: >-
+      本文构建面向稳定币发行方资产负债表的增量存量流量一致（ISFC）框架。
+      通过将稳定币发行、储备流动与赎回视为增量存量流量操作，模型揭示稳定币
+      平台与部分准备金商业银行之间的会计同构性。该框架兼容异质性储备实践，
+      为后续实证工作衡量价格、网络与资产负债表效应提供一致的会计语言。
+    doi: ""
+    pdf: ""
+    github: ""
+    bibtex: |
+      @article{zhou2026isfc,
+        title={ISFC: An Incremental Stock-Flow-Consistent Framework for Stablecoin Balance Sheets},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch3-1
+    chapter: "Chapter 3"
+    chapter_zh: "第3章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 3] Stablecoin Issuance Determinants — Empirical Manuscript 1"
+    title_zh: "【第3章】稳定币发行决定因素——实证手稿 1"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Empirical analysis of the drivers of stablecoin issuance across macro,
+      crypto-market, regulatory, and network-effect dimensions. This paper
+      applies Random Forest, XGBoost, and SHAP to identify the key predictors
+      of issuance volume and their nonlinear interactions.
+    description_zh: >-
+      从宏观、加密市场、监管与网络效应多维度实证分析稳定币发行的驱动因素。
+      应用随机森林、XGBoost 与 SHAP 方法识别发行规模的关键预测变量及其非线性
+      交互作用。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/3m1.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch3m1,
+        title={Stablecoin Issuance Determinants: Empirical Manuscript 1},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch3-2
+    chapter: "Chapter 3"
+    chapter_zh: "第3章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 3] Stablecoin Issuance Determinants — Empirical Manuscript 2"
+    title_zh: "【第3章】稳定币发行决定因素——实证手稿 2"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Complementary empirical manuscript exploring the time-varying and
+      supply-forecasting dimensions of stablecoin issuance. Employs LSTM/GRU
+      and Transformer architectures for multi-scenario supply forecasting and
+      robustness checks.
+    description_zh: >-
+      补充性实证手稿，探讨稳定币发行的时间变化特征与供给预测维度。采用
+      LSTM/GRU 与 Transformer 架构进行多情景供给预测与稳健性检验。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/3m2.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch3m2,
+        title={Stablecoin Issuance Determinants: Empirical Manuscript 2},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch4-1
+    chapter: "Chapter 4"
+    chapter_zh: "第4章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 4] Stablecoin Spillover and Contagion — Empirical Manuscript 1"
+    title_zh: "【第4章】稳定币溢出与传染——实证手稿 1"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Measures time-varying volatility spillovers from stablecoin markets to
+      U.S. Treasuries, commercial paper, and broader crypto assets. Uses
+      Diebold-Yilmaz spillover indices combined with LP-IV and TVP-VAR to
+      quantify dynamic transmission channels.
+    description_zh: >-
+      测度稳定币市场对美国国债、商业票据及更广泛的加密资产的时变波动溢出。
+      结合 Diebold-Yilmaz 溢出指数、LP-IV 与 TVP-VAR 量化动态传染渠道。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/4m1.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch4m1,
+        title={Stablecoin Spillover and Contagion: Empirical Manuscript 1},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch4-2
+    chapter: "Chapter 4"
+    chapter_zh: "第4章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 4] Stablecoin Spillover and Contagion — Empirical Manuscript 2"
+    title_zh: "【第4章】稳定币溢出与传染——实证手稿 2"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Examines causal effects of stablecoin reserve allocation on traditional
+      money-market spreads. Applies local projections with elastic-net residual
+      instruments to identify reserve-allocation shocks and their transmission
+      to Treasury yields and commercial paper.
+    description_zh: >-
+      考察稳定币储备配置对传统货币市场利差的因果效应。应用带弹性网残差工具
+      变量的局部投影方法识别储备配置冲击及其向国债收益率和商业票据的传导。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/4m2.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch4m2,
+        title={Stablecoin Spillover and Contagion: Empirical Manuscript 2},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch4-3
+    chapter: "Chapter 4"
+    chapter_zh: "第4章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 4] Stablecoin Spillover and Contagion — Empirical Manuscript 3"
+    title_zh: "【第4章】稳定币溢出与传染——实证手稿 3"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Investigates the causal impact of stablecoin shocks on interbank lending,
+      money market funds, and monetary policy rate pass-through. Uses
+      Difference-in-Differences, triple-difference, and synthetic control
+      designs with IV-2SLS identification.
+    description_zh: >-
+      研究稳定币冲击对银行间借贷、货币基金与货币政策利率传导的因果影响。
+      采用双重差分、三重差分与合成控制设计，并以 IV-2SLS 进行识别。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/4m3.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch4m3,
+        title={Stablecoin Spillover and Contagion: Empirical Manuscript 3},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch4-4
+    chapter: "Chapter 4"
+    chapter_zh: "第4章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 4] Stablecoin Spillover and Contagion — Empirical Manuscript 4"
+    title_zh: "【第4章】稳定币溢出与传染——实证手稿 4"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Builds cross-border stablecoin flow networks from on-chain data and
+      applies PageRank, Louvain community detection, and cascade failure
+      simulations to analyze digital dollarization dynamics and foreign-exchange
+      volatility spillovers.
+    description_zh: >-
+      基于链上数据构建跨境稳定币流动网络，应用 PageRank、Louvain 社区发现与
+      级联失效仿真分析数字美元化动态与外汇波动溢出。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/4m4.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch4m4,
+        title={Stablecoin Spillover and Contagion: Empirical Manuscript 4},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch5-1
+    chapter: "Chapter 5"
+    chapter_zh: "第5章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 5] Stablecoin Hedging and Safe-Haven Properties — Empirical Manuscript 1"
+    title_zh: "【第5章】稳定币对冲与安全港属性——实证手稿 1"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Evaluates stablecoins as hedging instruments against crypto-market and
+      traditional financial stress. Applies quantile regression and dynamic
+      conditional correlation models to compare hedging effectiveness across
+      major stablecoin designs.
+    description_zh: >-
+      评估稳定币作为加密市场与传统金融压力对冲工具的有效性。应用分位数回归
+      与动态条件相关模型比较主要稳定币设计的对冲表现。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/5m1.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch5m1,
+        title={Stablecoin Hedging and Safe-Haven Properties: Empirical Manuscript 1},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch5-2
+    chapter: "Chapter 5"
+    chapter_zh: "第5章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 5] Stablecoin Hedging and Safe-Haven Properties — Empirical Manuscript 2"
+    title_zh: "【第5章】稳定币对冲与安全港属性——实证手稿 2"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Tests stablecoins' safe-haven behavior during SVB-USDC depeg and other
+      regulatory shocks. Uses event-study methods and regime-switching models
+      to identify flight-to-quality and flight-to-liquidity patterns.
+    description_zh: >-
+      检验稳定币在 SVB-USDC 脱锚及其他监管冲击期间的安全港行为。采用事件研究
+      与区制转换模型识别逃向质量与逃向流动性的模式。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/5m2.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch5m2,
+        title={Stablecoin Hedging and Safe-Haven Properties: Empirical Manuscript 2},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch6-1
+    chapter: "Chapter 6"
+    chapter_zh: "第6章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 6] Stablecoin Governance and Regulation — Empirical Manuscript 1"
+    title_zh: "【第6章】稳定币治理与监管——实证手稿 1"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Analyzes the effectiveness of stablecoin reserve audits, disclosure
+      requirements, and redemption gates as governance tools. Uses panel
+      threshold models and RDD designs to evaluate regulatory threshold effects.
+    description_zh: >-
+      分析稳定币储备审计、信息披露要求与赎回限制作为治理工具的有效性。采用
+      面板门槛模型与断点回归设计评估监管阈值效应。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/6m1.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch6m1,
+        title={Stablecoin Governance and Regulation: Empirical Manuscript 1},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch6-2
+    chapter: "Chapter 6"
+    chapter_zh: "第6章"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "[Chapter 6] Stablecoin Governance and Regulation — Empirical Manuscript 2"
+    title_zh: "【第6章】稳定币治理与监管——实证手稿 2"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      Assesses the international coordination challenges of stablecoin
+      regulation. Employs comparative case studies and network-game reasoning
+      to discuss issuer-of-last-resort, run risk, and cross-border monetary
+      policy implications.
+    description_zh: >-
+      评估稳定币监管的国际协调挑战。运用比较案例研究与网络博弈分析讨论最后
+      贷款人、挤兑风险与跨境货币政策含义。
+    abstract_en: "[To be added by the author.]"
+    abstract_zh: "【待作者补充。】"
+    doi: ""
+    pdf: "/files/papers/6m2.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2026ch6m2,
+        title={Stablecoin Governance and Regulation: Empirical Manuscript 2},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: zhou2023oilgas-wp
+    chapter: "Energy Accounting"
+    chapter_zh: "能源核算"
+    year: 2023
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "Analysis of China's Oil and Gas Imports and Exports from 2018 to 2022"
+    title_zh: "2018—2022 年中国油气进出口状况分析"
+    authors: "**Jiayi Zhou**, et al."
+    authors_zh: "**周家屹**等"
+    venue_en: "*International Petroleum Economics*, 2023. (in Chinese)"
+    venue_zh: "《国际石油经济》，2023。"
+    description_en: >-
+      Provides a detailed accounting of China's crude oil and LNG import trends,
+      external dependence, and post-pandemic import-cost dynamics. The paper
+      documents the 2020 import peak and the 2022 LNG contraction, offering
+      empirical evidence for national energy-security and import-diversification
+      strategies.
+    description_zh: >-
+      详细核算中国原油与 LNG 进口趋势、对外依存度及疫情后进口成本动态。记录
+      2020 年进口峰值与 2022 年 LNG 收缩，为国家能源安全与进口多元化策略提供
+      经验证据。
+    abstract_en: >-
+      This paper examines China's oil and gas trade between 2018 and 2022. We
+      document the continued growth of crude oil imports, the rapid expansion and
+      subsequent contraction of LNG imports, and the corresponding changes in
+      external dependence. The analysis highlights the 2020 import peak, the 2022
+      LNG decline, and the rising import costs in the post-pandemic period,
+      offering implications for energy security and import diversification
+      strategies.
+    abstract_zh: >-
+      本文考察 2018—2022 年中国油气贸易。我们记录了原油进口的持续增长、LNG
+      进口的快速扩张与随后的收缩，以及相应对外依存度的变化。分析突出 2020 年
+      进口峰值、2022 年 LNG 下降及疫情后进口成本上升，为能源安全与进口多元化
+      策略提供参考。
+    doi: ""
+    pdf: "/files/papers/zhou2023oilgas.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2023oilgas,
+        title={Analysis of China's Oil and Gas Imports and Exports from 2018 to 2022},
+        author={Zhou, Jiayi and others},
+        journal={International Petroleum Economics},
+        year={2023},
+        note={in Chinese}
+      }
+
+  - id: zhou2022carbon-wp
+    chapter: "Carbon Accounting"
+    chapter_zh: "碳核算"
+    year: 2022
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics"
+    title_zh: "基于生物物理经济学思想的碳排放权价值测算模型研究"
+    authors: "**Jiayi Zhou**, Jian-Feng Guo, et al."
+    authors_zh: "**周家屹**，郭剑锋等"
+    venue_en: "*Chinese Journal of Management Science*, 2022. (in Chinese)"
+    venue_zh: "《中国管理科学》，2022。"
+    description_en: >-
+      Builds a balance-sheet valuation model for carbon emission rights from a
+      biophysical economics perspective: domestic emissions are treated as
+      assets, global atmospheric capacity as liabilities, and domestic carbon
+      sinks as equity. The paper derives a carbon-pricing accounting identity
+      and discusses its policy implications for China's carbon market.
+    description_zh: >-
+      建立生物物理经济学视角下的碳排放权资产负债表估值模型，将本国排放视为
+      资产、全球大气容量视为负债、国内碳汇视为权益，推导碳价会计恒等式，并
+      讨论其对中国碳市场的政策含义。
+    abstract_en: >-
+      Drawing on biophysical economics, this study reframes carbon emission
+      rights as balance-sheet items. National emissions are valued as assets,
+      the globally shared atmospheric capacity as liabilities, and domestic
+      carbon sinks as equity. We derive an accounting identity that links carbon
+      price to the monetized value of environmental capacity and apply it to
+      China's national carbon market. The model offers a new accounting lens for
+      carbon pricing and emissions budgeting.
+    abstract_zh: >-
+      本文借鉴生物物理经济学思想，将碳排放权重构为资产负债表项目：本国排放
+      量作为资产，全球共有大气容量作为负债，国内碳汇作为权益。我们推导了连接
+      碳价与环境容量货币化价值的会计恒等式，并将其应用于中国全国碳市场。该
+      模型为碳定价与排放预算提供了新的会计视角。
+    doi: "10.16381/j.cnki.issn1003-207x.2021.1684"
+    pdf: "/files/papers/zhou2022carbon.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2022carbon,
+        title={A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics},
+        author={Zhou, Jiayi and Guo, Jian-Feng and others},
+        journal={Chinese Journal of Management Science},
+        year={2022},
+        publisher={Science Press},
+        doi={10.16381/j.cnki.issn1003-207x.2021.1684},
+        note={in Chinese}
+      }
+
+  - id: carbon-bs-logic
+    chapter: "Research Note"
+    chapter_zh: "研究札记"
+    year: 2026
+    type_en: "Research Note"
+    type_zh: "研究札记"
+    title: "The Balance-Sheet Logic of Carbon Emission Rights"
+    title_zh: "碳排放权的资产负债表逻辑"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Open research note, 2026."
+    venue_zh: "开放研究札记，2026。"
+    description_en: >-
+      An open research note that explains the balance-sheet logic behind the
+      carbon emission rights valuation model. It reframes carbon emissions as
+      sovereign assets, atmospheric capacity as liabilities, and domestic carbon
+      sinks as equity, deriving a carbon-pricing accounting identity. This note
+      is part of our commitment to open, reproducible research.
+    description_zh: >-
+      一篇开放研究札记，阐释《基于生物物理经济学思想的碳排放权价值测算模型
+      研究》背后的资产负债表逻辑。将碳排放重构为国家资产、大气容量为负债、
+      国内碳汇为权益，推导碳定价会计恒等式。本文是我们践行开放、可复现研究的
+      一部分。
+    abstract_en: >-
+      This note develops a balance-sheet framework for carbon emission rights.
+      National emissions are treated as assets, the globally shared atmospheric
+      capacity as liabilities, and domestic carbon sinks as equity. We derive a
+      carbon-pricing identity and apply it to China's national carbon market and
+      the global carbon budget. The framework clarifies that carbon markets are
+      fundamentally mechanisms for monetizing the allocation of environmental
+      capacity, with important implications for climate policy and international
+      carbon negotiations.
+    abstract_zh: >-
+      本文构建碳排放权的资产负债表框架。本国排放量视为资产，全球共有大气容量
+      视为负债，国内碳汇视为权益。我们推导碳定价恒等式，并将其应用于中国全国
+      碳市场与全球碳预算。该框架阐明，碳市场本质上是环境容量分配货币化的机制，
+      对气候政策与国际碳谈判具有重要启示。
+    doi: ""
+    pdf: ""
+    github: ""
+    bibtex: |
+      @article{zhou2026carbonbs,
+        title={The Balance-Sheet Logic of Carbon Emission Rights},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: zhou2025ranking-wp
+    chapter: "Bibliometrics"
+    chapter_zh: "文献计量"
+    year: 2025
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "Ranking Influential Non-Content Factors on Scientific Papers' Citation Impact: A Multidomain Comparative Analysis"
+    title_zh: "科学论文引用影响力的非内容因素排名：一项跨领域比较分析"
+    authors: "Jiannan Zhu, **Jiayi Zhou**, Jing Pan, Feng Gu, & Jian-Feng Guo*"
+    authors_zh: "朱剑楠，**周家屹**，潘静，顾锋，郭剑锋*"
+    venue_en: "*Big Data and Cognitive Computing*, 9(2), 30, 2025."
+    venue_zh: "《Big Data and Cognitive Computing》，9(2)，30，2025。"
+    description_en: >-
+      Compares non-content drivers of citation impact across mathematics,
+      computer science, and management. Using XGBoost, GBDT, Random Forest, and
+      quantile regression, the study finds that author reputation and reference
+      count dominate citation influence, with discipline-specific variation in
+      the relative importance of other factors.
+    description_zh: >-
+      跨数学、计算机科学与管理学三领域比较论文引用的非内容因素。使用 XGBoost、
+      GBDT、随机森林与分位数回归，发现作者声望与参考文献数量主导引用影响，
+      其他因素的相对重要性因学科而异。
+    abstract_en: >-
+      This paper investigates the non-content factors that shape scientific
+      papers' citation impact across three disciplines. By combining machine
+      learning and quantile regression, we rank the influence of author
+      reputation, journal metrics, reference count, and collaboration patterns.
+      The results highlight that author prominence and the breadth of references
+      consistently rank highest, while the contribution of other factors varies
+      by field. These findings provide practical guidance for researchers aiming
+      to maximize the visibility of their work without sacrificing scholarly
+      quality.
+    abstract_zh: >-
+      本文研究影响科学论文引用影响力的非内容因素，覆盖三个学科。通过机器学习
+      与分位数回归相结合，我们对作者声望、期刊指标、参考文献数量与合作模式的
+      影响进行排名。结果表明，作者知名度与参考文献广度始终最为重要，其他因素
+      的贡献则因领域而异。研究为研究人员在不牺牲学术质量的前提下提升论文可见度
+      提供了实践参考。
+    doi: "10.3390/bdcc9020030"
+    pdf: "/files/papers/zhou2025ranking.pdf"
+    github: ""
+    bibtex: |
+      @article{zhou2025ranking,
+        title={Ranking Influential Non-Content Factors on Scientific Papers' Citation Impact: A Multidomain Comparative Analysis},
+        author={Zhu, Jiannan and Zhou, Jiayi and Pan, Jing and Gu, Feng and Guo, Jian-Feng},
+        journal={Big Data and Cognitive Computing},
+        volume={9},
+        number={2},
+        pages={30},
+        year={2025},
+        publisher={MDPI},
+        doi={10.3390/bdcc9020030}
+      }
+
+# ----------------------------------------------------------------------------
+# Peer-reviewed Publications
+# ----------------------------------------------------------------------------
+peer_reviewed:
   - id: zhou2025ranking
     year: 2025
-    type: "journal"
     type_en: "Journal Article"
     type_zh: "期刊论文"
     title: "Ranking Influential Non-Content Factors on Scientific Papers' Citation Impact: A Multidomain Comparative Analysis"
@@ -20,32 +662,33 @@ published:
     venue_zh: "《Big Data and Cognitive Computing》，9(2)，30，2025。"
     description_en: >-
       Compares non-content drivers of citation impact across mathematics,
-      computer science, and management. Using XGBoost, GBDT, Random Forest,
-      and quantile regression, the study finds that author reputation and
-      reference count dominate citation influence, with discipline-specific
-      variation in the relative importance of other factors.
+      computer science, and management. Using XGBoost, GBDT, Random Forest, and
+      quantile regression, the study finds that author reputation and reference
+      count dominate citation influence, with discipline-specific variation in
+      the relative importance of other factors.
     description_zh: >-
-      跨数学、计算机科学与管理学三领域比较论文引用的非内容因素。使用
-      XGBoost、GBDT、随机森林与分位数回归，发现作者声望与参考文献数量
-      主导引用影响，其他因素的相对重要性因学科而异。
+      跨数学、计算机科学与管理学三领域比较论文引用的非内容因素。使用 XGBoost、
+      GBDT、随机森林与分位数回归，发现作者声望与参考文献数量主导引用影响，
+      其他因素的相对重要性因学科而异。
     abstract_en: >-
       This paper investigates the non-content factors that shape scientific
       papers' citation impact across three disciplines. By combining machine
       learning and quantile regression, we rank the influence of author
-      reputation, journal metrics, reference count, and collaboration
-      patterns. The results highlight that author prominence and the breadth
-      of references consistently rank highest, while the contribution of
-      other factors varies by field. These findings provide practical
-      guidance for researchers aiming to maximize the visibility of their
-      work without sacrificing scholarly quality.
+      reputation, journal metrics, reference count, and collaboration patterns.
+      The results highlight that author prominence and the breadth of references
+      consistently rank highest, while the contribution of other factors varies
+      by field. These findings provide practical guidance for researchers aiming
+      to maximize the visibility of their work without sacrificing scholarly
+      quality.
     abstract_zh: >-
-      本文研究影响科学论文引用影响力的非内容因素，覆盖三个学科。通过
-      机器学习与分位数回归相结合，我们对作者声望、期刊指标、参考文献
-      数量与合作模式的影响进行排名。结果表明，作者知名度与参考文献
-      广度始终最为重要，其他因素的贡献则因领域而异。研究为研究人员在
-      不牺牲学术质量的前提下提升论文可见度提供了实践参考。
+      本文研究影响科学论文引用影响力的非内容因素，覆盖三个学科。通过机器学习
+      与分位数回归相结合，我们对作者声望、期刊指标、参考文献数量与合作模式的
+      影响进行排名。结果表明，作者知名度与参考文献广度始终最为重要，其他因素
+      的贡献则因领域而异。研究为研究人员在不牺牲学术质量的前提下提升论文可见度
+      提供了实践参考。
     doi: "10.3390/bdcc9020030"
     pdf: "/files/papers/zhou2025ranking.pdf"
+    github: ""
     bibtex: |
       @article{zhou2025ranking,
         title={Ranking Influential Non-Content Factors on Scientific Papers' Citation Impact: A Multidomain Comparative Analysis},
@@ -61,7 +704,6 @@ published:
 
   - id: zhou2022carbon
     year: 2022
-    type: "journal"
     type_en: "Journal Article"
     type_zh: "期刊论文"
     title: "A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics"
@@ -71,30 +713,31 @@ published:
     venue_en: "*Chinese Journal of Management Science*, 2022. (in Chinese)"
     venue_zh: "《中国管理科学》，2022。"
     description_en: >-
-      Builds a balance-sheet valuation model for carbon emission rights from
-      a biophysical economics perspective: domestic emissions are treated as
+      Builds a balance-sheet valuation model for carbon emission rights from a
+      biophysical economics perspective: domestic emissions are treated as
       assets, global atmospheric capacity as liabilities, and domestic carbon
       sinks as equity. The paper derives a carbon-pricing accounting identity
       and discusses its policy implications for China's carbon market.
     description_zh: >-
-      建立生物物理经济学视角下的碳排放权资产负债表估值模型，将本国排放
-      视为资产、全球大气容量视为负债、国内碳汇视为权益，推导碳价会计
-      恒等式，并讨论其对中国碳市场的政策含义。
+      建立生物物理经济学视角下的碳排放权资产负债表估值模型，将本国排放视为
+      资产、全球大气容量视为负债、国内碳汇视为权益，推导碳价会计恒等式，并
+      讨论其对中国碳市场的政策含义。
     abstract_en: >-
       Drawing on biophysical economics, this study reframes carbon emission
       rights as balance-sheet items. National emissions are valued as assets,
       the globally shared atmospheric capacity as liabilities, and domestic
-      carbon sinks as equity. We derive an accounting identity that links
-      carbon price to the monetized value of environmental capacity and apply
-      it to China's national carbon market. The model offers a new accounting
-      lens for carbon pricing and emissions budgeting.
+      carbon sinks as equity. We derive an accounting identity that links carbon
+      price to the monetized value of environmental capacity and apply it to
+      China's national carbon market. The model offers a new accounting lens for
+      carbon pricing and emissions budgeting.
     abstract_zh: >-
-      本文借鉴生物物理经济学思想，将碳排放权重构为资产负债表项目：本国
-      排放量作为资产，全球共有大气容量作为负债，国内碳汇作为权益。我们
-      推导了连接碳价与环境容量货币化价值的会计恒等式，并将其应用于中国
-      全国碳市场。该模型为碳定价与排放预算提供了新的会计视角。
+      本文借鉴生物物理经济学思想，将碳排放权重构为资产负债表项目：本国排放量
+      作为资产，全球共有大气容量作为负债，国内碳汇作为权益。我们推导了连接
+      碳价与环境容量货币化价值的会计恒等式，并将其应用于中国全国碳市场。该
+      模型为碳定价与排放预算提供了新的会计视角。
     doi: "10.16381/j.cnki.issn1003-207x.2021.1684"
     pdf: "/files/papers/zhou2022carbon.pdf"
+    github: ""
     bibtex: |
       @article{zhou2022carbon,
         title={A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics},
@@ -108,7 +751,6 @@ published:
 
   - id: zhou2023oilgas
     year: 2023
-    type: "journal"
     type_en: "Journal Article"
     type_zh: "期刊论文"
     title: "Analysis of China's Oil and Gas Imports and Exports from 2018 to 2022"
@@ -118,28 +760,29 @@ published:
     venue_en: "*International Petroleum Economics*, 2023. (in Chinese)"
     venue_zh: "《国际石油经济》，2023。"
     description_en: >-
-      Analyzes trends in China's crude oil and LNG imports, external
-      dependence, the 2020 import peak, and the 2022 LNG decline. The paper
-      also documents the post-pandemic rise in import costs and its
-      implications for national energy security.
+      Analyzes trends in China's crude oil and LNG imports, external dependence,
+      the 2020 import peak, and the 2022 LNG decline. The paper documents the
+      post-pandemic rise in import costs and its implications for national
+      energy security.
     description_zh: >-
-      分析中国原油与 LNG 进口趋势、对外依存度、2020 年进口峰值与 2022 年
-      LNG 下降，梳理疫情后进口成本上升态势及其对能源安全的影响。
+      分析中国原油与 LNG 进口趋势、对外依存度、2020 年进口峰值与 2022 年 LNG
+      下降，梳理疫情后进口成本上升态势及其对能源安全的影响。
     abstract_en: >-
-      This paper examines China's oil and gas trade between 2018 and 2022.
-      We document the continued growth of crude oil imports, the rapid
-      expansion and subsequent contraction of LNG imports, and the
-      corresponding changes in external dependence. The analysis highlights
-      the 2020 import peak, the 2022 LNG decline, and the rising import costs
-      in the post-pandemic period, offering implications for energy security
-      and import diversification strategies.
+      This paper examines China's oil and gas trade between 2018 and 2022. We
+      document the continued growth of crude oil imports, the rapid expansion
+      and subsequent contraction of LNG imports, and the corresponding changes in
+      external dependence. The analysis highlights the 2020 import peak, the
+      2022 LNG decline, and the rising import costs in the post-pandemic period,
+      offering implications for energy security and import diversification
+      strategies.
     abstract_zh: >-
-      本文考察 2018—2022 年中国油气贸易。我们记录了原油进口的持续增长、
-      LNG 进口的快速扩张与随后的收缩，以及相应对外依存度的变化。分析
-      突出 2020 年进口峰值、2022 年 LNG 下降及疫情后进口成本上升，为
-      能源安全与进口多元化策略提供参考。
+      本文考察 2018—2022 年中国油气贸易。我们记录了原油进口的持续增长、LNG
+      进口的快速扩张与随后的收缩，以及相应对外依存度的变化。分析突出 2020 年
+      进口峰值、2022 年 LNG 下降及疫情后进口成本上升，为能源安全与进口多元化
+      策略提供参考。
     doi: ""
     pdf: "/files/papers/zhou2023oilgas.pdf"
+    github: ""
     bibtex: |
       @article{zhou2023oilgas,
         title={Analysis of China's Oil and Gas Imports and Exports from 2018 to 2022},
@@ -149,94 +792,26 @@ published:
         note={in Chinese}
       }
 
-working_papers:
-  - id: zhou2026crypto
-    year: 2026
-    type: "working_paper"
-    type_en: "Working Paper"
-    type_zh: "工作论文"
-    title: "A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research"
-    title_zh: "加密金融风险研究的系统文献计量与主题建模综述"
-    authors: "**Jiayi Zhou**, Jingjing Li, Binbin Xu, Yanran Ma, & Jianfeng Guo"
-    authors_zh: "**周家屹**，李晶晶，徐彬彬，马嫣然，郭剑锋"
-    venue_en: "SSRN Working Paper, January 31, 2026."
-    venue_zh: "SSRN 工作论文，2026 年 1 月 31 日。"
+# ----------------------------------------------------------------------------
+# Patents
+# ----------------------------------------------------------------------------
+patents:
+  - id: us2026dissipative
+    title_en: "Industry Development State Assessment Device and Apparatus Based on Dissipative Structural Model"
+    title_zh: "基于耗散结构模型的产业发展状态评估装置与设备"
+    inventors_en: "Guo, J.-F., **Zhou, J.-Y.**, Cao, Q., Liu, S., & Pan, J."
+    inventors_zh: "郭剑锋，**周家屹**，曹琪，刘思，潘杰"
+    number: "U.S. Patent Application No. 19/346,554"
+    number_zh: "美国专利申请 No. 19/346,554"
+    date: "Jan. 22, 2026"
+    date_zh: "2026 年 1 月 22 日"
+    status_en: "Filed"
+    status_zh: "已提交"
     description_en: >-
-      A systematic bibliometric and BERTopic-based review of 891 crypto
-      financial risk papers and 1,980 risk events (2012–2025). The paper
-      builds an integrated research framework covering risk sources,
-      measurement, contagion, hedging, and governance.
+      A device and apparatus for assessing industrial development state by
+      modeling industries as dissipative structures, enabling early diagnosis of
+      transition risks and sustainability bottlenecks.
     description_zh: >-
-      基于 BERTopic 与文献计量，对 891 篇加密金融风险文献和 1,980 起风险
-      事件（2012—2025）进行主题建模，构建覆盖风险来源、测度、传染、对冲
-      与治理的综合研究框架。
-    abstract_en: >-
-      This study conducts a systematic bibliometric review of crypto financial
-      risk research, mapping its intellectual structure, keyword evolution,
-      and emerging research fronts. Using a modular BERTopic pipeline, we
-      identify core themes spanning risk identification, measurement,
-      transmission, hedging, and governance. We further link topic clusters
-      to a hand-collected database of 1,980 crypto risk events from 2012 to
-      2025, bridging the gap between the literature and empirical reality and
-      proposing an end-to-end risk research framework.
-    abstract_zh: >-
-      本研究对加密金融风险研究进行系统文献计量综述，刻画其知识结构、关键词
-      演进与新兴研究前沿。通过模块化 BERTopic 流程，我们识别覆盖风险识别、
-      度量、传染、对冲与治理的核心主题。进一步将主题聚类与 2012—2025 年
-      手工整理的 1,980 起加密风险事件数据库相联系，弥合文献空白与经验现实
-      之间的差距，并提出端到端的风险研究框架。
-    doi: "10.2139/ssrn.7225798"
-    pdf: "/files/papers/zhou2026crypto.pdf"
-    bibtex: |
-      @article{zhou2026crypto,
-        title={A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research},
-        author={Zhou, Jiayi and Li, Jingjing and Xu, Binbin and Ma, Yanran and Guo, Jianfeng},
-        journal={SSRN Working Paper},
-        year={2026},
-        doi={10.2139/ssrn.7225798}
-      }
-
-  - id: zhou2026carbonbs
-    year: 2026
-    type: "working_paper"
-    type_en: "Working Paper"
-    type_zh: "工作论文"
-    title: "The Balance-Sheet Logic of Carbon Emission Rights"
-    title_zh: "碳排放权的资产负债表逻辑"
-    authors: "**Jiayi Zhou**"
-    authors_zh: "**周家屹**"
-    venue_en: "Working paper, 2026."
-    venue_zh: "工作论文，2026。"
-    description_en: >-
-      Reframes carbon emissions as assets on a sovereign balance sheet,
-      derives a carbon-pricing formula, and applies the framework to China's
-      carbon market and the global carbon budget. The paper argues that
-      carbon pricing is the monetization of environmental capacity
-      allocation.
-    description_zh: >-
-      将碳排放重构为国家资产负债表中的资产项，推导碳定价公式，并应用于
-      中国碳市场与全球碳预算分析。论文提出碳定价本质上是环境容量分配的
-      货币化。
-    abstract_en: >-
-      This paper develops a balance-sheet framework for carbon emission
-      rights. National emissions are treated as assets, the globally shared
-      atmospheric capacity as liabilities, and domestic carbon sinks as
-      equity. We derive a carbon-pricing identity and apply it to China's
-      national carbon market and the global carbon budget. The framework
-      clarifies that carbon markets are fundamentally mechanisms for
-      monetizing the allocation of environmental capacity, with important
-      implications for climate policy and international carbon negotiations.
-    abstract_zh: >-
-      本文构建碳排放权的资产负债表框架。本国排放量视为资产，全球共有大气
-      容量视为负债，国内碳汇视为权益。我们推导碳定价恒等式，并将其应用于
-      中国全国碳市场与全球碳预算。该框架阐明，碳市场本质上是环境容量分配
-      货币化的机制，对气候政策与国际碳谈判具有重要启示。
-    doi: ""
-    pdf: ""
-    bibtex: |
-      @article{zhou2026carbonbs,
-        title={The Balance-Sheet Logic of Carbon Emission Rights},
-        author={Zhou, Jiayi},
-        journal={Working Paper},
-        year={2026}
-      }
+      通过将产业建模为耗散结构来评估产业发展状态的装置与设备，可用于早期识别
+      转型风险与可持续性瓶颈。
+    github: ""

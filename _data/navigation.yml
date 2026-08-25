@@ -8,18 +8,10 @@ main:
     title_zh: "研究"
     url: "/research/"
 
-  - title: "Publications"
-    title_zh: "发表"
+  - title: "Research Outputs"
+    title_zh: "研究成果"
     url: "/publications/"
-
-  - title: "Patents"
-    title_zh: "专利"
-    url: "/patents/"
 
   - title: "Skills"
     title_zh: "技能"
     url: "/skills/"
-
-  - title: "Contact"
-    title_zh: "联系"
-    url: "/contact/"
