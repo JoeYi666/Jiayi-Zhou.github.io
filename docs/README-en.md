@@ -22,7 +22,7 @@ The site is a heavily customized fork of the [AcadHomepage](https://github.com/R
 .
 ├── _config.yml              # Site metadata, author info, SEO, build settings
 ├── _data/
-│   ├── about.yml            # About page content (hero, bio, philosophy, news, education, hobbies)
+│   ├── about.yml            # About page content (hero, bio, philosophy, education, hobbies)
 │   ├── research.yml         # Research page content
 │   ├── publications.yml     # Publications page content (including Working Papers)
 │   ├── patents.yml          # Patents page content
@@ -132,7 +132,7 @@ Each page has its own data file; edit the corresponding file:
 
 | Page | Data file | Common fields |
 |---|---|---|
-| About | [`_data/about.yml`](../_data/about.yml) | `hero`, `about.paragraphs`, `philosophy.cards`, `news`, `education`, `hobbies`, `references` |
+| About | [`_data/about.yml`](../_data/about.yml) | `hero`, `about.paragraphs`, `philosophy.cards`, `education`, `hobbies`, `references` |
 | Research | [`_data/research.yml`](../_data/research.yml) | `intro`, `projects`, `interests.items` |
 | Publications | [`_data/publications.yml`](../_data/publications.yml) | `published`, `working_papers` |
 | Patents | [`_data/patents.yml`](../_data/patents.yml) | `list` |
@@ -167,20 +167,6 @@ published:
 ```
 
 Place PDF files in [`files/papers/`](../files/papers/) and match the filename with the `pdf` field.
-
-### Add or edit news
-
-Add a new item to the top of the `news:` list in [`_data/about.yml`](../_data/about.yml):
-
-```yaml
-news:
-  - date: "2026.08"
-    en: "🎉 Paper accepted at ..."
-    zh: "🎉 论文被 ... 接收。"
-  - date: "2026.01"
-    en: "..."
-    zh: "..."
-```
 
 ### Update navigation
 

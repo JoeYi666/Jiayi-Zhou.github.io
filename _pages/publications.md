@@ -67,7 +67,7 @@ author_profile: true
 
   <h3 class="section__subtitle"><span class="i18n" data-lang-block="en">Working Papers</span><span class="i18n" data-lang-block="zh">工作论文</span></h3>
   {% for paper in p.working_papers %}
-  <article class="paper-card" data-paper-id="{{ paper.id }}">
+  <article class="paper-card paper-card--wp" data-paper-id="{{ paper.id }}">
     <div class="paper-card__meta">
       <span class="paper-card__year">{{ paper.year }}</span>
       <span class="paper-card__type paper-card__type--wp"><span class="i18n" data-lang-block="en">{{ paper.type_en }}</span><span class="i18n" data-lang-block="zh">{{ paper.type_zh }}</span></span>

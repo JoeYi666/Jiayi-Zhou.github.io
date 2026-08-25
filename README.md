@@ -130,7 +130,7 @@
 
 | 页面 | 数据文件 | 常用字段 |
 |---|---|---|
-| About | [`_data/about.yml`](_data/about.yml) | `hero`、`about.paragraphs`、`philosophy.cards`、`news`、`education`、`hobbies`、`references` |
+| About | [`_data/about.yml`](_data/about.yml) | `hero`、`about.paragraphs`、`philosophy.cards`、`education`、`hobbies`、`references` |
 | Research | [`_data/research.yml`](_data/research.yml) | `intro`、`projects`、`interests.items` |
 | Publications | [`_data/publications.yml`](_data/publications.yml) | `published`（已发表论文）、`working_papers`（工作论文） |
 | Patents | [`_data/patents.yml`](_data/patents.yml) | `list` |
@@ -166,32 +166,9 @@ published:
 
 论文 PDF 请放入 [`files/papers/`](files/papers/)，文件名与 `pdf` 字段保持一致。
 
-### 添加或编辑最新动态
-
-在 [`_data/about.yml`](_data/about.yml) 的 `news:` 列表顶部新增一条：
-
-```yaml
-news:
-  - date: "2026.08"
-    en: "🎉 Paper accepted at ..."
-    zh: "🎉 论文被 ... 接收。"
-  - date: "2026.01"
-    en: "..."
-    zh: "..."
-```
-
 ### 添加或编辑学术发表
 
-普通列表项添加到 `publications.list:`：
-
-```yaml
-publications:
-  list:
-    - en: "[Title](https://doi.org/...), **Zhou, J.-Y.**, ..., *Journal*, 2026."
-      zh: "[标题](https://doi.org/...)，**周家屹**等，《期刊》，2026。"
-```
-
-代表作更新 `publications.featured`（标题、作者、发表处、要点、徽章）。
+在 [`_data/publications.yml`](_data/publications.yml) 中，已发表论文放入 `published:`，工作论文放入 `working_papers:`。论文字段参见上文示例。
 
 ### 更新导航
 

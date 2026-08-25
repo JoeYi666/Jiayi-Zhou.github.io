@@ -134,7 +134,7 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+# permalink: /:categories/:title/  # 全局 permalink 已禁用；各页面在 front matter 中自行指定
 timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 

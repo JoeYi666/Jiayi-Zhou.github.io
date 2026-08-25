@@ -52,7 +52,7 @@
     if (!btn) return;
     ['light', 'dark', 'system'].forEach(function (m) {
       var icon = btn.querySelector('.theme-toggle__icon--' + m);
-      if (icon) icon.style.display = (m === mode) ? 'inline' : 'none';
+      if (icon) icon.classList.toggle('is-active', m === mode);
     });
   }
 

@@ -88,19 +88,6 @@ redirect_from:
   </blockquote>
 </section>
 
-<!-- ============================== NEWS ============================== -->
-<section class="section">
-  <h2 class="section__title"><span class="i18n" data-lang-block="en">News</span><span class="i18n" data-lang-block="zh">最新动态</span></h2>
-  <ul class="news-list">
-    {% for item in a.news %}
-    <li class="news-list__item">
-      <span class="news-list__date">{{ item.date }}</span>
-      <div class="news-list__body">{% include bi.html en=item.en zh=item.zh %}</div>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-
 <!-- ============================ EDUCATION =========================== -->
 <section class="section">
   <h2 class="section__title"><span class="i18n" data-lang-block="en">Education</span><span class="i18n" data-lang-block="zh">教育经历</span></h2>

@@ -107,24 +107,6 @@ philosophy:
     en_text: "Science is the belief in the ignorance of experts."
     en_source: "Richard Feynman"
 
-news:
-  - date: "2026.01"
-    en: >-
-      🎉🎉 U.S. Patent Application No. 19/346,554 filed — "Industry
-      Development State Assessment Device and Apparatus Based on Dissipative
-      Structural Model".
-    zh: >-
-      🎉🎉 美国专利申请 No. 19/346,554 已提交——
-      "基于耗散结构模型的产业发展状态评估装置与设备"。
-  - date: "2025.02"
-    en: >-
-      🎉 Paper published in *Big Data and Cognitive Computing* — "Ranking
-      Influential Non-Content Factors on Scientific Papers' Citation
-      Impact".
-    zh: >-
-      🎉 论文发表于 *Big Data and Cognitive Computing*——
-      "科学论文引用影响力的非内容因素排名研究"。
-
 education:
   - period: "2023.09 – Present"
     period_zh: "2023.09 至今"
