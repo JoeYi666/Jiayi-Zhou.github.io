@@ -21,6 +21,64 @@ section_titles:
 # Working Papers（按博士论文章节顺序排列）
 # ----------------------------------------------------------------------------
 working_papers:
+  - id: zhou2026crypto
+    chapter: "Literature Review"
+    chapter_zh: "文献综述"
+    year: 2026
+    type_en: "SSRN Working Paper"
+    type_zh: "SSRN 工作论文"
+    title: "A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research"
+    title_zh: "加密金融风险研究的系统文献计量与主题建模综述"
+    authors: "**Jia-Yi Zhou**, Jing-Jing Li, Bin-Bin Xu, Yan-Ran Ma, & Jian-Feng Guo"
+    authors_zh: "**周家屹**，李晶晶，徐彬彬，马嫣然，郭剑锋"
+    venue_en: "SSRN Working Paper, January 31, 2026."
+    venue_zh: "SSRN 工作论文，2026 年 1 月 31 日。"
+    description_en: >-
+      This is the bibliometric backbone of the dissertation. I systematically
+      review 891 leading academic and policy publications on crypto financial
+      risk together with 1,980 hand-collected risk events spanning 2012–2025.
+      Using a modular BERTopic pipeline and citation-network analysis, I identify
+      19 research themes and consolidate them into an integrated framework that
+      covers risk sources, measurement, transmission, hedging, and governance.
+      The analysis reveals a thematic shift from early consensus-mechanism and
+      valuation concerns toward systemic spillovers, DeFi vulnerabilities, and
+      macroprudential governance, and it bridges the gap between the fragmented
+      literature and the empirical reality of crypto crises.
+    description_zh: >-
+      本文是博士论文的文献计量基础。我系统回顾了 2012—2025 年间 891 篇加密金融风险领域的
+      权威学术与政策文献，并结合 1,980 起手工整理的风险事件。通过模块化 BERTopic 流程与引文
+      网络分析，我识别出 19 个研究主题，并将其整合为覆盖风险来源、测度、传染、对冲与治理的
+      综合框架。分析揭示了研究主题从早年的共识机制与资产估值问题，逐步转向系统性溢出、
+      DeFi 脆弱性与宏观审慎治理的演进轨迹，弥合了碎片化文献与加密危机经验现实之间的鸿沟。
+    abstract_en: >-
+      The rapid expansion of crypto finance has generated a large and fragmented
+      scholarly literature, making systematic synthesis increasingly necessary.
+      We employ modular BERTopic and bibliometric analysis to examine 891 leading
+      academic and policy publications, integrated with 1,980 security events.
+      The analysis identifies 19 research themes, consolidated inductively into an
+      integrated framework encompassing risk sources, measurement, transmission,
+      hedging, and governance. The findings reveal a thematic shift from early
+      preoccupations with consensus mechanisms and asset valuation toward,
+      particularly since 2018, quantitative analyses of systemic spillovers, DeFi
+      vulnerabilities, and macroprudential governance.
+    abstract_zh: >-
+      加密金融的快速扩张催生了大量且碎片化的学术文献，系统综合变得越来越必要。我们采用
+      模块化 BERTopic 与文献计量分析，考察了 891 篇权威学术与政策文献，并结合 1,980 起安全
+      事件。分析识别出 19 个研究主题，并将其归纳整合为涵盖风险来源、测度、传染、对冲与治理的
+      综合框架。研究发现，研究主题从早年的共识机制与资产估值关注，特别是自 2018 年以来，
+      逐步转向系统性溢出、去中心化金融脆弱性与宏观审慎治理的定量分析。
+    doi: "10.2139/ssrn.7225798"
+    pdf: "/files/papers/zhou2026crypto.pdf"
+    github: "https://github.com/JoeYi666"
+    bibtex: |
+      @article{zhou2026crypto,
+        title={A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research},
+        author={Zhou, Jia-Yi and Li, Jing-Jing and Xu, Bin-Bin and Ma, Yan-Ran and Guo, Jian-Feng},
+        journal={SSRN Working Paper},
+        year={2026},
+        doi={10.2139/ssrn.7225798}
+      }
+
   - id: isfc-framework
     chapter: "ISFC Framework"
     chapter_zh: "ISFC 框架"
@@ -752,62 +810,6 @@ working_papers:
 # Peer-reviewed Publications
 # ----------------------------------------------------------------------------
 peer_reviewed:
-  - id: zhou2026crypto
-    year: 2026
-    type_en: "SSRN Working Paper"
-    type_zh: "SSRN 工作论文"
-    title: "A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research"
-    title_zh: "加密金融风险研究的系统文献计量与主题建模综述"
-    authors: "**Jia-Yi Zhou**, Jing-Jing Li, Bin-Bin Xu, Yan-Ran Ma, & Jian-Feng Guo"
-    authors_zh: "**周家屹**，李晶晶，徐彬彬，马嫣然，郭剑锋"
-    venue_en: "SSRN Working Paper, January 31, 2026."
-    venue_zh: "SSRN 工作论文，2026 年 1 月 31 日。"
-    description_en: >-
-      This is the bibliometric backbone of the dissertation. I systematically
-      review 891 leading academic and policy publications on crypto financial
-      risk together with 1,980 hand-collected risk events spanning 2012–2025.
-      Using a modular BERTopic pipeline and citation-network analysis, I identify
-      19 research themes and consolidate them into an integrated framework that
-      covers risk sources, measurement, transmission, hedging, and governance.
-      The analysis reveals a thematic shift from early consensus-mechanism and
-      valuation concerns toward systemic spillovers, DeFi vulnerabilities, and
-      macroprudential governance, and it bridges the gap between the fragmented
-      literature and the empirical reality of crypto crises.
-    description_zh: >-
-      本文是博士论文的文献计量基础。我系统回顾了 2012—2025 年间 891 篇加密金融风险领域的
-      权威学术与政策文献，并结合 1,980 起手工整理的风险事件。通过模块化 BERTopic 流程与引文
-      网络分析，我识别出 19 个研究主题，并将其整合为覆盖风险来源、测度、传染、对冲与治理的
-      综合框架。分析揭示了研究主题从早年的共识机制与资产估值问题，逐步转向系统性溢出、
-      DeFi 脆弱性与宏观审慎治理的演进轨迹，弥合了碎片化文献与加密危机经验现实之间的鸿沟。
-    abstract_en: >-
-      The rapid expansion of crypto finance has generated a large and fragmented
-      scholarly literature, making systematic synthesis increasingly necessary.
-      We employ modular BERTopic and bibliometric analysis to examine 891 leading
-      academic and policy publications, integrated with 1,980 security events.
-      The analysis identifies 19 research themes, consolidated inductively into an
-      integrated framework encompassing risk sources, measurement, transmission,
-      hedging, and governance. The findings reveal a thematic shift from early
-      preoccupations with consensus mechanisms and asset valuation toward,
-      particularly since 2018, quantitative analyses of systemic spillovers, DeFi
-      vulnerabilities, and macroprudential governance.
-    abstract_zh: >-
-      加密金融的快速扩张催生了大量且碎片化的学术文献，系统综合变得越来越必要。我们采用
-      模块化 BERTopic 与文献计量分析，考察了 891 篇权威学术与政策文献，并结合 1,980 起安全
-      事件。分析识别出 19 个研究主题，并将其归纳整合为涵盖风险来源、测度、传染、对冲与治理
-      的综合框架。研究发现，研究主题从早年的共识机制与资产估值关注，特别是自 2018 年以来，
-      逐步转向系统性溢出、去中心化金融脆弱性与宏观审慎治理的定量分析。
-    doi: "10.2139/ssrn.7225798"
-    pdf: "/files/papers/zhou2026crypto.pdf"
-    github: "https://github.com/JoeYi666"
-    bibtex: |
-      @article{zhou2026crypto,
-        title={A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research},
-        author={Zhou, Jia-Yi and Li, Jing-Jing and Xu, Bin-Bin and Ma, Yan-Ran and Guo, Jian-Feng},
-        journal={SSRN Working Paper},
-        year={2026},
-        doi={10.2139/ssrn.7225798}
-      }
-
   - id: zhou2025ranking
     year: 2025
     type_en: "Journal Article"

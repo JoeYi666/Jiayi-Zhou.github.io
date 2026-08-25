@@ -26,10 +26,11 @@ about:
         I am a Ph.D. candidate at the Institutes of Science and Development,
         Chinese Academy of Sciences (CASISD), affiliated with the School of
         Public Policy and Management, University of Chinese Academy of Sciences
-        (UCAS). My supervisor is Prof. Jian-Feng Guo.
+        (UCAS). My supervisor is [Prof. Jian-Feng Guo](https://people.ucas.ac.cn/~Guojf).
       zh: >-
         我是中国科学院科技战略咨询研究院（CASISD）的博士研究生，
-        就读于中国科学院大学公共政策与管理学院，导师为郭剑锋研究员。
+        就读于中国科学院大学公共政策与管理学院，
+        导师为[郭剑锋研究员](https://people.ucas.ac.cn/~Guojf)。
     - en: >-
         My research focuses on **crypto finance and stablecoin economics**,
         spanning decentralized finance (DeFi), systemic risk and financial
@@ -130,22 +131,23 @@ education:
   - period: "2023.09 – Present"
     period_zh: "2023.09 至今"
     en: >-
-      **Ph.D. Candidate** in Public Policy and Management,
+      **Ph.D. Candidate** in Management Science and Engineering,
       University of Chinese Academy of Sciences /
       Institutes of Science and Development, CAS.
       Advisor: [Prof. Jian-Feng Guo](https://people.ucas.ac.cn/~Guojf).
     zh: >-
-      **博士研究生**，公共政策与管理专业，
+      **博士研究生**，管理科学与工程专业，
       中国科学院大学 /
       中国科学院科技战略咨询研究院。
       导师：[郭剑锋研究员](https://people.ucas.ac.cn/~Guojf)。
   - period: "2019.09 – 2023.06"
     period_zh: "2019.09 – 2023.06"
     en: >-
-      **Bachelor of Management**, School of Economics and Management, China
-      University of Petroleum, Beijing.
+      **Bachelor of Management** in Financial Management (Accounting),
+      School of Economics and Management, China University of Petroleum, Beijing.
     zh: >-
-      **管理学学士**，中国石油大学（北京）经济管理学院。
+      **管理学学士**，财务管理（会计）专业，
+      中国石油大学（北京）经济管理学院。
 
 hobbies:
   - name_en: "Swimming"
@@ -158,8 +160,8 @@ hobbies:
     zh: "阅读面较广，尤其对中国历史、世界历史与经济思想史感兴趣。"
   - name_en: "Chinese Political Economy"
     name_zh: "中国政治经济研究"
-    en: "I study the institutions and power structures of China's party-state system and maintain a Neo4j graph database of party, government, military, SOE, university, and hospital organizations."
-    zh: "研究中国党政体制的机构与权力结构，并用 Neo4j 维护一个涵盖党、政、军、央企、高校、医院等组织的关系数据库。"
+    en: "I study the institutions and power structures of China's party-state system and am building an organizational database of party, government, military, SOE, university, and hospital organizations. The data can be converted into Neo4j format for graph visualization and network analysis."
+    zh: "研究中国党政体制的机构与权力结构。我正在构建一个涵盖党、政、军、央企、高校、医院等组织的数据库，数据可转化为 Neo4j 格式进行可视化与图研究。"
   - name_en: "GIS & Satellite Imagery"
     name_zh: "GIS 与卫星影像"
     en: "I enjoy exploring the world through satellite imagery, spatial data, and remote sensing."
