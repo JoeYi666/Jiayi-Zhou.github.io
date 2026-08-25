@@ -3,8 +3,8 @@
 # ============================================================================
 
 intro:
-  en: "Peer-reviewed publications, working papers, and patent applications. All empirical work is developed as open, reproducible research and will be accompanied by GitHub repositories."
-  zh: "同行评审论文、工作论文与专利申请。所有实证工作均按开放、可复现的研究模式开发，并将配套 GitHub 仓库。"
+  en: "Peer-reviewed publications, working papers, and patent applications from my doctoral research on crypto financial risk, stablecoin macro-financial linkages, and accounting-based sustainability analytics. All empirical work is developed as open, reproducible research and is accompanied by GitHub repositories with data and code."
+  zh: "本人博士研究期间的同行评审论文、工作论文与专利申请，研究方向涵盖加密金融风险、稳定币宏观金融关联以及基于会计的可持续分析。所有实证工作均按开放、可复现的研究模式开发，并配套提供数据与代码的 GitHub 仓库。"
 
 section_titles:
   working_papers:
@@ -21,59 +21,9 @@ section_titles:
 # Working Papers（按博士论文章节顺序排列）
 # ----------------------------------------------------------------------------
 working_papers:
-  - id: ssrn-7225798
-    chapter: "Chapter 1"
-    chapter_zh: "第1章"
-    year: 2026
-    type_en: "Working Paper"
-    type_zh: "工作论文"
-    title: "A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research"
-    title_zh: "加密金融风险研究的系统文献计量与主题建模综述"
-    authors: "**Jiayi Zhou**, Jingjing Li, Binbin Xu, Yanran Ma, & Jianfeng Guo"
-    authors_zh: "**周家屹**，李晶晶，徐彬彬，马嫣然，郭剑锋"
-    venue_en: "SSRN Working Paper, January 31, 2026."
-    venue_zh: "SSRN 工作论文，2026 年 1 月 31 日。"
-    description_en: >-
-      This is the bibliometric backbone of the dissertation. We systematically
-      review 891 crypto financial risk papers and 1,980 hand-collected risk
-      events (2012–2025) using BERTopic and citation-network analysis. The
-      paper builds an integrated risk-research framework spanning risk sources,
-      measurement, contagion, hedging, and governance, and bridges the gap
-      between the literature and empirical reality.
-    description_zh: >-
-      本文是博士论文的文献计量基础。我们使用 BERTopic 与引文网络分析，系统
-      回顾 891 篇加密金融风险文献与 1,980 起手工整理的风险事件（2012—2025），
-      构建覆盖风险来源、测度、传染、对冲与治理的综合研究框架，弥合文献空白
-      与经验现实之间的差距。
-    abstract_en: >-
-      This study conducts a systematic bibliometric review of crypto financial
-      risk research, mapping its intellectual structure, keyword evolution, and
-      emerging research fronts. Using a modular BERTopic pipeline, we identify
-      core themes spanning risk identification, measurement, transmission,
-      hedging, and governance. We further link topic clusters to a hand-collected
-      database of 1,980 crypto risk events from 2012 to 2025, bridging the gap
-      between the literature and empirical reality and proposing an end-to-end
-      risk research framework.
-    abstract_zh: >-
-      本研究对加密金融风险研究进行系统文献计量综述，刻画其知识结构、关键词
-      演进与新兴研究前沿。通过模块化 BERTopic 流程，我们识别覆盖风险识别、
-      度量、传染、对冲与治理的核心主题，并将主题聚类与 2012—2025 年手工整理
-      的 1,980 起加密风险事件数据库相联系，提出端到端的风险研究框架。
-    doi: "10.2139/ssrn.7225798"
-    pdf: ""
-    github: ""
-    bibtex: |
-      @article{zhou2026crypto,
-        title={A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research},
-        author={Zhou, Jiayi and Li, Jingjing and Xu, Binbin and Ma, Yanran and Guo, Jianfeng},
-        journal={SSRN Working Paper},
-        year={2026},
-        doi={10.2139/ssrn.7225798}
-      }
-
   - id: isfc-framework
-    chapter: "Chapter 2"
-    chapter_zh: "第2章"
+    chapter: "ISFC Framework"
+    chapter_zh: "ISFC 框架"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
@@ -84,33 +34,41 @@ working_papers:
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Develops the Incremental Stock-Flow-Consistent (ISFC) framework that
-      models stablecoin issuers' balance sheets as dynamic, incremental systems.
-      The framework clarifies the accounting isomorphism between stablecoin
-      platforms and commercial banks while accommodating institutional
-      heterogeneity, laying the theoretical foundation for the empirical
-      chapters that follow.
+      This paper develops the Incremental Stock-Flow-Consistent (ISFC) framework
+      that models stablecoin issuers' balance sheets as dynamic, incremental
+      systems. It clarifies the accounting isomorphism between stablecoin
+      platforms and fractional-reserve commercial banks, traces the intellectual
+      lineage back to the money view and post-Keynesian SFC models, and shows how
+      issuance, reserve flows, and redemptions can be represented as mutually
+      consistent stock and flow adjustments. The framework accommodates issuer
+      heterogeneity in reserve composition and redemption rules, providing the
+      theoretical foundation for the empirical chapters on banking, bond, FX, and
+      equity markets that follow.
     description_zh: >-
-      构建增量存量流量一致（ISFC）框架，将稳定币发行方资产负债表建模为动态
-      增量系统。该框架在兼容机构异质性的前提下，阐明稳定币平台与商业银行的
-      会计同构性，为后续实证章节奠定理论基础。
+      本文构建增量存量流量一致（ISFC）框架，将稳定币发行方资产负债表建模为动态
+      增量系统。该框架阐明稳定币平台与部分准备金商业银行之间的会计同构性，追溯其
+      思想渊源至货币观与后凯恩斯主义 SFC 模型，并将发行、储备流动与赎回表示为相互
+      一致的存量与流量调整。框架兼容发行方在储备构成与赎回规则上的异质性，为后续关于
+      银行、债券、外汇与股票市场的实证章节奠定理论基础。
     abstract_en: >-
       This paper develops an Incremental Stock-Flow-Consistent (ISFC) framework
       for analyzing stablecoin issuers' balance sheets. By treating stablecoin
       issuance, reserve flows, and redemptions as incremental stock-flow
-      operations, the model reveals the accounting isomorphism between
-      stablecoin platforms and fractional-reserve commercial banks. The
-      framework accommodates heterogeneous reserve practices and provides a
-      consistent accounting language for measuring price, network, and
-      balance-sheet effects in subsequent empirical work.
+      operations, the model reveals the accounting isomorphism between stablecoin
+      platforms and fractional-reserve commercial banks. The framework relates
+      this isomorphism to the money view of banking and to post-Keynesian
+      stock-flow-consistent models, accommodates heterogeneous reserve practices,
+      and provides a consistent accounting language for measuring price, network,
+      and balance-sheet effects in subsequent empirical work.
     abstract_zh: >-
-      本文构建面向稳定币发行方资产负债表的增量存量流量一致（ISFC）框架。
-      通过将稳定币发行、储备流动与赎回视为增量存量流量操作，模型揭示稳定币
-      平台与部分准备金商业银行之间的会计同构性。该框架兼容异质性储备实践，
-      为后续实证工作衡量价格、网络与资产负债表效应提供一致的会计语言。
+      本文构建面向稳定币发行方资产负债表的增量存量流量一致（ISFC）框架。通过将
+      稳定币发行、储备流动与赎回视为增量存量流量操作，模型揭示稳定币平台与部分准备金
+      商业银行之间的会计同构性。框架将该同构性与银行货币观及后凯恩斯主义存量流量一致
+      模型相联系，兼容异质性储备实践，并为后续实证工作衡量价格、网络与资产负债表效应
+      提供一致的会计语言。
     doi: ""
     pdf: ""
-    github: ""
+    github: "https://github.com/JoeYi666/ISFC"
     bibtex: |
       @article{zhou2026isfc,
         title={ISFC: An Incremental Stock-Flow-Consistent Framework for Stablecoin Balance Sheets},
@@ -119,537 +77,737 @@ working_papers:
         year={2026}
       }
 
-  - id: wp-ch3-1
-    chapter: "Chapter 3"
-    chapter_zh: "第3章"
+  - id: isfc-application
+    chapter: "ISFC Applications"
+    chapter_zh: "ISFC 应用"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 3] Stablecoin Issuance Determinants — Empirical Manuscript 1"
-    title_zh: "【第3章】稳定币发行决定因素——实证手稿 1"
+    title: "From Money View to Stablecoin Markets: An ISFC Account of Issuance, Banking, Bond, FX, and Equity Linkages"
+    title_zh: "从货币观到稳定币市场：稳定币发行及银行、债券、外汇与股票关联的 ISFC 分析"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Empirical analysis of the drivers of stablecoin issuance across macro,
-      crypto-market, regulatory, and network-effect dimensions. This paper
-      applies Random Forest, XGBoost, and SHAP to identify the key predictors
-      of issuance volume and their nonlinear interactions.
+      This paper applies the ISFC framework to map how stablecoin issuance
+      mechanisms propagate through the traditional financial system. It uses
+      consistent balance-sheet accounting to trace the flows from stablecoin
+      issuance to bank deposits, short-dated Treasury and commercial-paper
+      holdings, foreign-exchange demand, and crypto-equity valuations. By
+      distinguishing centralized fiat-backed, decentralized algorithmic, and
+      hybrid issuance designs, the analysis shows why different stablecoin
+      architectures create different balance-sheet multipliers and risk
+      transmission channels across banking, bond, FX, and equity markets.
     description_zh: >-
-      从宏观、加密市场、监管与网络效应多维度实证分析稳定币发行的驱动因素。
-      应用随机森林、XGBoost 与 SHAP 方法识别发行规模的关键预测变量及其非线性
-      交互作用。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文应用 ISFC 框架，刻画稳定币发行机制如何向传统金融体系传导。通过一致的资产
+      负债表会计，追踪稳定币发行如何流向银行存款、短期国债与商业票据持仓、外汇需求以及
+      加密股票估值。通过区分中心化法币抵押型、去中心化算法型与混合型发行设计，分析揭示
+      不同稳定币架构为何会在银行、债券、外汇与股票市场产生不同的资产负债表乘数与风险
+      传导渠道。
+    abstract_en: >-
+      This paper applies the Incremental Stock-Flow-Consistent (ISFC) framework
+      to explain stablecoin issuance mechanisms and their relationships with
+      banking, bond, foreign-exchange, and equity markets. Using consistent
+      balance-sheet accounting, we trace how issuance, reserve allocation, and
+      redemption flows connect stablecoin platforms to traditional financial
+      institutions and asset prices. We compare centralized fiat-backed,
+      decentralized algorithmic, and hybrid designs, and show how each architecture
+      generates distinct balance-sheet multipliers and risk transmission channels.
+      The framework unifies the empirical chapters of the dissertation by
+      providing a common accounting language for issuance-driven macro-financial
+      linkages.
+    abstract_zh: >-
+      本文应用增量存量流量一致（ISFC）框架解释稳定币发行机制及其与银行、债券、外汇和
+      股票市场的关系。通过一致的资产负债表会计，我们追踪发行、储备配置与赎回流动如何
+      将稳定币平台与传统金融机构及资产价格相联系。我们比较中心化法币抵押型、去中心化
+      算法型与混合型设计，展示每种架构如何产生不同的资产负债表乘数与风险传导渠道。该
+      框架为论文的实证章节提供统一的会计语言，以理解发行驱动的宏观金融关联。
+    doi: ""
+    pdf: ""
+    github: "https://github.com/JoeYi666/ISFC"
+    bibtex: |
+      @article{zhou2026isfcapp,
+        title={From Money View to Stablecoin Markets: An ISFC Account of Issuance, Banking, Bond, FX, and Equity Linkages},
+        author={Zhou, Jiayi},
+        journal={Working Paper},
+        year={2026}
+      }
+
+  - id: wp-ch3-1
+    chapter: "Issuance Drivers"
+    chapter_zh: "发行驱动"
+    year: 2026
+    type_en: "Working Paper"
+    type_zh: "工作论文"
+    title: "Time-Varying Analysis of Stablecoin Issuance Drivers: A Rolling LASSO Approach"
+    title_zh: "稳定币发行驱动因素的时变分析与轮动效应"
+    authors: "**Jiayi Zhou**"
+    authors_zh: "**周家屹**"
+    venue_en: "Working paper, 2026."
+    venue_zh: "工作论文，2026。"
+    description_en: >-
+      This paper investigates which macro-financial, crypto-market, and
+      network-effect variables drive stablecoin issuance, and how their relative
+      importance evolves over time. Using daily data on USDT, USDC, and DAI from
+      2020 to 2026, I apply a rolling LASSO approach to track time-varying driver
+      importance and detect regime shifts in issuance dynamics. The results reveal
+      a clear rotation effect: stablecoin issuance is anchored in Fed liquidity
+      plumbing and short-term interest rates over long horizons, while short-horizon
+      issuance is dominated by autoregressive supply momentum and market-wide
+      realized-cap flows. Decentralized stablecoins such as DAI depend more on
+      coin-specific on-chain quantities than their centralized peers.
+    description_zh: >-
+      本文研究哪些宏观金融、加密市场与网络效应变量驱动稳定币发行，以及其相对重要性
+      如何随时间演变。基于 2020—2026 年 USDT、USDC 与 DAI 的日度数据，我采用滚动
+      LASSO 方法追踪驱动因素重要性的时变特征，识别发行动态中的机制切换。结果呈现清晰
+      的轮动效应：长期发行锚定于美联储流动性管道与短期利率，而短期发行则由自回归供给
+      动量与市场层面已实现市值资金流主导。去中心化稳定币 DAI 相较中心化同类更依赖币种
+      特定的链上变量。
+    abstract_en: >-
+      Stablecoins serve as the bridge between the crypto ecosystem and the
+      traditional financial system, and their aggregate issuance is widely viewed
+      as a key barometer of crypto-market liquidity and risk appetite. This paper
+      uses a rolling LASSO approach to analyze the time-varying drivers of
+      stablecoin issuance for USDT, USDC, and DAI over 2020–2026. We find that
+      driver importance rotates across horizons and market regimes: long-horizon
+      issuance is anchored in Federal Reserve liquidity-plumbing variables and
+      short-term interest rates, while short-horizon issuance is dominated by
+      autoregressive supply momentum and market-wide realized-cap flows.
+      Decentralized stablecoins exhibit distinct driver heterogeneity compared
+      with centralized collateralized stablecoins.
+    abstract_zh: >-
+      稳定币是加密生态与传统金融体系之间的桥梁，其总发行量被广泛视为加密市场流动性与
+      风险偏好的关键晴雨表。本文采用滚动 LASSO 方法分析 2020—2026 年 USDT、USDC 与
+      DAI 发行驱动因素的时变特征。我们发现驱动因素的重要性会随期限与市场机制轮动：长期
+      发行锚定于美联储流动性管道变量与短期利率，短期发行则由自回归供给动量与市场层面已
+      实现市值资金流主导。去中心化稳定币相较中心化抵押型稳定币呈现出不同的驱动因素
+      异质性。
     doi: ""
     pdf: "/files/papers/3m1.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Chapter3_Regularized_Regression"
     bibtex: |
       @article{zhou2026ch3m1,
-        title={Stablecoin Issuance Determinants: Empirical Manuscript 1},
+        title={Time-Varying Analysis of Stablecoin Issuance Drivers: A Rolling LASSO Approach},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
       }
 
   - id: wp-ch3-2
-    chapter: "Chapter 3"
-    chapter_zh: "第3章"
+    chapter: "Issuance Drivers"
+    chapter_zh: "发行驱动"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 3] Stablecoin Issuance Determinants — Empirical Manuscript 2"
-    title_zh: "【第3章】稳定币发行决定因素——实证手稿 2"
+    title: "Stablecoin Flows and the U.S. Treasury Yield Curve: A Local Projection–IV Approach"
+    title_zh: "稳定币资金流与美国国债收益率曲线：局部投影–工具变量方法"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Complementary empirical manuscript exploring the time-varying and
-      supply-forecasting dimensions of stablecoin issuance. Employs LSTM/GRU
-      and Transformer architectures for multi-scenario supply forecasting and
-      robustness checks.
+      This paper estimates the causal effect of dollar stablecoin flows on the
+      U.S. Treasury yield curve using daily data from January 2021 to June 2026.
+      I construct an Elastic-Net crypto shock as an instrumental variable for
+      exogenous stablecoin flow variation and apply local-projection IV methods.
+      A two-standard-deviation ($2.5 bn) stablecoin inflow lowers the 3-month
+      T-bill yield by about 10 basis points within 10 days, with effects
+      concentrated at the front end of the curve (1M, 3M) and fading beyond one
+      year. Outflows are about twice as large as inflows, consistent with
+      fire-sale asymmetry during redemptions, and USDT accounts for roughly 45%
+      of the transmission.
     description_zh: >-
-      补充性实证手稿，探讨稳定币发行的时间变化特征与供给预测维度。采用
-      LSTM/GRU 与 Transformer 架构进行多情景供给预测与稳健性检验。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文利用 2021 年 1 月至 2026 年 6 月的日度数据，估计美元稳定币资金流对美国国债
+      收益率曲线的因果效应。我构建 Elastic-Net 加密冲击作为稳定币资金流外生变异的工具
+      变量，并应用局部投影–工具变量方法。两倍标准差（约 25 亿美元）的稳定币流入在 10 天
+      内使 3 个月期国库券收益率下降约 10 个基点，效应集中于曲线前端（1 个月、3 个月），
+      并在 1 年以上期限消失。流出效应约为流入的两倍，与赎回期间的抛售非对称性一致，
+      USDT 贡献约 45% 的传导。
+    abstract_en: >-
+      We estimate the causal effect of dollar stablecoin flows on the U.S. Treasury
+      yield curve using daily data from January 2021 to June 2026. Combining
+      issuer-level circulating supply for USDT, USDC, DAI, and BUSD with FRED
+      Treasury yields and a rich macro-financial control set, we construct a 5-day
+      market-capitalization flow measure and identify exogenous variation through
+      an Elastic-Net crypto shock: the cumulated residual of daily Bitcoin returns
+      after partialling out contemporaneous traditional-finance variation. A
+      two-standard-deviation ($2.5 bn) stablecoin inflow lowers the 3-month T-bill
+      yield by about 10 basis points within 10 days. The effect is sharply
+      concentrated at the front of the curve, outflows generate responses roughly
+      twice as large as inflows, and issuer-level decompositions attribute about
+      45% of the transmission to USDT.
+    abstract_zh: >-
+      本文利用 2021 年 1 月至 2026 年 6 月的日度数据，估计美元稳定币资金流对美国国债
+      收益率曲线的因果效应。我们结合 USDT、USDC、DAI 与 BUSD 的发行人层面流通量数据、
+      FRED 国债收益率以及丰富的宏观金融控制变量，构造 5 日市值流量测度，并通过
+      Elastic-Net 加密冲击识别外生变异：即日度比特币收益率在剔除同期传统金融变量影响后
+      的累积残差。两倍标准差（约 25 亿美元）的稳定币流入在 10 天内使 3 个月期国库券收益率
+      下降约 10 个基点。效应高度集中于曲线前端，流出产生的响应约为流入的两倍，发行人层面
+      分解将约 45% 的传导归因于 USDT。
     doi: ""
     pdf: "/files/papers/3m2.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Chapter3_SHAP_FS"
     bibtex: |
       @article{zhou2026ch3m2,
-        title={Stablecoin Issuance Determinants: Empirical Manuscript 2},
+        title={Stablecoin Flows and the U.S. Treasury Yield Curve: A Local Projection--IV Approach},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
       }
 
   - id: wp-ch4-1
-    chapter: "Chapter 4"
-    chapter_zh: "第4章"
+    chapter: "Treasury/Bond Market"
+    chapter_zh: "国债/债券市场"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 4] Stablecoin Spillover and Contagion — Empirical Manuscript 1"
-    title_zh: "【第4章】稳定币溢出与传染——实证手稿 1"
+    title: "Stablecoin Shocks, Spillovers and State-Dependent Transmission: Structural Identification and Time-Varying Propagation"
+    title_zh: "稳定币冲击、溢出与状态依赖传导：结构识别与时变传播"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Measures time-varying volatility spillovers from stablecoin markets to
-      U.S. Treasuries, commercial paper, and broader crypto assets. Uses
-      Diebold-Yilmaz spillover indices combined with LP-IV and TVP-VAR to
-      quantify dynamic transmission channels.
+      This paper identifies structural stablecoin demand shocks and traces their
+      dynamic transmission to the U.S. Treasury market, the dollar, crypto assets,
+      and equities. Using a manually curated event library of 16 stablecoin-ecosystem
+      news items (2021–2025) and daily market-cap changes of USDT and USDC over
+      2020–2026, I deploy three cross-validating identification strategies:
+      heteroskedasticity-based estimation, SVAR-IV, and max-share identification.
+      A 1% stablecoin demand shock lowers the 1-month Treasury yield by up to
+      7.5–7.6 basis points at a trough near 26 weeks. Spillovers are approximately
+      neutral on average but turn net-positive around crisis episodes, and the
+      yield response is 1.3–2.6 times larger in post-2023 high-rate and
+      post-regulation states.
     description_zh: >-
-      测度稳定币市场对美国国债、商业票据及更广泛的加密资产的时变波动溢出。
-      结合 Diebold-Yilmaz 溢出指数、LP-IV 与 TVP-VAR 量化动态传染渠道。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文识别结构性稳定币需求冲击，并追踪其对美国国债市场、美元、加密资产与股票的
+      动态传导。基于人工整理的 2021—2025 年 16 个稳定币生态新闻事件库以及 2020—2026
+      年 USDT 与 USDC 的日度市值变动数据，我采用三种相互交叉验证的识别策略：异方差识别、
+      SVAR-IV 与 max-share 识别。1% 的稳定币需求冲击会在约 26 周处使 1 个月期国债收益率
+      累计最多下行 7.5–7.6 个基点。稳定币溢出在全样本上近似中性，但在危机时段转为净输出，
+      且 2023 年之后的高利率与后监管状态将收益率响应放大约 1.3–2.6 倍。
+    abstract_en: >-
+      We identify structural stablecoin demand shocks and trace their dynamic
+      transmission to the U.S. Treasury market, the dollar, crypto assets, and
+      equities, with particular attention to time variation and state dependence.
+      Using a manually curated event library of 16 stablecoin-ecosystem news items
+      (2021–2025) and daily market-cap changes of USDT and USDC over 2020–2026, we
+      deploy three identification strategies that cross-validate each other:
+      heteroskedasticity-based estimation applied to event versus control dates,
+      a daily SVAR identified by an event-based external instrument (SVAR-IV), and
+      max-share identification. A stablecoin demand shock that lifts combined
+      USDT+USDC market cap by 1% lowers the 1-month Treasury yield by up to
+      7.5–7.6 bps cumulatively at a trough near 26 weeks. Spillovers turn into a
+      net transmitter around crisis episodes, and the yield response is 1.3–2.6
+      times larger in post-2023 high-rate and post-regulation states.
+    abstract_zh: >-
+      本文识别结构性稳定币需求冲击，并追踪其对美国国债市场、美元、加密资产与股票市场
+      的动态传导，重点关注传导的时变性与状态依赖性。基于人工整理的 2021—2025 年 16 个
+      稳定币生态新闻事件库以及 2020—2026 年 USDT 与 USDC 的日度市值变动数据，本文采用
+      三种相互交叉验证的识别策略：应用于事件日与对照日的异方差识别估计量、以事件日为
+      外部工具变量的日度结构向量自回归（SVAR-IV）、以及选取最大化稳定币自身预测误差
+      方差份额的结构冲击的 max-share 识别。使 USDT+USDC 合计市值上升 1% 的稳定币需求冲击
+      会在约 26 周处使 1 个月期国债收益率累计最多下行 7.5–7.6 个基点。稳定币溢出在危机
+      时段转为净输出，且在 2023 年之后的高利率与后监管状态下收益率响应放大约 1.3–2.6 倍。
     doi: ""
     pdf: "/files/papers/4m1.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Chapter4_Impact_on_Bonds_Market"
     bibtex: |
       @article{zhou2026ch4m1,
-        title={Stablecoin Spillover and Contagion: Empirical Manuscript 1},
+        title={Stablecoin Shocks, Spillovers and State-Dependent Transmission: Structural Identification and Time-Varying Propagation},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
       }
 
   - id: wp-ch4-2
-    chapter: "Chapter 4"
-    chapter_zh: "第4章"
+    chapter: "Treasury/Bond Market"
+    chapter_zh: "国债/债券市场"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 4] Stablecoin Spillover and Contagion — Empirical Manuscript 2"
-    title_zh: "【第4章】稳定币溢出与传染——实证手稿 2"
+    title: "Stablecoins and the Bond Market: Yield-Curve Effects, Volatility Spillovers, Credit Spreads and Systemic Risk"
+    title_zh: "稳定币与债券市场：收益率曲线效应、波动溢出、信用利差与系统性风险"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Examines causal effects of stablecoin reserve allocation on traditional
-      money-market spreads. Applies local projections with elastic-net residual
-      instruments to identify reserve-allocation shocks and their transmission
-      to Treasury yields and commercial paper.
+      This paper studies how stablecoin issuance and redemption affect the bond
+      market along four dimensions: the Treasury yield curve, volatility
+      spillovers, credit spreads as a proxy for the commercial-paper market, and
+      systemic risk. Using daily data from 2020 to 2026, I combine LP, LP-IV,
+      VAR, Diebold-Yilmaz connectedness measures, two-stage least squares with
+      credit-spread proxies, event studies, Rigobon (2003) heteroskedasticity
+      identification, and calibrated stress tests. A $1 bn five-day net issuance
+      lowers 1M/3M Treasury yields by up to 3.4/2.4 basis points within three
+      weeks, stablecoin-bond connectedness averages 19.7%, and a 10% USDT run
+      would raise the 3-month yield by 47–60 basis points in calibrated stress
+      scenarios.
     description_zh: >-
-      考察稳定币储备配置对传统货币市场利差的因果效应。应用带弹性网残差工具
-      变量的局部投影方法识别储备配置冲击及其向国债收益率和商业票据的传导。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文从四个维度研究稳定币发行与赎回对债券市场的影响：国债收益率曲线、波动溢出、
+      作为商业票据市场代理的信用利差以及系统性风险。基于 2020—2026 年的日度数据，我综合
+      运用局部投影（LP）、LP-IV、向量自回归、Diebold-Yilmaz 连通性测度、基于信用利差代理
+      的两阶段最小二乘、事件研究、Rigobon（2003）异方差识别与校准压力测试。10 亿美元的 5
+      日净发行在三周内使 1 个月/3 个月期国债收益率最多下行 3.4/2.4 个基点，稳定币与债市的
+      平均连通性为 19.7%，10% 的 USDT 挤兑在校准压力情景下将推高 3 个月期收益率 47–60 个
+      基点。
+    abstract_en: >-
+      Stablecoin issuers have become structural marginal buyers of U.S. money-market
+      and short-dated fixed-income assets. This paper studies how stablecoin
+      issuance and redemption affect the bond market along four dimensions: the
+      Treasury yield curve, volatility spillovers, credit spreads as a proxy for
+      the commercial paper market, and systemic risk. Using daily data from
+      2020-01 to 2026-06 covering USDT, USDC, DAI, and BUSD, FRED Treasury yields
+      and money-market variables, on-chain transfer and exchange flows, and crypto
+      derivatives indicators, we deploy local projections, LP-IV, vector
+      autoregressions, Diebold-Yilmaz connectedness, and calibrated stress tests.
+      A $1 bn five-day net issuance lowers 1M/3M Treasury yields by up to
+      3.4/2.4 bps within three weeks; effects concentrate at the short end and
+      stablecoin-bond connectedness averages 19.7%.
+    abstract_zh: >-
+      稳定币发行方已成为美国货币市场与短期固定收益资产的结构化边际买家。本文从四个
+      维度研究稳定币发行与赎回对债券市场的影响：国债收益率曲线、波动溢出、信用利差
+      （作为数据不可得的商业票据市场的代理）以及系统性风险。基于 2020 年 1 月至 2026 年 6
+      月涵盖 USDT、USDC、DAI、BUSD、FRED 国债收益率与货币市场变量、链上转账与交易所流量
+      以及加密衍生品指标的日度数据，本文综合运用局部投影、LP-IV、向量自回归、
+      Diebold-Yilmaz 连通性测度与校准压力测试。10 亿美元的 5 日净发行在三周内使 1 个月/
+      3 个月期国债收益率最多下行 3.4/2.4 个基点；效应集中于短端，稳定币与债市的平均连通性
+      为 19.7%。
     doi: ""
     pdf: "/files/papers/4m2.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Chapter4_Impact_on_Bonds_Market"
     bibtex: |
       @article{zhou2026ch4m2,
-        title={Stablecoin Spillover and Contagion: Empirical Manuscript 2},
+        title={Stablecoins and the Bond Market: Yield-Curve Effects, Volatility Spillovers, Credit Spreads and Systemic Risk},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
       }
 
   - id: wp-ch4-3
-    chapter: "Chapter 4"
-    chapter_zh: "第4章"
+    chapter: "Treasury/Bond Market"
+    chapter_zh: "国债/债券市场"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 4] Stablecoin Spillover and Contagion — Empirical Manuscript 3"
-    title_zh: "【第4章】稳定币溢出与传染——实证手稿 3"
+    title: "Stablecoin Flows and Treasury Yields: Interpretable Machine Learning Meets Causal Identification"
+    title_zh: "稳定币资金流与国债收益率：可解释机器学习与计量因果识别的结合"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Investigates the causal impact of stablecoin shocks on interbank lending,
-      money market funds, and monetary policy rate pass-through. Uses
-      Difference-in-Differences, triple-difference, and synthetic control
-      designs with IV-2SLS identification.
+      This paper combines Jorda (2005) local projections with a machine-learning-
+      assisted instrumental variable to estimate the causal effect of dollar
+      stablecoin flows on the U.S. Treasury yield curve. Using daily data on
+      USDT, USDC, DAI, and BUSD over 2020–2026, I purge broad crypto-market
+      returns of their predictable component from traditional finance variables
+      using Elastic Net regularization and use the residual as an instrument.
+      SHAP values make the first-stage machine-learning step transparent. A
+      $1 bn five-day stablecoin inflow lowers the 1-month yield by up to 8.5 bps
+      over 30 trading days, and the effect is strongly asymmetric and amplified
+      roughly tenfold in crypto bear markets.
     description_zh: >-
-      研究稳定币冲击对银行间借贷、货币基金与货币政策利率传导的因果影响。
-      采用双重差分、三重差分与合成控制设计，并以 IV-2SLS 进行识别。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文将 Jordà（2005）局部投影与机器学习辅助的工具变量相结合，估计美元稳定币
+      资金流对美国国债收益率曲线的因果效应。基于 2020—2026 年 USDT、USDC、DAI 与 BUSD
+      的日度数据，我用 Elastic Net 正则化剔除加密市场宽基收益率中可由传统金融变量预测
+      的成分，并将残差作为工具变量。SHAP 值使机器学习第一阶段透明化。10 亿美元的 5 日稳定
+      币净流入在 30 个交易日内使 1 个月期国债收益率最多下行 8.5 个基点，效应具有强非对称
+      性，并在加密熊市中放大约十倍。
+    abstract_en: >-
+      We estimate the causal effect of dollar-stablecoin flows on the U.S. Treasury
+      yield curve by combining Jorda (2005) local projections with a machine-
+      learning-assisted instrumental variable. Using daily data on USDT, USDC, DAI,
+      and BUSD supply, on-chain transfer and exchange-flow indicators, crypto
+      derivatives sentiment, and FRED bond-market variables over 2020–2026, we
+      construct the five-day stablecoin flow and instrument it with the Elastic-Net
+      residual of broad crypto-market returns on traditional finance variables.
+      SHAP values decompose which traditional finance variables absorb the
+      predictable component of crypto returns. A $1 bn five-day net stablecoin
+      inflow lowers the 1-month Treasury yield by up to 8.5 bps over 30 trading
+      days, and the effect is strongly asymmetric and amplified roughly tenfold
+      in crypto bear markets.
+    abstract_zh: >-
+      本文结合 Jordà（2005）局部投影与机器学习辅助的工具变量，估计美元稳定币资金流
+      对美国国债收益率曲线的因果效应。基于 2020—2026 年 USDT、USDC、DAI 与 BUSD 供应量、
+      链上转账与交易所流量指标、加密衍生品情绪指标以及 FRED 债券市场变量的日度数据，本文
+      构造 5 日稳定币流量，并以加密市场宽基收益率对传统金融变量做 Elastic Net 拟合所得残差
+      作为工具变量。SHAP 值分解哪些传统金融变量吸收了加密收益率的可预测成分。10 亿美元的
+      5 日稳定币净流入在 30 个交易日内使 1 个月期国债收益率最多下行 8.5 个基点，效应具有强
+      非对称性，并在加密熊市中放大约十倍。
     doi: ""
     pdf: "/files/papers/4m3.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Chapter4_Impact_on_Bonds_Market"
     bibtex: |
       @article{zhou2026ch4m3,
-        title={Stablecoin Spillover and Contagion: Empirical Manuscript 3},
+        title={Stablecoin Flows and Treasury Yields: Interpretable Machine Learning Meets Causal Identification},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
       }
 
   - id: wp-ch4-4
-    chapter: "Chapter 4"
-    chapter_zh: "第4章"
+    chapter: "Treasury/Bond Market"
+    chapter_zh: "国债/债券市场"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 4] Stablecoin Spillover and Contagion — Empirical Manuscript 4"
-    title_zh: "【第4章】稳定币溢出与传染——实证手稿 4"
+    title: "Unraveling Temporal and Structural Drivers of Stablecoin Issuance: A SHAP-Enhanced Deep Forecasting Framework"
+    title_zh: "解构稳定币发行量的时变与结构性驱动因素：基于 SHAP 增强的深度预测框架"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Builds cross-border stablecoin flow networks from on-chain data and
-      applies PageRank, Louvain community detection, and cascade failure
-      simulations to analyze digital dollarization dynamics and foreign-exchange
-      volatility spillovers.
+      This paper proposes a SHAP-enhanced deep forecasting framework for stablecoin
+      issuance that addresses three challenges: high-dimensional noise, the black-box
+      nature of deep learning, and the structural differences between centralized
+      collateralized and decentralized algorithmic stablecoins. Using daily data on
+      USDT, USDC, and DAI over 2020–2026 within a nested walk-forward validation
+      design, I show that a horizon-pooled non-negative least-squares ensemble
+      beats the no-drift random walk on RMSE, MAE, and directional accuracy at all
+      four horizons. A two-dimensional attribution framework across time horizons
+      and stablecoin types reveals that short-horizon issuance is dominated by
+      autoregressive supply momentum and realized-cap flows, while long-horizon
+      issuance is anchored in Fed liquidity plumbing and short-term interest rates.
     description_zh: >-
-      基于链上数据构建跨境稳定币流动网络，应用 PageRank、Louvain 社区发现与
-      级联失效仿真分析数字美元化动态与外汇波动溢出。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文提出面向稳定币发行量预测的 SHAP 增强深度预测框架，应对三大挑战：高维噪声、
+      深度学习的黑箱性质以及中心化抵押型与去中心化算法型稳定币之间的结构性差异。基于
+      2020—2026 年 USDT、USDC 与 DAI 的日度数据，并在嵌套前向交叉验证设计下，我证明期限
+      池化的非负最小二乘集成在全部四个期限上同时在 RMSE、MAE 与方向准确性上超越无漂移
+      随机游走。跨期限与稳定币类型的二维归因框架揭示，短期发行由自回归供给动量与已实现
+      市值资金流主导，长期发行则锚定于美联储流动性管道与短期利率。
+    abstract_en: >-
+      Stablecoins serve as the bridge between the crypto ecosystem and the
+      traditional financial system, and their aggregate issuance is widely viewed
+      as a key barometer of crypto-market liquidity and risk appetite. Forecasting
+      stablecoin issuance, however, faces three challenges: the high-dimensional
+      noise induced by a large array of on-chain, macro-financial, and sentiment
+      variables; the black-box nature of deep learning models; and the neglect of
+      structural differences between centralized collateralized and decentralized
+      algorithmic stablecoins. We propose a SHAP-enhanced deep forecasting framework
+      disciplined end-to-end by a nested walk-forward validation design. Using daily
+      data on USDT, USDC, and DAI over 2020–2026, we show that the random walk can
+      be beaten once forecasts are anchored, combined, and disciplined, and we
+      construct a two-dimensional attribution framework across horizons and stablecoin
+      types to map driver heterogeneity.
+    abstract_zh: >-
+      稳定币是加密生态与传统金融体系之间的桥梁，其总发行量被广泛视为加密市场流动性与
+      风险偏好的关键晴雨表。然而，稳定币发行量预测面临三大挑战：链上、宏观金融与情绪变量
+      众多所引致的高维噪声；深度学习模型的黑箱性质限制其经济可解释性；以及现有研究对中心化
+      抵押型与去中心化算法型稳定币之间结构性差异的忽视。本文提出 SHAP 增强深度预测框架，
+      并以嵌套前向交叉验证设计严格约束。基于 2020—2026 年 USDT、USDC 与 DAI 的日度数据，
+      我们证明随机游走可以通过锚定、组合与约束被击败，并构建跨期限与稳定币类型的二维归因
+      框架以刻画驱动因素异质性。
     doi: ""
     pdf: "/files/papers/4m4.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Chapter4_Impact_on_Bonds_Market"
     bibtex: |
       @article{zhou2026ch4m4,
-        title={Stablecoin Spillover and Contagion: Empirical Manuscript 4},
+        title={Unraveling Temporal and Structural Drivers of Stablecoin Issuance: A SHAP-Enhanced Deep Forecasting Framework},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
       }
 
   - id: wp-ch5-1
-    chapter: "Chapter 5"
-    chapter_zh: "第5章"
+    chapter: "FX Markets"
+    chapter_zh: "外汇市场"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 5] Stablecoin Hedging and Safe-Haven Properties — Empirical Manuscript 1"
-    title_zh: "【第5章】稳定币对冲与安全港属性——实证手稿 1"
+    title: "Disentangling the Effects of Stablecoins on Exchange Rates: A Currency-by-Currency Analysis"
+    title_zh: "区分稳定币对汇率的影响：逐币种分析"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Evaluates stablecoins as hedging instruments against crypto-market and
-      traditional financial stress. Applies quantile regression and dynamic
-      conditional correlation models to compare hedging effectiveness across
-      major stablecoin designs.
+      This paper examines whether USD-pegged stablecoins affect exchange rates
+      across 27 economies at daily frequency from January 2020 to December 2025.
+      Combining on-chain stablecoin metrics with a multi-source panel of daily
+      exchange rates and annual country characteristics, I estimate country-by-country
+      panel regressions, standardized interaction terms, and a crypto-shock
+      instrumental-variable design that exploits the Terra/LUNA collapse, the
+      SVB-induced USDC de-peg, and lagged Ethereum network congestion. The average
+      effects are small, but USDT coefficients are statistically significant in
+      developed economies and high-crypto-adoption countries, with circulation and
+      trading volume dominating issuance and active wallets as transmission channels.
     description_zh: >-
-      评估稳定币作为加密市场与传统金融压力对冲工具的有效性。应用分位数回归
-      与动态条件相关模型比较主要稳定币设计的对冲表现。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文考察 2020 年 1 月至 2025 年 12 月期间美元锚定稳定币是否影响 27 个经济体的日度
+      汇率。我将链上稳定币指标与多来源的日度汇率及年度国家特征面板相结合，估计逐国面板
+      回归、标准化交互项以及利用 Terra/LUNA 崩盘、硅谷银行引发的 USDC 脱锚与滞后以太坊网络
+      拥堵构建的加密冲击工具变量。平均效应较小，但 USDT 系数在发达经济体与高加密采用国家
+      统计显著，流通量与交易量是主导传导渠道，发行量与活跃钱包次之。
+    abstract_en: >-
+      We examine whether USD-pegged stablecoins (USDT, USDC, DAI) affect exchange
+      rates across 27 economies at daily frequency from January 2020 to December
+      2025. Combining on-chain stablecoin metrics (circulation, issuance, transfer
+      volume, and active addresses) with a multi-source panel of daily exchange
+      rates and annual country characteristics, we estimate country-by-country panel
+      regressions, standardized country-characteristic interactions, and a crypto-
+      shock instrumental-variables design. Average effects are small: USDT
+      coefficients are significant in developed economies and high-crypto-adoption
+      countries, but not in emerging markets. Circulation and trading volume dominate
+      issuance and active wallets as transmission channels.
+    abstract_zh: >-
+      本文考察美元锚定稳定币（USDT、USDC、DAI）是否影响 2020 年 1 月至 2025 年 12 月期间
+      27 个经济体的日度汇率。我们将链上稳定币指标（流通量、发行量、转账交易量、活跃地址数）
+      与多来源的日度汇率和年度国家特征面板相结合，估计逐国面板回归、标准化国家特征交互项
+      以及加密冲击工具变量设计。平均效应很小：USDT 系数在发达经济体和高加密采用国家显著，
+      而在新兴市场并不显著。流通量与交易量是主导传导渠道，发行量与活跃钱包次之。
     doi: ""
     pdf: "/files/papers/5m1.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Chapter5_Impact_on_FX_Market"
     bibtex: |
       @article{zhou2026ch5m1,
-        title={Stablecoin Hedging and Safe-Haven Properties: Empirical Manuscript 1},
+        title={Disentangling the Effects of Stablecoins on Exchange Rates: A Currency-by-Currency Analysis},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
       }
 
   - id: wp-ch5-2
-    chapter: "Chapter 5"
-    chapter_zh: "第5章"
+    chapter: "FX Markets"
+    chapter_zh: "外汇市场"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 5] Stablecoin Hedging and Safe-Haven Properties — Empirical Manuscript 2"
-    title_zh: "【第5章】稳定币对冲与安全港属性——实证手稿 2"
+    title: "Volatility Spillovers Between Stablecoins and Foreign Exchange Markets: A Dynamic Analysis with TVP-VAR"
+    title_zh: "稳定币与外汇市场之间的波动溢出：基于 TVP-VAR 的动态分析"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Tests stablecoins' safe-haven behavior during SVB-USDC depeg and other
-      regulatory shocks. Uses event-study methods and regime-switching models
-      to identify flight-to-quality and flight-to-liquidity patterns.
+      This paper examines the dynamic volatility spillovers between major USD-pegged
+      stablecoins (USDT, USDC, and DAI) and the foreign-exchange markets of 27 economies
+      from January 2020 to December 2025. I estimate GARCH(1,1) conditional
+      volatilities and apply the Diebold-Yilmaz spillover index together with a
+      time-varying parameter VAR estimated by Kalman filtering. In normal times,
+      stablecoin price volatility is largely idiosyncratic, but spillovers spike
+      during the Terra/LUNA collapse and the SVB-induced USDC de-peg, when stablecoins
+      flip from net receivers to large net transmitters of volatility. Emerging-market
+      currencies are relatively more exposed to stablecoin volatility than developed
+      market currencies.
     description_zh: >-
-      检验稳定币在 SVB-USDC 脱锚及其他监管冲击期间的安全港行为。采用事件研究
-      与区制转换模型识别逃向质量与逃向流动性的模式。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文考察 2020 年 1 月至 2025 年 12 月期间主要美元锚定稳定币（USDT、USDC、DAI）与 27
+      个经济体外币市场之间的动态波动溢出。我估计 GARCH(1,1) 条件波动率，并应用
+      Diebold-Yilmaz 溢出指数与基于 Kalman 滤波的时变参数 VAR。常态时期稳定币价格波动在
+      很大程度上是特质性的，但在 Terra/LUNA 崩盘与硅谷银行引发的 USDC 脱锚期间溢出急剧
+      上升，稳定币由波动率的净接收者转变为大规模净输出者。新兴市场货币相较发达经济体货币
+      更容易暴露于稳定币波动。
+    abstract_en: >-
+      This paper examines the dynamic volatility spillovers between major USD-pegged
+      stablecoins (USDT, USDC, and DAI) and the foreign exchange markets of 27 economies
+      from January 2020 to December 2025. We estimate GARCH(1,1) conditional
+      volatilities for all series and apply the Diebold-Yilmaz spillover index
+      framework based on generalized forecast error variance decompositions, together
+      with a time-varying parameter vector autoregression (TVP-VAR) estimated by Kalman
+      filtering with forgetting factors. In normal times stablecoin price volatility
+      is largely idiosyncratic, but spillovers spike during crisis episodes, when
+      stablecoins flip from net receivers to large net transmitters of volatility.
+      Emerging market currencies are relatively more exposed to stablecoin volatility.
+    abstract_zh: >-
+      本文考察 2020 年 1 月至 2025 年 12 月期间主要美元锚定稳定币（USDT、USDC、DAI）与 27
+      个经济体外币市场之间的动态波动溢出。我们对所有序列估计 GARCH(1,1) 条件波动率，并
+      基于广义预测误差方差分解应用 Diebold-Yilmaz 溢出指数框架，同时采用带遗忘因子的
+      Kalman 滤波估计时变参数向量自回归（TVP-VAR）模型。常态时期稳定币价格波动很大程度上
+      是特质性的，但在危机时段稳定币由净接收者转变为大规模净输出者，溢出急剧上升。新兴
+      市场货币相对更容易暴露于稳定币波动。
     doi: ""
     pdf: "/files/papers/5m2.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Chapter5_Impact_on_FX_Market"
     bibtex: |
       @article{zhou2026ch5m2,
-        title={Stablecoin Hedging and Safe-Haven Properties: Empirical Manuscript 2},
+        title={Volatility Spillovers Between Stablecoins and Foreign Exchange Markets: A Dynamic Analysis with TVP-VAR},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
       }
 
   - id: wp-ch6-1
-    chapter: "Chapter 6"
-    chapter_zh: "第6章"
+    chapter: "Equity & Regulation"
+    chapter_zh: "股票与监管"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 6] Stablecoin Governance and Regulation — Empirical Manuscript 1"
-    title_zh: "【第6章】稳定币治理与监管——实证手稿 1"
+    title: "Regulatory Spillovers and Asset Pricing Implications of Stablecoin Legislation: Evidence from the GENIUS Act Event Study and DCC-GARCH Analysis"
+    title_zh: "稳定币立法的监管溢出与资产定价含义：来自 GENIUS 法案事件研究与 DCC-GARCH 分析的证据"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Analyzes the effectiveness of stablecoin reserve audits, disclosure
-      requirements, and redemption gates as governance tools. Uses panel
-      threshold models and RDD designs to evaluate regulatory threshold effects.
+      This paper examines how stablecoin regulatory announcements affect U.S.
+      financial and crypto-related equity markets. Focusing on eight key legislative
+      milestones of the GENIUS Act and CLARITY Act in 2025, I combine event-study
+      methodology, DCC-GARCH dynamic correlation analysis, and panel fixed-effects
+      regressions. Crypto-concept stocks significantly underperform traditional
+      financial stocks around pro-regulation news, while large banks earn positive
+      abnormal returns around the Senate passage of the GENIUS Act. DCC-GARCH
+      estimates show that dynamic conditional correlations between stablecoin market
+      capitalization changes and equity returns increase significantly after
+      regulatory clarification, indicating closer integration between stablecoin
+      markets and traditional finance.
     description_zh: >-
-      分析稳定币储备审计、信息披露要求与赎回限制作为治理工具的有效性。采用
-      面板门槛模型与断点回归设计评估监管阈值效应。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文考察稳定币监管公告如何影响美国金融类与加密相关股票市场。围绕 2025 年 GENIUS
+      法案与 CLARITY 法案的八个关键立法节点，我综合事件研究法、DCC-GARCH 动态相关分析与
+      面板固定效应回归。支持监管推进的消息前后，加密概念股显著跑输传统金融股；而参议院
+      全院通过 GENIUS 法案前后，大银行获得正异常收益。DCC-GARCH 估计显示，监管澄清后稳定
+      币市值变动与股票收益之间的动态条件相关显著上升，表明稳定币市场与传统金融的融合加深。
+    abstract_en: >-
+      This paper examines how stablecoin regulatory announcements affect U.S.
+      financial and crypto-related equity markets, using a multi-method approach that
+      combines event study methodology, DCC-GARCH dynamic correlation analysis, and
+      panel fixed-effects regressions. Focusing on eight key legislative milestones
+      of the GENIUS Act and CLARITY Act in 2025, we document strong evidence of
+      sectorally differentiated market reactions. Crypto-concept stocks significantly
+      underperform traditional financial stocks around pro-regulation news, while
+      large banks earn significant positive abnormal returns around the Senate
+      passage of the GENIUS Act. DCC-GARCH estimates show that dynamic conditional
+      correlations between stablecoin market capitalization changes and equity returns
+      increase significantly after regulatory clarification for all sectors.
+    abstract_zh: >-
+      本文采用事件研究法、DCC-GARCH 动态相关分析与面板固定效应回归相结合的多方法框架，
+      考察稳定币监管公告如何影响美国金融类与加密概念类股票市场。围绕 2025 年 GENIUS 法案
+      与 CLARITY 法案的八个关键立法节点，我们发现了板块间高度差异化市场反应的强证据。在
+      支持监管推进的消息前后，纯加密概念股显著跑输传统金融股；在参议院全院通过 GENIUS 法案
+      前后，大银行获得显著为正的超额收益。DCC-GARCH 估计显示，监管澄清后所有板块的股票
+      收益与稳定币市值变动之间的动态条件相关均显著上升。
     doi: ""
     pdf: "/files/papers/6m1.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Value-of-Carbon-Asset"
     bibtex: |
       @article{zhou2026ch6m1,
-        title={Stablecoin Governance and Regulation: Empirical Manuscript 1},
+        title={Regulatory Spillovers and Asset Pricing Implications of Stablecoin Legislation: Evidence from the GENIUS Act Event Study and DCC-GARCH Analysis},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
       }
 
   - id: wp-ch6-2
-    chapter: "Chapter 6"
-    chapter_zh: "第6章"
+    chapter: "Equity & Regulation"
+    chapter_zh: "股票与监管"
     year: 2026
     type_en: "Working Paper"
     type_zh: "工作论文"
-    title: "[Chapter 6] Stablecoin Governance and Regulation — Empirical Manuscript 2"
-    title_zh: "【第6章】稳定币治理与监管——实证手稿 2"
+    title: "Time-Varying Volatility Spillovers and Extreme Risk Contagion Between Stablecoin Markets and Stock Markets: Evidence from TVP-VAR and CoVaR Approaches"
+    title_zh: "稳定币市场与股票市场之间的时变波动溢出与极端风险传染：来自 TVP-VAR 与 CoVaR 方法的证据"
     authors: "**Jiayi Zhou**"
     authors_zh: "**周家屹**"
     venue_en: "Working paper, 2026."
     venue_zh: "工作论文，2026。"
     description_en: >-
-      Assesses the international coordination challenges of stablecoin
-      regulation. Employs comparative case studies and network-game reasoning
-      to discuss issuer-of-last-resort, run risk, and cross-border monetary
-      policy implications.
+      This paper investigates the time-varying volatility spillovers and extreme
+      risk contagion effects between stablecoin markets and U.S. stock markets from
+      April 2021 to June 2026. I employ a TVP-VAR connectedness approach, frequency-
+      domain decomposition, and CoVaR/MES tail-risk measures. Stablecoin markets are
+      materially connected to traditional financial markets, with a full-sample
+      average total spillover index of 47.2%. The largest spillover spike (87.5%)
+      occurs during the March 2023 SVB failure and associated USDC de-peg, while
+      crypto-native crises such as Terra-LUNA and FTX generate only moderate
+      increases. Crypto-concept stocks and exchange stocks exhibit far larger tail
+      exposures than payment stocks, the broad market, and bank stocks.
     description_zh: >-
-      评估稳定币监管的国际协调挑战。运用比较案例研究与网络博弈分析讨论最后
-      贷款人、挤兑风险与跨境货币政策含义。
-    abstract_en: "[To be added by the author.]"
-    abstract_zh: "【待作者补充。】"
+      本文研究 2021 年 4 月至 2026 年 6 月期间稳定币市场与美国股票市场之间的时变波动溢出
+      与极端风险传染效应。我采用 TVP-VAR 关联性方法、频域分解以及 CoVaR/MES 尾部风险测度。
+      稳定币市场与传统金融市场存在实质性关联，全样本平均总溢出指数为 47.2%。最大的一次
+      溢出飙升（87.5%）出现在 2023 年 3 月硅谷银行倒闭及 USDC 脱锚期间，而 Terra-LUNA 与
+      FTX 等加密原生危机仅产生温和上升。加密货币概念股与交易所股的尾部暴露远大于支付股、
+      大盘与银行股。
+    abstract_en: >-
+      This paper investigates the time-varying volatility spillovers and extreme
+      risk contagion effects between stablecoin markets and U.S. stock markets from
+      April 2021 to June 2026. Using the time-varying parameter vector autoregression
+      (TVP-VAR) connectedness approach, we first construct a dynamic spillover index
+      framework that overcomes the rolling-window bias in traditional Diebold-Yilmaz
+      spillover measures. We further decompose spillovers into frequency domains and
+      quantify extreme tail risk contagion via CoVaR and MES measures. Stablecoin
+      markets are materially connected to traditional financial markets, with the
+      largest spillover spike occurring during the March 2023 SVB failure and the
+      associated USDC depegging. Crypto-concept stocks exhibit far larger tail
+      exposures than payment stocks, the broad market, and bank stocks.
+    abstract_zh: >-
+      本文研究 2021 年 4 月至 2026 年 6 月期间稳定币市场与美国股票市场之间的时变波动溢出
+      与极端风险传染效应。我们利用时变参数向量自回归（TVP-VAR）关联性方法，首先构建动态
+      溢出指数框架以克服传统 Diebold-Yilmaz 溢出测度中的滚动窗口偏差；进一步对溢出进行
+      频域分解，并通过 CoVaR 与 MES 测度量化极端尾部风险传染。稳定币市场与传统金融市场
+      存在实质性关联，最大的一次溢出飙升出现在 2023 年 3 月硅谷银行倒闭及 USDC 脱锚期间。
+      加密货币概念股的尾部暴露远大于支付股、大盘与银行股。
     doi: ""
     pdf: "/files/papers/6m2.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Value-of-Carbon-Asset"
     bibtex: |
       @article{zhou2026ch6m2,
-        title={Stablecoin Governance and Regulation: Empirical Manuscript 2},
+        title={Time-Varying Volatility Spillovers and Extreme Risk Contagion Between Stablecoin Markets and Stock Markets: Evidence from TVP-VAR and CoVaR Approaches},
         author={Zhou, Jiayi},
         journal={Working Paper},
         year={2026}
-      }
-
-  - id: zhou2023oilgas-wp
-    chapter: "Energy Accounting"
-    chapter_zh: "能源核算"
-    year: 2023
-    type_en: "Working Paper"
-    type_zh: "工作论文"
-    title: "Analysis of China's Oil and Gas Imports and Exports from 2018 to 2022"
-    title_zh: "2018—2022 年中国油气进出口状况分析"
-    authors: "**Jiayi Zhou**, et al."
-    authors_zh: "**周家屹**等"
-    venue_en: "*International Petroleum Economics*, 2023. (in Chinese)"
-    venue_zh: "《国际石油经济》，2023。"
-    description_en: >-
-      Provides a detailed accounting of China's crude oil and LNG import trends,
-      external dependence, and post-pandemic import-cost dynamics. The paper
-      documents the 2020 import peak and the 2022 LNG contraction, offering
-      empirical evidence for national energy-security and import-diversification
-      strategies.
-    description_zh: >-
-      详细核算中国原油与 LNG 进口趋势、对外依存度及疫情后进口成本动态。记录
-      2020 年进口峰值与 2022 年 LNG 收缩，为国家能源安全与进口多元化策略提供
-      经验证据。
-    abstract_en: >-
-      This paper examines China's oil and gas trade between 2018 and 2022. We
-      document the continued growth of crude oil imports, the rapid expansion and
-      subsequent contraction of LNG imports, and the corresponding changes in
-      external dependence. The analysis highlights the 2020 import peak, the 2022
-      LNG decline, and the rising import costs in the post-pandemic period,
-      offering implications for energy security and import diversification
-      strategies.
-    abstract_zh: >-
-      本文考察 2018—2022 年中国油气贸易。我们记录了原油进口的持续增长、LNG
-      进口的快速扩张与随后的收缩，以及相应对外依存度的变化。分析突出 2020 年
-      进口峰值、2022 年 LNG 下降及疫情后进口成本上升，为能源安全与进口多元化
-      策略提供参考。
-    doi: ""
-    pdf: "/files/papers/zhou2023oilgas.pdf"
-    github: ""
-    bibtex: |
-      @article{zhou2023oilgas,
-        title={Analysis of China's Oil and Gas Imports and Exports from 2018 to 2022},
-        author={Zhou, Jiayi and others},
-        journal={International Petroleum Economics},
-        year={2023},
-        note={in Chinese}
-      }
-
-  - id: zhou2022carbon-wp
-    chapter: "Carbon Accounting"
-    chapter_zh: "碳核算"
-    year: 2022
-    type_en: "Working Paper"
-    type_zh: "工作论文"
-    title: "A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics"
-    title_zh: "基于生物物理经济学思想的碳排放权价值测算模型研究"
-    authors: "**Jiayi Zhou**, Jian-Feng Guo, et al."
-    authors_zh: "**周家屹**，郭剑锋等"
-    venue_en: "*Chinese Journal of Management Science*, 2022. (in Chinese)"
-    venue_zh: "《中国管理科学》，2022。"
-    description_en: >-
-      Builds a balance-sheet valuation model for carbon emission rights from a
-      biophysical economics perspective: domestic emissions are treated as
-      assets, global atmospheric capacity as liabilities, and domestic carbon
-      sinks as equity. The paper derives a carbon-pricing accounting identity
-      and discusses its policy implications for China's carbon market.
-    description_zh: >-
-      建立生物物理经济学视角下的碳排放权资产负债表估值模型，将本国排放视为
-      资产、全球大气容量视为负债、国内碳汇视为权益，推导碳价会计恒等式，并
-      讨论其对中国碳市场的政策含义。
-    abstract_en: >-
-      Drawing on biophysical economics, this study reframes carbon emission
-      rights as balance-sheet items. National emissions are valued as assets,
-      the globally shared atmospheric capacity as liabilities, and domestic
-      carbon sinks as equity. We derive an accounting identity that links carbon
-      price to the monetized value of environmental capacity and apply it to
-      China's national carbon market. The model offers a new accounting lens for
-      carbon pricing and emissions budgeting.
-    abstract_zh: >-
-      本文借鉴生物物理经济学思想，将碳排放权重构为资产负债表项目：本国排放
-      量作为资产，全球共有大气容量作为负债，国内碳汇作为权益。我们推导了连接
-      碳价与环境容量货币化价值的会计恒等式，并将其应用于中国全国碳市场。该
-      模型为碳定价与排放预算提供了新的会计视角。
-    doi: "10.16381/j.cnki.issn1003-207x.2021.1684"
-    pdf: "/files/papers/zhou2022carbon.pdf"
-    github: ""
-    bibtex: |
-      @article{zhou2022carbon,
-        title={A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics},
-        author={Zhou, Jiayi and Guo, Jian-Feng and others},
-        journal={Chinese Journal of Management Science},
-        year={2022},
-        publisher={Science Press},
-        doi={10.16381/j.cnki.issn1003-207x.2021.1684},
-        note={in Chinese}
-      }
-
-  - id: carbon-bs-logic
-    chapter: "Research Note"
-    chapter_zh: "研究札记"
-    year: 2026
-    type_en: "Research Note"
-    type_zh: "研究札记"
-    title: "The Balance-Sheet Logic of Carbon Emission Rights"
-    title_zh: "碳排放权的资产负债表逻辑"
-    authors: "**Jiayi Zhou**"
-    authors_zh: "**周家屹**"
-    venue_en: "Open research note, 2026."
-    venue_zh: "开放研究札记，2026。"
-    description_en: >-
-      An open research note that explains the balance-sheet logic behind the
-      carbon emission rights valuation model. It reframes carbon emissions as
-      sovereign assets, atmospheric capacity as liabilities, and domestic carbon
-      sinks as equity, deriving a carbon-pricing accounting identity. This note
-      is part of our commitment to open, reproducible research.
-    description_zh: >-
-      一篇开放研究札记，阐释《基于生物物理经济学思想的碳排放权价值测算模型
-      研究》背后的资产负债表逻辑。将碳排放重构为国家资产、大气容量为负债、
-      国内碳汇为权益，推导碳定价会计恒等式。本文是我们践行开放、可复现研究的
-      一部分。
-    abstract_en: >-
-      This note develops a balance-sheet framework for carbon emission rights.
-      National emissions are treated as assets, the globally shared atmospheric
-      capacity as liabilities, and domestic carbon sinks as equity. We derive a
-      carbon-pricing identity and apply it to China's national carbon market and
-      the global carbon budget. The framework clarifies that carbon markets are
-      fundamentally mechanisms for monetizing the allocation of environmental
-      capacity, with important implications for climate policy and international
-      carbon negotiations.
-    abstract_zh: >-
-      本文构建碳排放权的资产负债表框架。本国排放量视为资产，全球共有大气容量
-      视为负债，国内碳汇视为权益。我们推导碳定价恒等式，并将其应用于中国全国
-      碳市场与全球碳预算。该框架阐明，碳市场本质上是环境容量分配货币化的机制，
-      对气候政策与国际碳谈判具有重要启示。
-    doi: ""
-    pdf: ""
-    github: ""
-    bibtex: |
-      @article{zhou2026carbonbs,
-        title={The Balance-Sheet Logic of Carbon Emission Rights},
-        author={Zhou, Jiayi},
-        journal={Working Paper},
-        year={2026}
-      }
-
-  - id: zhou2025ranking-wp
-    chapter: "Bibliometrics"
-    chapter_zh: "文献计量"
-    year: 2025
-    type_en: "Working Paper"
-    type_zh: "工作论文"
-    title: "Ranking Influential Non-Content Factors on Scientific Papers' Citation Impact: A Multidomain Comparative Analysis"
-    title_zh: "科学论文引用影响力的非内容因素排名：一项跨领域比较分析"
-    authors: "Jiannan Zhu, **Jiayi Zhou**, Jing Pan, Feng Gu, & Jian-Feng Guo*"
-    authors_zh: "朱剑楠，**周家屹**，潘静，顾锋，郭剑锋*"
-    venue_en: "*Big Data and Cognitive Computing*, 9(2), 30, 2025."
-    venue_zh: "《Big Data and Cognitive Computing》，9(2)，30，2025。"
-    description_en: >-
-      Compares non-content drivers of citation impact across mathematics,
-      computer science, and management. Using XGBoost, GBDT, Random Forest, and
-      quantile regression, the study finds that author reputation and reference
-      count dominate citation influence, with discipline-specific variation in
-      the relative importance of other factors.
-    description_zh: >-
-      跨数学、计算机科学与管理学三领域比较论文引用的非内容因素。使用 XGBoost、
-      GBDT、随机森林与分位数回归，发现作者声望与参考文献数量主导引用影响，
-      其他因素的相对重要性因学科而异。
-    abstract_en: >-
-      This paper investigates the non-content factors that shape scientific
-      papers' citation impact across three disciplines. By combining machine
-      learning and quantile regression, we rank the influence of author
-      reputation, journal metrics, reference count, and collaboration patterns.
-      The results highlight that author prominence and the breadth of references
-      consistently rank highest, while the contribution of other factors varies
-      by field. These findings provide practical guidance for researchers aiming
-      to maximize the visibility of their work without sacrificing scholarly
-      quality.
-    abstract_zh: >-
-      本文研究影响科学论文引用影响力的非内容因素，覆盖三个学科。通过机器学习
-      与分位数回归相结合，我们对作者声望、期刊指标、参考文献数量与合作模式的
-      影响进行排名。结果表明，作者知名度与参考文献广度始终最为重要，其他因素
-      的贡献则因领域而异。研究为研究人员在不牺牲学术质量的前提下提升论文可见度
-      提供了实践参考。
-    doi: "10.3390/bdcc9020030"
-    pdf: "/files/papers/zhou2025ranking.pdf"
-    github: ""
-    bibtex: |
-      @article{zhou2025ranking,
-        title={Ranking Influential Non-Content Factors on Scientific Papers' Citation Impact: A Multidomain Comparative Analysis},
-        author={Zhu, Jiannan and Zhou, Jiayi and Pan, Jing and Gu, Feng and Guo, Jian-Feng},
-        journal={Big Data and Cognitive Computing},
-        volume={9},
-        number={2},
-        pages={30},
-        year={2025},
-        publisher={MDPI},
-        doi={10.3390/bdcc9020030}
       }
 
 # ----------------------------------------------------------------------------
 # Peer-reviewed Publications
 # ----------------------------------------------------------------------------
 peer_reviewed:
+  - id: zhou2026crypto
+    year: 2026
+    type_en: "SSRN Working Paper"
+    type_zh: "SSRN 工作论文"
+    title: "A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research"
+    title_zh: "加密金融风险研究的系统文献计量与主题建模综述"
+    authors: "**Jia-Yi Zhou**, Jing-Jing Li, Bin-Bin Xu, Yan-Ran Ma, & Jian-Feng Guo"
+    authors_zh: "**周家屹**，李晶晶，徐彬彬，马嫣然，郭剑锋"
+    venue_en: "SSRN Working Paper, January 31, 2026."
+    venue_zh: "SSRN 工作论文，2026 年 1 月 31 日。"
+    description_en: >-
+      This is the bibliometric backbone of the dissertation. I systematically
+      review 891 leading academic and policy publications on crypto financial
+      risk together with 1,980 hand-collected risk events spanning 2012–2025.
+      Using a modular BERTopic pipeline and citation-network analysis, I identify
+      19 research themes and consolidate them into an integrated framework that
+      covers risk sources, measurement, transmission, hedging, and governance.
+      The analysis reveals a thematic shift from early consensus-mechanism and
+      valuation concerns toward systemic spillovers, DeFi vulnerabilities, and
+      macroprudential governance, and it bridges the gap between the fragmented
+      literature and the empirical reality of crypto crises.
+    description_zh: >-
+      本文是博士论文的文献计量基础。我系统回顾了 2012—2025 年间 891 篇加密金融风险领域的
+      权威学术与政策文献，并结合 1,980 起手工整理的风险事件。通过模块化 BERTopic 流程与引文
+      网络分析，我识别出 19 个研究主题，并将其整合为覆盖风险来源、测度、传染、对冲与治理的
+      综合框架。分析揭示了研究主题从早年的共识机制与资产估值问题，逐步转向系统性溢出、
+      DeFi 脆弱性与宏观审慎治理的演进轨迹，弥合了碎片化文献与加密危机经验现实之间的鸿沟。
+    abstract_en: >-
+      The rapid expansion of crypto finance has generated a large and fragmented
+      scholarly literature, making systematic synthesis increasingly necessary.
+      We employ modular BERTopic and bibliometric analysis to examine 891 leading
+      academic and policy publications, integrated with 1,980 security events.
+      The analysis identifies 19 research themes, consolidated inductively into an
+      integrated framework encompassing risk sources, measurement, transmission,
+      hedging, and governance. The findings reveal a thematic shift from early
+      preoccupations with consensus mechanisms and asset valuation toward,
+      particularly since 2018, quantitative analyses of systemic spillovers, DeFi
+      vulnerabilities, and macroprudential governance.
+    abstract_zh: >-
+      加密金融的快速扩张催生了大量且碎片化的学术文献，系统综合变得越来越必要。我们采用
+      模块化 BERTopic 与文献计量分析，考察了 891 篇权威学术与政策文献，并结合 1,980 起安全
+      事件。分析识别出 19 个研究主题，并将其归纳整合为涵盖风险来源、测度、传染、对冲与治理
+      的综合框架。研究发现，研究主题从早年的共识机制与资产估值关注，特别是自 2018 年以来，
+      逐步转向系统性溢出、去中心化金融脆弱性与宏观审慎治理的定量分析。
+    doi: "10.2139/ssrn.7225798"
+    pdf: "/files/papers/zhou2026crypto.pdf"
+    github: "https://github.com/JoeYi666"
+    bibtex: |
+      @article{zhou2026crypto,
+        title={A Systematic Bibliometric and Topic Modelling Review of Crypto Financial Risk Research},
+        author={Zhou, Jia-Yi and Li, Jing-Jing and Xu, Bin-Bin and Ma, Yan-Ran and Guo, Jian-Feng},
+        journal={SSRN Working Paper},
+        year={2026},
+        doi={10.2139/ssrn.7225798}
+      }
+
   - id: zhou2025ranking
     year: 2025
     type_en: "Journal Article"
@@ -661,34 +819,29 @@ peer_reviewed:
     venue_en: "*Big Data and Cognitive Computing*, 9(2), 30, 2025."
     venue_zh: "《Big Data and Cognitive Computing》，9(2)，30，2025。"
     description_en: >-
-      Compares non-content drivers of citation impact across mathematics,
-      computer science, and management. Using XGBoost, GBDT, Random Forest, and
-      quantile regression, the study finds that author reputation and reference
-      count dominate citation influence, with discipline-specific variation in
-      the relative importance of other factors.
+      Compares non-content drivers of citation impact across mathematics, computer
+      science, and management. Using XGBoost, GBDT, Random Forest, and quantile
+      regression, the study finds that author reputation and reference count dominate
+      citation influence, with discipline-specific variation in the relative
+      importance of other factors.
     description_zh: >-
-      跨数学、计算机科学与管理学三领域比较论文引用的非内容因素。使用 XGBoost、
-      GBDT、随机森林与分位数回归，发现作者声望与参考文献数量主导引用影响，
-      其他因素的相对重要性因学科而异。
+      跨数学、计算机科学与管理学三领域比较论文引用的非内容因素。使用 XGBoost、GBDT、
+      随机森林与分位数回归，发现作者声望与参考文献数量主导引用影响，其他因素的相对重要性
+      因学科而异。
     abstract_en: >-
-      This paper investigates the non-content factors that shape scientific
-      papers' citation impact across three disciplines. By combining machine
-      learning and quantile regression, we rank the influence of author
-      reputation, journal metrics, reference count, and collaboration patterns.
-      The results highlight that author prominence and the breadth of references
-      consistently rank highest, while the contribution of other factors varies
-      by field. These findings provide practical guidance for researchers aiming
-      to maximize the visibility of their work without sacrificing scholarly
-      quality.
+      This paper investigates the non-content factors that shape scientific papers'
+      citation impact across three disciplines. By combining machine learning and
+      quantile regression, we rank the influence of author reputation, journal
+      metrics, reference count, and collaboration patterns. The results highlight
+      that author prominence and the breadth of references consistently rank highest,
+      while the contribution of other factors varies by field.
     abstract_zh: >-
-      本文研究影响科学论文引用影响力的非内容因素，覆盖三个学科。通过机器学习
-      与分位数回归相结合，我们对作者声望、期刊指标、参考文献数量与合作模式的
-      影响进行排名。结果表明，作者知名度与参考文献广度始终最为重要，其他因素
-      的贡献则因领域而异。研究为研究人员在不牺牲学术质量的前提下提升论文可见度
-      提供了实践参考。
+      本文研究影响科学论文引用影响力的非内容因素，覆盖三个学科。通过机器学习与分位数回归
+      相结合，我们对作者声望、期刊指标、参考文献数量与合作模式的影响进行排名。结果表明，
+      作者知名度与参考文献广度始终最为重要，其他因素的贡献则因领域而异。
     doi: "10.3390/bdcc9020030"
     pdf: "/files/papers/zhou2025ranking.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666"
     bibtex: |
       @article{zhou2025ranking,
         title={Ranking Influential Non-Content Factors on Scientific Papers' Citation Impact: A Multidomain Comparative Analysis},
@@ -713,31 +866,40 @@ peer_reviewed:
     venue_en: "*Chinese Journal of Management Science*, 2022. (in Chinese)"
     venue_zh: "《中国管理科学》，2022。"
     description_en: >-
-      Builds a balance-sheet valuation model for carbon emission rights from a
-      biophysical economics perspective: domestic emissions are treated as
-      assets, global atmospheric capacity as liabilities, and domestic carbon
-      sinks as equity. The paper derives a carbon-pricing accounting identity
-      and discusses its policy implications for China's carbon market.
+      This paper reframes carbon emission rights from a biophysical economics and
+      accounting perspective: national emissions are treated as assets, the globally
+      shared atmospheric capacity as liabilities, and domestic carbon sinks as equity.
+      It derives a carbon-pricing accounting identity in which the carbon price equals
+      the monetized value of environmental capacity divided by total emissions, and it
+      explains how CBAM transforms the passive expansion of the global-common liability
+      into an explicit monetary loss. Applied to China's national carbon market, the
+      model shows that the current price reflects mainly the domestic cost of carbon
+      sink production, while future price increases will be driven by the gradual
+      explicit pricing of the global-common liability through tighter caps and
+      international carbon mechanisms.
     description_zh: >-
-      建立生物物理经济学视角下的碳排放权资产负债表估值模型，将本国排放视为
-      资产、全球大气容量视为负债、国内碳汇视为权益，推导碳价会计恒等式，并
-      讨论其对中国碳市场的政策含义。
+      本文从生物物理经济学与会计学视角重构碳排放权：将本国实际排放量视为资产，全球共有
+      大气容量视为负债，国内碳汇新增视为权益。文章推导了碳定价会计恒等式——碳价等于环境
+      容量货币化价值除以总排放量，并解释 CBAM 如何将全球共有负债的被动扩张显性化为货币
+      损失。应用于中国全国碳市场，模型表明当前碳价主要反映国内碳汇生产成本，而未来价格
+      上行将由更严格的总量控制与国际碳机制逐步推动全球共有负债显性化所驱动。
     abstract_en: >-
-      Drawing on biophysical economics, this study reframes carbon emission
-      rights as balance-sheet items. National emissions are valued as assets,
-      the globally shared atmospheric capacity as liabilities, and domestic
-      carbon sinks as equity. We derive an accounting identity that links carbon
-      price to the monetized value of environmental capacity and apply it to
-      China's national carbon market. The model offers a new accounting lens for
-      carbon pricing and emissions budgeting.
+      Drawing on biophysical economics, this study reframes carbon emission rights
+      as balance-sheet items. National emissions are valued as assets, the globally
+      shared atmospheric capacity as liabilities, and domestic carbon sinks as equity.
+      We derive an accounting identity that links carbon price to the monetized value
+      of environmental capacity and apply it to China's national carbon market. The
+      model offers a new accounting lens for carbon pricing and emissions budgeting,
+      and it clarifies that CBAM acts as a mechanism that makes the consumption of
+      global-common environmental capacity visible as a monetary loss.
     abstract_zh: >-
-      本文借鉴生物物理经济学思想，将碳排放权重构为资产负债表项目：本国排放量
-      作为资产，全球共有大气容量作为负债，国内碳汇作为权益。我们推导了连接
-      碳价与环境容量货币化价值的会计恒等式，并将其应用于中国全国碳市场。该
-      模型为碳定价与排放预算提供了新的会计视角。
+      本文借鉴生物物理经济学思想，将碳排放权重构为资产负债表项目：本国排放量作为资产，
+      全球共有大气容量作为负债，国内碳汇作为权益。我们推导了连接碳价与环境容量货币化价值
+      的会计恒等式，并将其应用于中国全国碳市场。该模型为碳定价与排放预算提供了新的会计
+      视角，并阐明 CBAM 本质上是一种将全球共有环境容量消费显性化为货币损失的机制。
     doi: "10.16381/j.cnki.issn1003-207x.2021.1684"
     pdf: "/files/papers/zhou2022carbon.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Value-of-Carbon-Asset"
     bibtex: |
       @article{zhou2022carbon,
         title={A Model for Calculating the Value of Carbon Emission Rights Based on the Ideas of Biophysical Economics},
@@ -762,27 +924,24 @@ peer_reviewed:
     description_en: >-
       Analyzes trends in China's crude oil and LNG imports, external dependence,
       the 2020 import peak, and the 2022 LNG decline. The paper documents the
-      post-pandemic rise in import costs and its implications for national
-      energy security.
+      post-pandemic rise in import costs and its implications for national energy
+      security.
     description_zh: >-
-      分析中国原油与 LNG 进口趋势、对外依存度、2020 年进口峰值与 2022 年 LNG
-      下降，梳理疫情后进口成本上升态势及其对能源安全的影响。
+      分析中国原油与 LNG 进口趋势、对外依存度、2020 年进口峰值与 2022 年 LNG 下降，梳理
+      疫情后进口成本上升态势及其对能源安全的影响。
     abstract_en: >-
       This paper examines China's oil and gas trade between 2018 and 2022. We
-      document the continued growth of crude oil imports, the rapid expansion
-      and subsequent contraction of LNG imports, and the corresponding changes in
-      external dependence. The analysis highlights the 2020 import peak, the
-      2022 LNG decline, and the rising import costs in the post-pandemic period,
-      offering implications for energy security and import diversification
-      strategies.
+      document the continued growth of crude oil imports, the rapid expansion and
+      subsequent contraction of LNG imports, and the corresponding changes in
+      external dependence. The analysis highlights the 2020 import peak, the 2022
+      LNG decline, and the rising import costs in the post-pandemic period.
     abstract_zh: >-
-      本文考察 2018—2022 年中国油气贸易。我们记录了原油进口的持续增长、LNG
-      进口的快速扩张与随后的收缩，以及相应对外依存度的变化。分析突出 2020 年
-      进口峰值、2022 年 LNG 下降及疫情后进口成本上升，为能源安全与进口多元化
-      策略提供参考。
+      本文考察 2018—2022 年中国油气贸易。我们记录了原油进口的持续增长、LNG 进口的快速
+      扩张与随后的收缩，以及相应对外依存度的变化。分析突出 2020 年进口峰值、2022 年 LNG
+      下降及疫情后进口成本上升。
     doi: ""
     pdf: "/files/papers/zhou2023oilgas.pdf"
-    github: ""
+    github: "https://github.com/JoeYi666/Value-of-Carbon-Asset"
     bibtex: |
       @article{zhou2023oilgas,
         title={Analysis of China's Oil and Gas Imports and Exports from 2018 to 2022},
@@ -808,10 +967,11 @@ patents:
     status_en: "Filed"
     status_zh: "已提交"
     description_en: >-
-      A device and apparatus for assessing industrial development state by
-      modeling industries as dissipative structures, enabling early diagnosis of
-      transition risks and sustainability bottlenecks.
+      A device and apparatus for assessing industrial development state by modeling
+      industries as dissipative structures, enabling early diagnosis of transition
+      risks and sustainability bottlenecks.
     description_zh: >-
-      通过将产业建模为耗散结构来评估产业发展状态的装置与设备，可用于早期识别
-      转型风险与可持续性瓶颈。
-    github: ""
+      通过将产业建模为耗散结构来评估产业发展状态的装置与设备，可用于早期识别转型风险与
+      可持续性瓶颈。
+    github: "https://github.com/JoeYi666"
+

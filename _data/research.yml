@@ -3,95 +3,197 @@
 # ============================================================================
 
 intro:
-  en: "My doctoral research situates USD stablecoins in the international monetary system and studies their balance-sheet, price, and network effects on financial markets."
-  zh: "我的博士研究将美元稳定币置于国际货币体系中，系统考察其对金融市场的资产负债表、价格与网络效应。"
+  en: "My doctoral research studies USD stablecoins as a bridge between the crypto ecosystem and the traditional financial system. I use an Incremental-Stock-Flow-Consistent (ISFC) framework, causal-identification strategies, and machine-learning tools to examine how stablecoin issuance, reserve allocation, and redemption affect bond yields, exchange rates, equity markets, and regulatory spillovers."
+  zh: "我的博士研究将美元稳定币视为连接加密生态与传统金融体系的桥梁。我运用增量—存量—流量一致（ISFC）框架、因果识别策略与机器学习工具，考察稳定币的发行、储备配置与赎回如何影响债券收益率、汇率、股票市场与监管溢出。"
 
 projects:
-  - id: dissertation
-    title_en: "Doctoral Dissertation: The Impact of USD Stablecoins on International Financial Markets"
-    title_zh: "博士论文：美元稳定币对国际金融市场的影响"
-    role_en: "Independent Researcher"
-    role_zh: "独立研究者"
+  - id: isfc-framework
+    title_en: "ISFC Framework and the Money View"
+    title_zh: "ISFC 框架与货币视角"
+    role_en: "Ph.D. Researcher"
+    role_zh: "博士生研究"
     period: "Sep. 2023 – Present"
     period_zh: "2023 年 9 月至今"
     points:
       - en: >-
-          Constructed the **Incremental-Stock-Flow-Consistent (ISFC)**
-          analytical framework to model stablecoin issuers' balance sheets,
-          revealing their accounting isomorphism with commercial banks
-          alongside institutional heterogeneity.
+          Develop the Incremental-Stock-Flow-Consistent (ISFC) framework to model
+          stablecoin issuers' balance sheets as dynamic, incremental systems.
         zh: >-
-          构建**增量—存量—流量一致（ISFC）**分析框架，刻画稳定币发行方的
-          资产负债表，揭示其与商业银行在记账逻辑上的同构性及制度异质性。
+          构建增量—存量—流量一致（ISFC）框架，将稳定币发行方资产负债表建模为动态
+          增量系统。
       - en: >-
-          Applied **Random Forest, XGBoost, and SHAP** to identify key drivers
-          of stablecoin issuance across macro, crypto-market, regulatory, and
-          network-effect dimensions; developed **LSTM/GRU and Transformer**
-          models for multi-scenario supply forecasting.
+          Clarify the accounting isomorphism between stablecoin platforms and
+          fractional-reserve commercial banks, tracing the intellectual lineage
+          to Perry Mehrling's Money View and post-Keynesian SFC models.
         zh: >-
-          运用**随机森林、XGBoost 与 SHAP**，从宏观、加密市场、监管与网络效应
-          等维度识别稳定币发行的关键驱动因素；构建 **LSTM/GRU 与 Transformer**
-          模型进行多情景供给预测。
+          阐明稳定币平台与部分准备金商业银行之间的会计同构性，并追溯其思想渊源至
+          Perry Mehrling 的货币视角与后凯恩斯主义 SFC 模型。
       - en: >-
-          Employed **LP-IV with Elastic Net residual instruments** to identify
-          causal effects of stablecoin reserve allocation on U.S. Treasury
-          yields and commercial paper spreads; integrated **Diebold-Yilmaz
-          spillover indices** and **TVP-VAR** to quantify time-varying
-          volatility transmission to bond markets.
+          Provide a common accounting language for the empirical chapters on
+          banking, bond, foreign-exchange, and equity markets.
         zh: >-
-          采用**基于弹性网络残差工具变量的局部投影法（LP-IV）**，识别稳定币
-          储备资产配置对美国国债收益率与商业票据利差的因果效应；结合
-          **Diebold-Yilmaz 溢出指数**与 **TVP-VAR** 模型，量化对债券市场的
-          时变波动传染。
+          为后续关于银行、债券、外汇与股票市场的实证章节提供统一的会计语言。
+
+  - id: issuance-drivers
+    title_en: "Drivers and Forecasting of Stablecoin Issuance"
+    title_zh: "稳定币发行的驱动因素与预测"
+    role_en: "Ph.D. Researcher"
+    role_zh: "博士生研究"
+    period: "2023 – 2026"
+    period_zh: "2023—2026"
+    points:
       - en: >-
-          Designed **Difference-in-Differences (DiD), triple-difference, and
-          synthetic control** strategies with **IV-2SLS** (on-chain activity
-          and regulatory events as instruments) to estimate stablecoins'
-          impact on interbank lending, money market funds, and monetary
-          policy rate pass-through.
+          Use rolling LASSO and SHAP-enhanced deep forecasting to track how the
+          drivers of USDT, USDC, and DAI issuance vary across horizons and market
+          regimes.
         zh: >-
-          设计**双重差分（DiD）、三重差分与合成控制**策略，辅以 **IV-2SLS**
-          （以链上活跃度与监管事件为工具变量），估计稳定币对银行间拆借、
-          货币市场基金与货币政策利率传导的影响。
+          采用滚动 LASSO 与 SHAP 增强深度预测方法，追踪 USDT、USDC 与 DAI 发行驱动
+          因素如何随期限与市场机制变化。
       - en: >-
-          Built **cross-border stablecoin flow networks** using on-chain data;
-          applied **PageRank, Louvain community detection, and cascade failure
-          simulations** to analyze digital dollarization dynamics and foreign
-          exchange volatility spillovers.
+          Find that long-horizon issuance is anchored in Federal Reserve liquidity
+          plumbing and short-term interest rates, while short-horizon issuance is
+          dominated by autoregressive supply momentum and realized-cap flows.
         zh: >-
-          基于链上数据构建**稳定币跨境流动网络**；运用 **PageRank、Louvain
-          社区发现与级联失效仿真**，分析数字美元化动态与汇率波动溢出。
+          发现长期发行锚定于美联储流动性管道与短期利率，短期发行则由自回归供给
+          动量与已实现市值资金流主导。
       - en: >-
-          Applied **Hansen (1999) panel threshold models** to test currency
-          substitution effects across emerging and advanced economies;
-          employed **RDD** for regulatory threshold identification and
-          **event studies** on SVB-USDC depeg and GENIUS/CLARITY Act shocks.
+          Distinguish centralized fiat-backed, decentralized algorithmic, and
+          hybrid stablecoin designs in the forecasting and attribution analysis.
         zh: >-
-          运用 **Hansen (1999) 面板门槛模型**检验新兴与发达经济体的货币替代
-          效应；采用**断点回归（RDD）**识别监管门槛效应，并针对 SVB-USDC
-          脱锚与 GENIUS/CLARITY 法案冲击开展**事件研究**。
+          在预测与归因分析中区分中心化法币抵押型、去中心化算法型与混合型稳定币设计。
+
+  - id: bond-market
+    title_en: "Stablecoin Impacts on Treasury and Bond Markets"
+    title_zh: "稳定币对国债与债券市场的影响"
+    role_en: "Ph.D. Researcher"
+    role_zh: "博士生研究"
+    period: "2024 – 2026"
+    period_zh: "2024—2026"
+    points:
       - en: >-
-          Data sources: **Glassnode, DeFiLlama, TradingView**; empirical workflow
-          built on **Python** and the [StatsPAI](https://github.com/brycewang-stanford/StatsPAI)
-          library; follow the [empirical paper workflow](https://github.com/brycewang-stanford/Paper-WorkFlow)
-          for reproducible research.
+          Estimate the causal effect of stablecoin flows on the U.S. Treasury
+          yield curve using local-projection IV with Elastic-Net crypto shocks as
+          instruments.
         zh: >-
-          数据来源：**Glassnode、DeFiLlama、TradingView**；实证工作流基于 **Python**
-          与 [StatsPAI](https://github.com/brycewang-stanford/StatsPAI) 库构建，
-          并遵循 [实证论文写作工作流](https://github.com/brycewang-stanford/Paper-WorkFlow)
-          以保证研究可复现。
+          采用局部投影—工具变量方法，以 Elastic-Net 加密冲击作为工具变量，估计稳定
+          币资金流对美国国债收益率曲线的因果效应。
+      - en: >-
+          Identify structural stablecoin demand shocks with heteroskedasticity-based
+          estimation, SVAR-IV, and max-share identification, and document
+          state-dependent transmission.
+        zh: >-
+          通过异方差识别、SVAR-IV 与 max-share 识别方法识别结构性稳定币需求冲击，并
+          记录状态依赖传导。
+      - en: >-
+          Quantify volatility spillovers, credit-spread effects, and systemic-risk
+          scenarios using Diebold-Yilmaz connectedness measures and calibrated
+          stress tests.
+        zh: >-
+          运用 Diebold-Yilmaz 连通性测度与校准压力测试，量化波动溢出、信用利差效应与
+          系统性风险情景。
+
+  - id: fx-markets
+    title_en: "Stablecoins and Foreign-Exchange Markets"
+    title_zh: "稳定币与外汇市场"
+    role_en: "Ph.D. Researcher"
+    role_zh: "博士生研究"
+    period: "2024 – 2026"
+    period_zh: "2024—2026"
+    points:
+      - en: >-
+          Examine whether USD-pegged stablecoins affect daily exchange rates across
+          27 economies, using country-by-country panel regressions and a crypto-shock
+          IV design.
+        zh: >-
+          考察美元锚定稳定币是否影响 27 个经济体的日度汇率，采用逐国面板回归与加密
+          冲击工具变量设计。
+      - en: >-
+          Find that circulation and trading volume are the main transmission
+          channels, with significant effects concentrated in developed economies
+          and high-crypto-adoption countries.
+        zh: >-
+          发现流通量与交易量是主要传导渠道，显著效应集中于发达经济体与高加密采用
+          国家。
+      - en: >-
+          Study dynamic volatility spillovers with TVP-VAR and show that spillovers
+          spike during crisis episodes such as Terra/LUNA and the SVB-USDC de-peg.
+        zh: >-
+          运用 TVP-VAR 研究动态波动溢出，发现 Terra/LUNA 崩盘与 SVB-USDC 脱锚等危机
+          期间溢出显著上升。
+
+  - id: equity-regulation
+    title_en: "Regulation, Equity Markets, and Systemic Risk"
+    title_zh: "监管、股票市场与系统性风险"
+    role_en: "Ph.D. Researcher"
+    role_zh: "博士生研究"
+    period: "2024 – 2026"
+    period_zh: "2024—2026"
+    points:
+      - en: >-
+          Evaluate how the GENIUS Act and CLARITY Act milestones in 2025 affect
+          crypto-concept stocks, banks, payment firms, and the broad market using
+          event studies and DCC-GARCH.
+        zh: >-
+          运用事件研究与 DCC-GARCH 评估 2025 年 GENIUS 法案与 CLARITY 法案关键节点对
+          加密概念股、银行、支付公司与大盘的影响。
+      - en: >-
+          Show that crypto-concept stocks underperform traditional financial stocks
+          around pro-regulation news, while large banks earn positive abnormal
+          returns around the Senate passage of the GENIUS Act.
+        zh: >-
+          发现在支持监管推进的消息前后加密概念股跑输传统金融股，而参议院全院通过
+          GENIUS 法案前后大银行获得正异常收益。
+      - en: >-
+          Measure time-varying volatility spillovers and extreme tail-risk contagion
+          between stablecoin markets and U.S. equities with TVP-VAR, CoVaR, and MES.
+        zh: >-
+          使用 TVP-VAR、CoVaR 与 MES 测度稳定币市场与美国股票之间的时变波动溢出与
+          极端尾部风险传染。
+
+  - id: published-work
+    title_en: "Published and Peer-Reviewed Work"
+    title_zh: "已发表与同行评审成果"
+    role_en: "Co-author / Lead Author"
+    role_zh: "合作作者 / 第一作者"
+    period: "2022 – 2026"
+    period_zh: "2022—2026"
+    points:
+      - en: >-
+          Systematic bibliometric and topic-modeling review of 891 crypto financial
+          risk publications and 1,980 risk events, identifying 19 research themes
+          and an integrated risk framework.
+        zh: >-
+          对 891 篇加密金融风险文献与 1980 起风险事件进行系统文献计量与主题建模综述，
+          识别 19 个研究主题并构建综合风险框架。
+      - en: >-
+          Cross-disciplinary analysis of non-content factors affecting scientific
+          citation impact in mathematics, computer science, and management.
+        zh: >-
+          跨数学、计算机科学与管理学分析影响科学论文引用影响力的非内容因素。
+      - en: >-
+          Biophysical-economics and balance-sheet reframing of carbon emission
+          rights, applied to China's national carbon market.
+        zh: >-
+          从生物物理经济学与资产负债表视角重构碳排放权价值，并应用于中国全国碳市场。
+      - en: >-
+          Analysis of China's crude oil and LNG import trends, external dependence,
+          and post-pandemic energy-security implications from 2018 to 2022.
+        zh: >-
+          分析 2018—2022 年中国原油与 LNG 进口趋势、对外依存度及疫情后能源安全含义。
 
 interests:
   title_en: "Research Interests"
   title_zh: "研究方向"
   items:
-    - en: "Crypto finance & stablecoin economics"
-      zh: "加密金融与稳定币经济学"
-    - en: "Decentralized finance (DeFi) and systemic risk"
-      zh: "去中心化金融（DeFi）与系统性风险"
+    - en: "Stablecoin economics and crypto-financial linkages"
+      zh: "稳定币经济学与加密金融关联"
+    - en: "Balance-sheet accounting and the Money View"
+      zh: "资产负债表会计与货币视角"
+    - en: "Causal inference and machine learning in finance"
+      zh: "金融因果推断与机器学习"
     - en: "International financial markets and digital dollarization"
       zh: "国际金融市场与数字美元化"
-    - en: "Machine learning and causal inference in finance"
-      zh: "金融机器学习与因果推断"
-    - en: "Biophysical economics and the energy basis of value"
-      zh: "生物物理经济学与价值的能量基础"
+    - en: "Financial regulation, systemic risk, and contagion"
+      zh: "金融监管、系统性风险与传染"
+    - en: "Biophysical economics and sustainability accounting"
+      zh: "生物物理经济学与可持续会计"

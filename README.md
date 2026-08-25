@@ -7,12 +7,12 @@
 
 本仓库是 **周家屹（Jiayi Zhou）学术个人主页** 的源码，使用 Jekyll 构建，并通过 GitHub Pages 部署。
 
-- **线上站点**：https://Jiayi-Zhou.github.io
-- **源码仓库**：https://github.com/Jiayi-Zhou/Jiayi-Zhou.github.io
+- **线上站点**：https://joeyi666.github.io/Jiayi-Zhou.github.io/
+- **源码仓库**：https://github.com/JoeYi666/Jiayi-Zhou.github.io
 - **所有者 GitHub 主页**：https://github.com/JoeYi666
 - **谷歌学术主页**：https://scholar.google.com/citations?user=qcxrzQcAAAAJ&hl=zh-CN
 
-本站是基于 [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) 模板深度定制的版本，原始单页布局已被替换为以 `_data/*.yml` 为数据源的中英双语多页设计。
+本站是基于 [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) 模板深度定制的版本，原始单页布局已被替换为以 `_data/*.yml` 为数据源的中英双语多页设计。由于部署在子路径（`baseurl: /Jiayi-Zhou.github.io`），所有内部链接均使用 Jekyll 的 `relative_url` 过滤器生成。
 
 ---
 
@@ -20,22 +20,19 @@
 
 ```text
 .
-├── _config.yml              # 站点元数据、作者信息、SEO、构建设置
-├── _data/
-│   ├── about.yml            # About 页面内容（Hero、简介、理念、动态、教育、爱好）
+├── _config.yml              # 站点元数据、作者信息、SEO、baseurl、构建设置
+├── _data/                   # 页面文字内容的核心数据源（中英双语）
+│   ├── about.yml            # About 页面内容（Hero、简介、理念、教育、爱好、推荐人）
+│   ├── contact.yml          # 主页 Contact 区块内容（联系方式、地址）
+│   ├── navigation.yml       # 顶部导航链接
+│   ├── publications.yml     # Research Outputs 页面内容（Working Papers + 已发表论文 + 专利）
 │   ├── research.yml         # Research 页面内容
-│   ├── publications.yml     # Publications 页面内容（含 Working Papers）
-│   ├── patents.yml          # Patents 页面内容
-│   ├── skills.yml           # Skills 页面内容
-│   ├── contact.yml          # Contact 页面内容
-│   └── navigation.yml       # 顶部导航链接
-├── _pages/
-│   ├── about.md             # 主页（/）
-│   ├── research.md          # 研究页面（/research/）
-│   ├── publications.md      # 学术发表页面（/publications/）
-│   ├── patents.md           # 专利页面（/patents/）
-│   ├── skills.md            # 技能页面（/skills/）
-│   └── contact.md           # 联系页面（/contact/）
+│   └── skills.yml           # Skills 页面内容
+├── _pages/                  # 页面模板（Markdown + Liquid）
+│   ├── about.md             # 主页（/），包含 Hero、Contact、About、教育、爱好、推荐人
+│   ├── publications.md      # Research Outputs 页面（/publications/）
+│   ├── research.md          # Research 页面（/research/）
+│   └── skills.md            # Skills 页面（/skills/）
 ├── _includes/
 │   ├── bi.html              # 双语内容渲染用 include
 │   ├── masthead.html        # 顶部导航栏 + 语言/主题切换按钮
@@ -43,7 +40,7 @@
 │   └── ...
 ├── assets/
 │   ├── js/i18n.js           # 语言切换逻辑
-│   ├── js/theme.js          # 主题切换逻辑（light/dark/system）
+│   ├── js/theme.js          # 主题切换逻辑（light ↔ dark 二值）
 │   ├── js/publications.js   # Publications 页面展开/折叠逻辑
 │   └── css/                 # 编译后的样式（源文件在 _sass/）
 ├── _sass/
@@ -56,39 +53,62 @@
     └── README-en.md         # 英文参考版
 ```
 
-你最常编辑的文件是 [`_config.yml`](_config.yml)（作者资料）和各页面数据文件（`_data/*.yml`）。
+**你最常编辑的文件是 [`_config.yml`](_config.yml)（作者资料）和 [`_data/*.yml`](_data/)（各页面文字内容）。** 日常内容更新基本不需要改动 `_pages/*.md` 模板。
 
 ---
 
 ## 站点结构
 
-| 页面 | 访问路径 | 数据文件 |
-|---|---|---|
-| About | `/` | [`_data/about.yml`](_data/about.yml) |
-| Research | `/research/` | [`_data/research.yml`](_data/research.yml) |
-| Publications | `/publications/` | [`_data/publications.yml`](_data/publications.yml) |
-| Patents | `/patents/` | [`_data/patents.yml`](_data/patents.yml) |
-| Skills | `/skills/` | [`_data/skills.yml`](_data/skills.yml) |
-| Contact | `/contact/` | [`_data/contact.yml`](_data/contact.yml) |
+| 页面 | 访问路径 | 数据文件 | 说明 |
+|---|---|---|---|
+| About | `/` | [`_data/about.yml`](_data/about.yml) | 主页，包含 Hero、Contact 区块、个人简介、研究理念、教育、爱好、推荐人 |
+| Research | `/research/` | [`_data/research.yml`](_data/research.yml) | 研究方向与项目介绍 |
+| Research Outputs | `/publications/` | [`_data/publications.yml`](_data/publications.yml) | 工作论文、已发表论文、专利 |
+| Skills | `/skills/` | [`_data/skills.yml`](_data/skills.yml) | 技能与证书 |
 
-导航顺序由 [`_data/navigation.yml`](_data/navigation.yml) 控制。
+主页的 Contact 区块内容来自 [`_data/contact.yml`](_data/contact.yml)。导航顺序由 [`_data/navigation.yml`](_data/navigation.yml) 控制。
 
 ---
 
 ## 双语机制说明
 
-本站通过**单一数据源双语模型**支持英文与中文：
+本站通过**单一数据源双语模型**支持英文与中文，**两种语言内容成对存储在同一个数据文件中**，由模板根据用户选择的语言动态显示其中一种。
 
-1. **数据源**：每个 `_data/*.yml` 文件将每条内容都以相邻的 `en:` 和 `zh:` 字段成对存储。例如：
+### 1. 内容存储在哪里？
 
-   ```yaml
-   about:
-     paragraphs:
-       - en: "I am a Ph.D. candidate at ..."
-         zh: "我是中国科学院科技战略咨询研究院的博士研究生 ..."
-   ```
+所有页面文字内容都存储在 [`_data/*.yml`](_data/) YAML 文件中。每个需要双语的字段都以相邻的 `_en` / `_zh` 或 `en:` / `zh:` 成对出现。例如：
 
-2. **渲染 include**：[`_includes/bi.html`](_includes/bi.html) 将两种语言版本并排输出到 HTML 中：
+```yaml
+# _data/about.yml
+about:
+  paragraphs:
+    - en: "I am a Ph.D. candidate at ..."
+      zh: "我是中国科学院科技战略咨询研究院的博士研究生 ..."
+```
+
+又如 [`_data/publications.yml`](_data/publications.yml) 中的论文条目：
+
+```yaml
+- id: zhou2025ranking
+  title: "Ranking Influential Non-Content Factors ..."
+  title_zh: "科学论文引用影响力的非内容因素排名 ..."
+  description_en: "Short contribution summary in English."
+  description_zh: "中文主要工作与贡献简述。"
+  abstract_en: "English abstract."
+  abstract_zh: "中文摘要。"
+```
+
+### 2. 英文和中文是储存在一起吗？
+
+**是的，储存在同一个 YAML 文件里。** 每个内容条目都有英文和中文两个版本，成对排列。这样做的好处是：
+
+- 修改时中英文一一对应，不容易遗漏；
+- 模板只需要读取同一个数据源，不需要维护两套文件；
+- 新增页面或论文时，一次性完成双语内容。
+
+### 3. 页面如何决定显示哪种语言？
+
+1. **渲染 include**：[`_includes/bi.html`](_includes/bi.html) 将两种语言版本并排输出到 HTML 中：
 
    ```liquid
    {% include bi.html en=item.en zh=item.zh %}
@@ -96,24 +116,43 @@
 
    这会生成两个分别带有 `data-lang-block="en"` 和 `data-lang-block="zh"` 属性的 `<div>` 块。
 
-4. **主题切换器**：[`assets/js/theme.js`](assets/js/theme.js) 提供 **light / dark / system** 三种模式，持久化到 `localStorage`。[`_includes/head/custom.html`](_includes/head/custom.html) 中的内联脚本会在首屏绘制前恢复主题偏好，避免闪烁。
-
-5. **CSS 过滤**：[`_sass/_redesign.scss`](_sass/_redesign.scss) 隐藏非当前语言的内容，并定义亮/暗两套配色：
+2. **CSS 过滤**：[`_sass/_redesign.scss`](_sass/_redesign.scss) 根据 `html` 上的 `data-lang` 属性隐藏非当前语言的内容：
 
    ```scss
    html[data-lang="en"] [data-lang-block="zh"] { display: none !important; }
    html[data-lang="zh"] [data-lang-block="en"] { display: none !important; }
    ```
 
-### 单一数据源原则
+3. **语言切换器**：[`assets/js/i18n.js`](assets/js/i18n.js) 在点击顶部导航栏的“中文/EN”按钮时切换 `html` 的 `data-lang` 属性，并把选择持久化到 `localStorage`。[`_includes/head/custom.html`](_includes/head/custom.html) 中的内联脚本会在首屏绘制前恢复语言偏好，避免闪烁。
 
-- 在 `_data/*.yml` 中，**务必同时修改同一条目的 `en:` 和 `zh:`**，不要只添加英文。
-- 英文文本作为结构基准；中文文本应传达相同含义。
-- 两个字段都支持 Markdown 语法（`**加粗**`、`[链接](url)`、列表等）。
+### 4. 修改双语内容时要注意什么？
+
+- **务必同时修改同一条目的英文和中文**，不要只改一边；
+- 字段命名规律：
+  - 简单字段：`title` / `title_zh`、`authors` / `authors_zh`；
+  - 长文本字段：`description_en` / `description_zh`、`abstract_en` / `abstract_zh`；
+  - 通用键值对：`en:` / `zh:`；
+- 两个字段都支持 Markdown 语法（`**加粗**`、`[链接](url)`、列表等），最终由模板调用 `markdownify` 渲染。
 
 ---
 
 ## 日常编辑指南
+
+### 文字内容修改速查表
+
+| 你想改什么 | 去哪里改 | 备注 |
+|---|---|---|
+| 作者姓名、邮箱、头像、Google Scholar / GitHub / ORCID 等 | [`_config.yml`](_config.yml) 的 `author:` 区块 | 同时影响所有页面的页脚/社交链接 |
+| 顶部导航文字和顺序 | [`_data/navigation.yml`](_data/navigation.yml) | 每项包含 `title`（英文）、`title_zh`（中文）、`url` |
+| 主页 Hero（姓名、职位、标语、关键词、按钮） | [`_data/about.yml`](_data/about.yml) 的 `hero:` 区块 | 中英成对 |
+| 主页 Contact 区块 | [`_data/contact.yml`](_data/contact.yml) | 联系方式、地址、社交提示 |
+| 个人简介、研究理念、教育、爱好、推荐人 | [`_data/about.yml`](_data/about.yml) | 中英成对 |
+| Research 页面 | [`_data/research.yml`](_data/research.yml) | 中英成对 |
+| Research Outputs 页面（论文、专利） | [`_data/publications.yml`](_data/publications.yml) | 详见下方论文编辑说明 |
+| Skills 页面 | [`_data/skills.yml`](_data/skills.yml) | 中英成对 |
+| 页面标题、SEO 描述、baseurl | [`_config.yml`](_config.yml) | 如 `_config.yml` 中的 `description` / `description_zh` |
+| 视觉样式、颜色、暗色模式 | [`_sass/_redesign.scss`](_sass/_redesign.scss) | 需要了解 SCSS |
+| 语言/主题切换逻辑 | [`assets/js/i18n.js`](assets/js/i18n.js) / [`assets/js/theme.js`](assets/js/theme.js) | 一般不需要改 |
 
 ### 更新作者资料
 
@@ -122,7 +161,8 @@
 - `title`、`description`、`description_zh`
 - `author.name`、`author.avatar`、`author.email`
 - `author.googlescholar`、`author.github`、`author.researchgate`、`author.orcid`
-- `repository`：必须保持为 `Jiayi-Zhou/Jiayi-Zhou.github.io`，否则谷歌学术爬虫和 CDN 路径会失效。
+- `baseurl`：必须保持为 `/Jiayi-Zhou.github.io`，以匹配当前 GitHub Pages 项目站点路径。
+- `repository`：保持为 `Jiayi-Zhou/Jiayi-Zhou.github.io`（用于 GitHub 元数据）。
 
 ### 更新各页面内容
 
@@ -131,21 +171,25 @@
 | 页面 | 数据文件 | 常用字段 |
 |---|---|---|
 | About | [`_data/about.yml`](_data/about.yml) | `hero`、`about.paragraphs`、`philosophy.cards`、`education`、`hobbies`、`references` |
+| 主页 Contact 区块 | [`_data/contact.yml`](_data/contact.yml) | `intro`、`locations`、`social_hint` |
 | Research | [`_data/research.yml`](_data/research.yml) | `intro`、`projects`、`interests.items` |
-| Publications | [`_data/publications.yml`](_data/publications.yml) | `published`（已发表论文）、`working_papers`（工作论文） |
-| Patents | [`_data/patents.yml`](_data/patents.yml) | `list` |
+| Research Outputs | [`_data/publications.yml`](_data/publications.yml) | `working_papers`、`peer_reviewed`、`patents` |
 | Skills | [`_data/skills.yml`](_data/skills.yml) | `groups`、`certifications.items` |
-| Contact | [`_data/contact.yml`](_data/contact.yml) | `intro`、`locations` |
 
 ### 添加或编辑论文
 
-在 [`_data/publications.yml`](_data/publications.yml) 中，已发表论文放入 `published:`，工作论文放入 `working_papers:`。每篇论文的字段包括：
+在 [`_data/publications.yml`](_data/publications.yml) 中：
+
+- 已发表论文放入 `peer_reviewed:`
+- 工作论文放入 `working_papers:`
+- 专利放入 `patents:`
+
+每篇论文的字段示例：
 
 ```yaml
-published:
+peer_reviewed:
   - id: zhou2025ranking
     year: 2025
-    type: "journal"
     type_en: "Journal Article"
     type_zh: "期刊论文"
     title: "English title"
@@ -160,15 +204,12 @@ published:
     abstract_zh: "中文摘要。"
     doi: "10.xxxx/xxxxx"
     pdf: "/files/papers/zhou2025ranking.pdf"
+    github: "https://github.com/JoeYi666/repo-name"
     bibtex: |
       @article{...}
 ```
 
 论文 PDF 请放入 [`files/papers/`](files/papers/)，文件名与 `pdf` 字段保持一致。
-
-### 添加或编辑学术发表
-
-在 [`_data/publications.yml`](_data/publications.yml) 中，已发表论文放入 `published:`，工作论文放入 `working_papers:`。论文字段参见上文示例。
 
 ### 更新导航
 
@@ -183,7 +224,7 @@ published:
 
 ### 主题模式
 
-点击顶部导航栏的主题按钮可在 **system → light → dark → system** 间循环切换。选择会持久化到 `localStorage`，并在刷新后保持。
+点击顶部导航栏的主题按钮可在 **light ↔ dark** 两种模式间切换。选择会持久化到 `localStorage`，并在刷新后保持。[`_includes/head/custom.html`](_includes/head/custom.html) 中的内联脚本会在首屏绘制前恢复主题偏好，避免闪烁。
 
 ### Markdown 与 HTML include 混用
 
@@ -219,17 +260,29 @@ bash run_server.sh
 
 ### 验证清单
 
-- 访问 `/`、`/research/`、`/publications/`、`/patents/`、`/skills/`、`/contact/`，确认各页面渲染正常。
-- 点击顶部导航每个链接，确认跳转正确。
+- 访问 `/`、`/research/`、`/publications/`、`/skills/`，确认各页面渲染正常。
+- 点击顶部导航每个链接，确认跳转正确（注意项目站点的子路径 `/Jiayi-Zhou.github.io/`）。
 - 在多个页面切换语言，确认只显示选中语言且选择跨页面保持一致。
-- 切换主题并刷新，确认无闪烁；system 模式随 OS 主题变化。
-- 在 `/publications/` 确认：已发表论文、Working Papers、每篇描述、可展开摘要/BibTeX、DOI/PDF 链接均正常。
+- 切换主题并刷新，确认无闪烁。
+- 在 `/publications/` 确认：Working Papers、已发表论文、专利、每篇描述、可展开摘要/BibTeX、DOI/PDF/GitHub 链接均正常。
 
 ---
 
 ## 构建与部署
 
-本站通过 GitHub Pages 从 `main` 分支自动部署。
+本站通过 GitHub Pages 从 `main` 分支自动部署，实际访问地址为：
+
+```text
+https://joeyi666.github.io/Jiayi-Zhou.github.io/
+```
+
+由于使用项目站点（非用户站点），[`_config.yml`](_config.yml) 中设置了 `baseurl: "/Jiayi-Zhou.github.io"`。所有内部链接都应通过 Jekyll 的 `relative_url` 过滤器生成，例如：
+
+```liquid
+{{ '/files/papers/zhou2025ranking.pdf' | relative_url }}
+```
+
+### 部署步骤
 
 1. 提交改动：
 
@@ -246,11 +299,11 @@ bash run_server.sh
 
 3. GitHub Pages 会自动重新构建站点。可在仓库的 **Actions** 标签页查看构建状态。
 
-4. 构建完成后访问 https://Jiayi-Zhou.github.io。
+4. 构建完成后访问 https://joeyi666.github.io/Jiayi-Zhou.github.io/。
 
 ### 自定义域名
 
-当前未配置自定义域名。如后续添加，请更新 [`_config.yml`](_config.yml) 中的 `url` 并在此记录。
+当前未配置自定义域名。如后续添加，请更新 [`_config.yml`](_config.yml) 中的 `url` 和 `baseurl` 并在此记录。
 
 ---
 
@@ -334,18 +387,20 @@ bash run_server.sh
 
 ### 每次内容更新前
 
-- [ ] 我在对应的 `_data/*.yml` 中同时修改了每条改动的 `en:` 和 `zh:`。
+- [ ] 我在对应的 `_data/*.yml` 中同时修改了每条改动的英文和中文版本。
 - [ ] YAML 缩进正确（每级 2 空格）。
 - [ ] 我已使用 `bash run_server.sh` 在本地预览。
 - [ ] 我点击了语言切换按钮，确认两种语言都正常渲染。
 - [ ] 我在多个页面间切换，确认语言和主题选择跨页面保持一致。
+- [ ] 新增论文 PDF 已放入 `files/papers/` 且路径正确。
+- [ ] 新增论文的 GitHub 仓库链接已填写。
 
 ### 每次部署前
 
 - [ ] `git status` 只显示预期改动。
 - [ ] 提交信息清晰明确。
 - [ ] 已推送到 `main` 分支且 GitHub Pages 构建成功。
-- [ ] 已访问线上站点确认更新生效。
+- [ ] 已访问线上站点 https://joeyi666.github.io/Jiayi-Zhou.github.io/ 确认更新生效。
 
 ### 定期检查
 

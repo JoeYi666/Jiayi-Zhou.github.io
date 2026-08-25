@@ -51,55 +51,74 @@ about:
 
 philosophy:
   cards:
-    - title_en: "ISFC & the Money View"
-      title_zh: "ISFC 与货币视角"
-      en: >-
-        I ground stablecoin research in Incremental-Stock-Flow-Consistent
-        (ISFC) modeling and Perry Mehrling's Money View. Treating issuers,
-        commercial banks, and shadow banks as nodes on a common balance-sheet
-        network lets me trace how digital dollars are created, circulated, and
-        destroyed — money as a social ledger of intertemporal obligations.
-      zh: >-
-        我将稳定币研究建立在增量—存量—流量一致（ISFC）框架与 Perry
-        Mehrling 的货币视角（Money View）之上。把发行方、商业银行与影子银行
-        视为同一张资产负债表网络上的节点，可以追踪数字美元如何被创造、流转与
-        销毁——货币即跨期债务的社会记账。
-
-    - title_en: "Causal Inference & Reproducibility"
-      title_zh: "因果推断与可复现性"
-      en: >-
-        Causal identification comes before prediction. I combine
-        difference-in-differences, instrumental variables, regression
-        discontinuity, synthetic control, and double-machine-learning methods to
-        isolate mechanisms. Every project ships with a variable dictionary,
-        sample restrictions, robustness checks, and a replication package.
-      zh: >-
-        因果识别优先于预测。我综合运用双重差分、工具变量、断点回归、合成控制
-        与双重机器学习等方法来隔离机制。每个项目都附带变量字典、样本限制、
-        稳健性检验与复现包。
-
     - title_en: "First Principles"
       title_zh: "第一性原理"
       en: >-
-        I reason from first principles: money is a ledger for intertemporal
-        energy allocation; a balance sheet encodes a node's social relations;
-        systemic risk is the fragility of the network structure that emerges
-        when those relations tighten.
+        I try to reason from the underlying accounting and institutional
+        mechanics of money. A stablecoin is not just a price or a token; it is a
+        promise recorded on a balance sheet, backed by reserves and redeemed by
+        a network of counterparties. Starting from these primitives makes it
+        easier to see how issuance, reserve allocation, and redemption connect
+        to bond yields, exchange rates, and equity prices.
       zh: >-
-        我从第一性原理出发：货币是跨期能量配置的记账杠杆；资产负债表编码了
-        节点的社会关系；系统性风险则源于这些关系过度收紧后网络结构的脆弱性。
+        我倾向于从货币 underlying 的会计与制度机制出发思考问题。稳定币不只是
+        价格或代币，而是记录在资产负债表上、由储备支撑、由交易对手网络赎回的
+        一种承诺。从这些基本单元出发，发行、储备配置与赎回如何连接国债收益率、
+        汇率与股价，会变得更清晰。
 
     - title_en: "AI-Augmented Research"
       title_zh: "AI 增强科研"
       en: >-
-        Large language models and AI coding tools are infrastructure for
-        research automation — literature review, data cleaning, code
-        generation, and causal-inference workflows. Human judgment and
-        auditable logs remain the final checkpoint.
+        I use large language models and AI coding tools as assistants for
+        literature review, data cleaning, code generation, and workflow
+        automation. They speed up exploration, but the design of research
+        questions, identification strategies, and interpretation of results
+        remains a human responsibility.
       zh: >-
-        大语言模型与 AI 编程工具是科研自动化的基础设施，服务于文献梳理、
-        数据清洗、代码生成与因果推断工作流。人工判断与可审计日志始终是最终
-        把关节点。
+        我将大语言模型与 AI 编程工具作为文献梳理、数据清洗、代码生成与工作流
+        自动化的助手。它们能加快探索过程，但研究问题设计、识别策略与结果解释
+        仍需要人来完成。
+
+    - title_en: "Causal Inference, Reproducibility & Open Source"
+      title_zh: "因果推断、可复现性与开源"
+      en: >-
+        Causal identification matters more than prediction alone. I combine
+        instrumental variables, local projections, difference-in-differences,
+        regression discontinuity, and machine-learning-assisted identification
+        to isolate mechanisms. I also keep code, data dictionaries, and
+        replication materials in public GitHub repositories so that results can
+        be checked and reused.
+      zh: >-
+        因果识别比单纯的预测更重要。我综合运用工具变量、局部投影、双重差分、
+        断点回归以及机器学习辅助的识别策略来分离机制。同时，我把代码、变量字典
+        与复现材料放在公开 GitHub 仓库中，方便结果被检验与复用。
+
+    - title_en: "ISFC & the Money View"
+      title_zh: "ISFC 与货币视角"
+      en: >-
+        My doctoral work develops an Incremental-Stock-Flow-Consistent (ISFC)
+        framework for stablecoin balance sheets, drawing on Perry Mehrling's
+        Money View and post-Keynesian SFC models. The framework treats issuers,
+        commercial banks, and shadow banks as nodes on a common balance-sheet
+        network, and traces how digital dollars are created, allocated, and
+        redeemed.
+      zh: >-
+        我的博士工作为稳定币资产负债表构建了一个增量—存量—流量一致（ISFC）
+        框架，借鉴 Perry Mehrling 的货币视角与后凯恩斯主义 SFC 模型。该框架将
+        发行方、商业银行与影子银行视为同一张资产负债表网络上的节点，追踪数字
+        美元如何被创造、配置与赎回。
+
+    - title_en: "New Economic Thinking"
+      title_zh: "新的经济学思想"
+      en: >-
+        I am interested in strands of economic thinking that put accounting,
+        energy, and complexity at the center: biophysical economics, complexity
+        science, and crypto-economics. These perspectives help connect abstract
+        price dynamics to physical and institutional constraints.
+      zh: >-
+        我对把会计、能量与复杂性置于核心的经济学思潮感兴趣，包括生物物理经济
+        学、复杂性科学与加密经济学。这些视角有助于把抽象的价格动态与物质和制度
+        约束联系起来。
 
   quote:
     zh_text: "科学，就是相信专家也会无知。"
@@ -111,15 +130,15 @@ education:
   - period: "2023.09 – Present"
     period_zh: "2023.09 至今"
     en: >-
-      **Ph.D. Candidate** in Public Policy and Management, University of
-      Chinese Academy of Sciences / Institutes of Science and Development,
-      CAS. Advisor: Prof. Jian-Feng Guo. Dissertation: *The Impact of USD
-      Stablecoins on International Financial Markets: Research and Empirical
-      Analysis*.
+      **Ph.D. Candidate** in Public Policy and Management,
+      University of Chinese Academy of Sciences /
+      Institutes of Science and Development, CAS.
+      Advisor: [Prof. Jian-Feng Guo](https://people.ucas.ac.cn/~Guojf).
     zh: >-
-      **博士研究生**，公共政策与管理专业，中国科学院大学 /
-      中国科学院科技战略咨询研究院。导师：郭剑锋研究员。学位论文：
-      《美元稳定币对国际金融市场的影响：研究与实证分析》。
+      **博士研究生**，公共政策与管理专业，
+      中国科学院大学 /
+      中国科学院科技战略咨询研究院。
+      导师：[郭剑锋研究员](https://people.ucas.ac.cn/~Guojf)。
   - period: "2019.09 – 2023.06"
     period_zh: "2019.09 – 2023.06"
     en: >-
@@ -131,24 +150,24 @@ education:
 hobbies:
   - name_en: "Swimming"
     name_zh: "游泳"
-    en: "Proficient in all four competitive strokes: Freestyle, Breaststroke, Backstroke, and Butterfly."
+    en: "Proficient in all four competitive strokes: freestyle, breaststroke, backstroke, and butterfly."
     zh: "熟练掌握全部四种竞技泳姿：自由泳、蛙泳、仰泳与蝶泳。"
-  - name_en: "Movies"
-    name_zh: "电影"
-    en: "Avid cinephile with 1,000+ films watched; passionate about cinematic art and storytelling."
-    zh: "资深影迷，观影量逾 1,000 部；热爱电影艺术与叙事美学。"
-  - name_en: "GIS & Satellite Imagery"
-    name_zh: "GIS 与卫星影像"
-    en: "GIS enthusiast who enjoys exploring the world through satellite imagery and spatial data."
-    zh: "GIS 爱好者，喜欢通过卫星影像与空间数据观察世界。"
   - name_en: "Reading & History"
     name_zh: "阅读与历史"
-    en: "Avid reader with a focus on history, especially the history of the Chinese Communist Party and ancient Chinese history."
-    zh: "热爱阅读，尤好历史；熟悉中国共产党党史与中国古代历史。"
+    en: "I read widely, with a particular interest in Chinese history, world history, and the history of economic thought."
+    zh: "阅读面较广，尤其对中国历史、世界历史与经济思想史感兴趣。"
   - name_en: "Chinese Political Economy"
     name_zh: "中国政治经济研究"
-    en: "Building a Neo4j graph database of Chinese party-state institutions, mapping bureaus, public institutions, SOEs, universities, and hospitals under the Party, military, State Council, NPC, and CPPCC systems, along with their functions, relationships, and power structures."
-    zh: "使用 Neo4j 构建中国党政军学民机构数据库，系统整理党中央、中央军委、国务院、人大、政协等系统下属司局及事业单位，以及央企、高校、医院等组织的职能、关系与权力结构。"
+    en: "I study the institutions and power structures of China's party-state system and maintain a Neo4j graph database of party, government, military, SOE, university, and hospital organizations."
+    zh: "研究中国党政体制的机构与权力结构，并用 Neo4j 维护一个涵盖党、政、军、央企、高校、医院等组织的关系数据库。"
+  - name_en: "GIS & Satellite Imagery"
+    name_zh: "GIS 与卫星影像"
+    en: "I enjoy exploring the world through satellite imagery, spatial data, and remote sensing."
+    zh: "喜欢通过卫星影像、空间数据与遥感技术观察世界。"
+  - name_en: "Movies & Games"
+    name_zh: "电影与游戏"
+    en: 'Avid cinephile with 1,000+ films and TV series watched; see [my Douban profile](https://www.douban.com/people/dbzjy). I also enjoy real-time strategy games.'
+    zh: '资深影迷，观影量逾 1000 部电影与电视剧；详见[我的豆瓣主页](https://www.douban.com/people/dbzjy)。同时喜欢即时战略游戏。'
 
 references:
   en: "Available upon request."

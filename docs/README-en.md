@@ -1,4 +1,3 @@
-
 # Jiayi Zhou's Academic Homepage — Maintenance Handbook
 
 > This is the English reference version. The primary maintenance handbook is the Chinese README: [中文维护手册](../README.md).
@@ -7,12 +6,12 @@
 
 This repository hosts the source code of **Jiayi Zhou's (周家屹) academic personal homepage**, built with Jekyll and deployed via GitHub Pages.
 
-- **Live site**: https://Jiayi-Zhou.github.io
-- **Source repo**: https://github.com/Jiayi-Zhou/Jiayi-Zhou.github.io
+- **Live site**: https://joeyi666.github.io/Jiayi-Zhou.github.io/
+- **Source repo**: https://github.com/JoeYi666/Jiayi-Zhou.github.io
 - **Owner's GitHub profile**: https://github.com/JoeYi666
 - **Google Scholar**: https://scholar.google.com/citations?user=qcxrzQcAAAAJ&hl=zh-CN
 
-The site is a heavily customized fork of the [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) template. The original single-page layout has been replaced with a bilingual, multi-page design driven by data in `_data/*.yml`.
+The site is a heavily customized fork of the [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io) template. The original single-page layout has been replaced with a bilingual, multi-page design driven by data in `_data/*.yml`. Because the site is deployed as a GitHub Pages project site under the sub-path `baseurl: /Jiayi-Zhou.github.io`, all internal links are generated with Jekyll's `relative_url` filter.
 
 ---
 
@@ -20,22 +19,19 @@ The site is a heavily customized fork of the [AcadHomepage](https://github.com/R
 
 ```text
 .
-├── _config.yml              # Site metadata, author info, SEO, build settings
-├── _data/
-│   ├── about.yml            # About page content (hero, bio, philosophy, education, hobbies)
+├── _config.yml              # Site metadata, author info, SEO, baseurl, build settings
+├── _data/                   # Core data source for page text (bilingual)
+│   ├── about.yml            # About page content (hero, bio, philosophy, education, hobbies, references)
+│   ├── contact.yml          # Home page Contact block content (contact info, address)
+│   ├── navigation.yml       # Top navigation links
+│   ├── publications.yml     # Research Outputs page content (Working Papers + peer-reviewed + patents)
 │   ├── research.yml         # Research page content
-│   ├── publications.yml     # Publications page content (including Working Papers)
-│   ├── patents.yml          # Patents page content
-│   ├── skills.yml           # Skills page content
-│   ├── contact.yml          # Contact page content
-│   └── navigation.yml       # Top navigation links
-├── _pages/
-│   ├── about.md             # Home page (/)
+│   └── skills.yml           # Skills page content
+├── _pages/                  # Page templates (Markdown + Liquid)
+│   ├── about.md             # Home page (/), includes Hero, Contact block, About, education, hobbies, references
+│   ├── publications.md      # Research Outputs page (/publications/)
 │   ├── research.md          # Research page (/research/)
-│   ├── publications.md      # Publications page (/publications/)
-│   ├── patents.md           # Patents page (/patents/)
-│   ├── skills.md            # Skills page (/skills/)
-│   └── contact.md           # Contact page (/contact/)
+│   └── skills.md            # Skills page (/skills/)
 ├── _includes/
 │   ├── bi.html              # Bilingual content renderer include
 │   ├── masthead.html        # Top navigation bar + language/theme toggle buttons
@@ -43,12 +39,12 @@ The site is a heavily customized fork of the [AcadHomepage](https://github.com/R
 │   └── ...
 ├── assets/
 │   ├── js/i18n.js           # Language switcher logic
-│   ├── js/theme.js          # Theme switcher logic (light/dark/system)
+│   ├── js/theme.js          # Theme switcher logic (light ↔ dark binary)
 │   ├── js/publications.js   # Publications expand/collapse logic
 │   └── css/                 # Compiled styles (source in _sass/)
 ├── _sass/
 │   └── _redesign.scss       # Custom theme styles, language hiding rules, dark mode
-├── images/                  # Avatar, favicon, paper thumbnails
+├── images/                  # Avatar, favicon, paper figures
 ├── files/papers/            # Paper PDF files
 ├── run_server.sh            # Local development: bundle exec jekyll liveserve
 ├── README.md                # Chinese primary handbook
@@ -56,39 +52,61 @@ The site is a heavily customized fork of the [AcadHomepage](https://github.com/R
     └── README-en.md         # This file (English reference version)
 ```
 
-The files you will edit most often are [`_config.yml`](../_config.yml) (author profile) and the per-page data files in `_data/`.
+**The files you will edit most often are [`_config.yml`](../_config.yml) (author profile) and the per-page data files in [`_data/`](../_data/).** Daily content updates usually do not require changing `_pages/*.md` templates.
 
 ---
 
 ## Site structure
 
-| Page | URL | Data file |
-|---|---|---|
-| About | `/` | [`_data/about.yml`](../_data/about.yml) |
-| Research | `/research/` | [`_data/research.yml`](../_data/research.yml) |
-| Publications | `/publications/` | [`_data/publications.yml`](../_data/publications.yml) |
-| Patents | `/patents/` | [`_data/patents.yml`](../_data/patents.yml) |
-| Skills | `/skills/` | [`_data/skills.yml`](../_data/skills.yml) |
-| Contact | `/contact/` | [`_data/contact.yml`](../_data/contact.yml) |
+| Page | URL | Data file | Notes |
+|---|---|---|---|
+| About | `/` | [`_data/about.yml`](../_data/about.yml) | Home page, includes Hero, Contact block, bio, research philosophy, education, hobbies, references |
+| Research | `/research/` | [`_data/research.yml`](../_data/research.yml) | Research directions and project introductions |
+| Research Outputs | `/publications/` | [`_data/publications.yml`](../_data/publications.yml) | Working papers, peer-reviewed publications, patents |
+| Skills | `/skills/` | [`_data/skills.yml`](../_data/skills.yml) | Skills and certifications |
 
-Navigation order is controlled by [`_data/navigation.yml`](../_data/navigation.yml).
+The Contact block on the home page is sourced from [`_data/contact.yml`](../_data/contact.yml). Navigation order is controlled by [`_data/navigation.yml`](../_data/navigation.yml).
 
 ---
 
 ## How bilingual support works
 
-The site supports English and Chinese through a **single-source bilingual data model**:
+The site supports English and Chinese through a **single-source bilingual data model**: both language versions are stored as paired fields inside the same data file, and the template displays only the active language.
 
-1. **Data source**: each `_data/*.yml` file stores every piece of content as paired `en:` and `zh:` fields. For example:
+### 1. Where is the text content stored?
 
-   ```yaml
-   about:
-     paragraphs:
-       - en: "I am a Ph.D. candidate at ..."
-         zh: "我是中国科学院科技战略咨询研究院的博士研究生 ..."
-   ```
+All page text is stored in [`_data/*.yml`](../_data/) YAML files. Every field that needs bilingual support appears as an adjacent `_en` / `_zh` or `en:` / `zh:` pair. For example, in [`_data/about.yml`](../_data/about.yml):
 
-2. **Renderer include**: [`_includes/bi.html`](../_includes/bi.html) outputs both language versions side by side in the HTML:
+```yaml
+about:
+  paragraphs:
+    - en: "I am a Ph.D. candidate at ..."
+      zh: "我是中国科学院科技战略咨询研究院的博士研究生 ..."
+```
+
+Or, in [`_data/publications.yml`](../_data/publications.yml):
+
+```yaml
+- id: zhou2025ranking
+  title: "Ranking Influential Non-Content Factors ..."
+  title_zh: "科学论文引用影响力的非内容因素排名 ..."
+  description_en: "Short contribution summary in English."
+  description_zh: "中文主要工作与贡献简述。"
+  abstract_en: "English abstract."
+  abstract_zh: "中文摘要。"
+```
+
+### 2. Are English and Chinese stored together?
+
+**Yes, in the same YAML file.** Each content entry has both an English and a Chinese version, placed side by side. This approach has several advantages:
+
+- You can edit the two languages in one-to-one correspondence, making it harder to miss a translation.
+- Templates read a single data source, so you do not need to maintain two parallel file trees.
+- Adding a new page or paper is done once, with bilingual content filled in together.
+
+### 3. How does a page decide which language to show?
+
+1. **Renderer include**: [`_includes/bi.html`](../_includes/bi.html) outputs both language versions side by side in the HTML:
 
    ```liquid
    {% include bi.html en=item.en zh=item.zh %}
@@ -96,26 +114,43 @@ The site supports English and Chinese through a **single-source bilingual data m
 
    This generates two `<div>` blocks tagged with `data-lang-block="en"` and `data-lang-block="zh"`.
 
-3. **Language switcher**: [`assets/js/i18n.js`](../assets/js/i18n.js) toggles the `<html data-lang="en|zh">` attribute and persists the choice in `localStorage`. [`_includes/head/custom.html`](../_includes/head/custom.html) runs an inline script before first paint to restore the visitor's preference and avoid a flash of the default language.
-
-4. **Theme switcher**: [`assets/js/theme.js`](../assets/js/theme.js) provides **light / dark / system** modes and persists the choice in `localStorage`. [`_includes/head/custom.html`](../_includes/head/custom.html) runs an inline script before first paint to restore the theme preference and avoid a flash.
-
-5. **CSS filtering**: [`_sass/_redesign.scss`](../_sass/_redesign.scss) hides the inactive language and defines light/dark color palettes:
+2. **CSS filtering**: [`_sass/_redesign.scss`](../_sass/_redesign.scss) hides the inactive language based on the `data-lang` attribute on `<html>`:
 
    ```scss
    html[data-lang="en"] [data-lang-block="zh"] { display: none !important; }
    html[data-lang="zh"] [data-lang-block="en"] { display: none !important; }
    ```
 
-### Single-source-of-truth rule
+3. **Language switcher**: [`assets/js/i18n.js`](../assets/js/i18n.js) toggles the `<html data-lang="en|zh">` attribute when the top-bar "中文/EN" button is clicked, and persists the choice in `localStorage`. An inline script in [`_includes/head/custom.html`](../_includes/head/custom.html) restores the visitor's preference before first paint to avoid a flash.
 
-- **Always edit `en:` and `zh:` together** in the same entry of `_data/*.yml`. Never add an English-only entry.
-- The English text is the structural source of truth; the Chinese text should convey the same meaning.
-- Markdown syntax (`**bold**`, `[links](url)`, lists) is supported in both fields.
+### 4. What to watch when editing bilingual content
+
+- **Always edit both the English and Chinese versions of the same entry**; do not change only one side.
+- Field naming conventions:
+  - Simple fields: `title` / `title_zh`, `authors` / `authors_zh`.
+  - Long-text fields: `description_en` / `description_zh`, `abstract_en` / `abstract_zh`.
+  - Generic key-value pairs: `en:` / `zh:`.
+- Both fields support Markdown syntax (`**bold**`, `[links](url)`, lists, etc.) and are rendered with `markdownify` by the template.
 
 ---
 
 ## Daily editing guide
+
+### Quick reference table for text edits
+
+| What you want to change | Where to edit | Notes |
+|---|---|---|
+| Author name, email, avatar, Google Scholar / GitHub / ORCID / ResearchGate links | [`_config.yml`](../_config.yml) `author:` block | Affects footer/social links on every page |
+| Top navigation text and order | [`_data/navigation.yml`](../_data/navigation.yml) | Each entry has `title` (English), `title_zh` (Chinese), and `url` |
+| Home page Hero (name, position, tagline, keywords, buttons) | [`_data/about.yml`](../_data/about.yml) `hero:` block | English/Chinese pairs |
+| Home page Contact block | [`_data/contact.yml`](../_data/contact.yml) | Contact info, address, social hints |
+| Bio, research philosophy, education, hobbies, references | [`_data/about.yml`](../_data/about.yml) | English/Chinese pairs |
+| Research page | [`_data/research.yml`](../_data/research.yml) | English/Chinese pairs |
+| Research Outputs page (papers, patents) | [`_data/publications.yml`](../_data/publications.yml) | See publication editing notes below |
+| Skills page | [`_data/skills.yml`](../_data/skills.yml) | English/Chinese pairs |
+| Page titles, SEO descriptions, baseurl | [`_config.yml`](../_config.yml) | e.g. `description` / `description_zh` |
+| Visual style, colors, dark mode | [`_sass/_redesign.scss`](../_sass/_redesign.scss) | Requires SCSS knowledge |
+| Language/theme switcher logic | [`assets/js/i18n.js`](../assets/js/i18n.js) / [`assets/js/theme.js`](../assets/js/theme.js) | Usually not needed |
 
 ### Update author profile
 
@@ -124,7 +159,8 @@ Edit [`_config.yml`](../_config.yml):
 - `title`, `description`, `description_zh`
 - `author.name`, `author.avatar`, `author.email`
 - `author.googlescholar`, `author.github`, `author.researchgate`, `author.orcid`
-- `repository`: must remain `Jiayi-Zhou/Jiayi-Zhou.github.io` for the Google Scholar crawler and CDN path to work.
+- `baseurl`: must remain `/Jiayi-Zhou.github.io` to match the current GitHub Pages project-site path.
+- `repository`: keep as `Jiayi-Zhou/Jiayi-Zhou.github.io` (used for GitHub metadata).
 
 ### Update page content
 
@@ -133,21 +169,25 @@ Each page has its own data file; edit the corresponding file:
 | Page | Data file | Common fields |
 |---|---|---|
 | About | [`_data/about.yml`](../_data/about.yml) | `hero`, `about.paragraphs`, `philosophy.cards`, `education`, `hobbies`, `references` |
+| Home Contact block | [`_data/contact.yml`](../_data/contact.yml) | `intro`, `locations`, `social_hint` |
 | Research | [`_data/research.yml`](../_data/research.yml) | `intro`, `projects`, `interests.items` |
-| Publications | [`_data/publications.yml`](../_data/publications.yml) | `published`, `working_papers` |
-| Patents | [`_data/patents.yml`](../_data/patents.yml) | `list` |
+| Research Outputs | [`_data/publications.yml`](../_data/publications.yml) | `working_papers`, `peer_reviewed`, `patents` |
 | Skills | [`_data/skills.yml`](../_data/skills.yml) | `groups`, `certifications.items` |
-| Contact | [`_data/contact.yml`](../_data/contact.yml) | `intro`, `locations` |
 
 ### Add or edit a publication
 
-In [`_data/publications.yml`](../_data/publications.yml), place peer-reviewed papers under `published:` and working papers under `working_papers:`. Each paper entry includes:
+In [`_data/publications.yml`](../_data/publications.yml):
+
+- Peer-reviewed papers go under `peer_reviewed:`.
+- Working papers go under `working_papers:`.
+- Patents go under `patents:`.
+
+Example paper entry:
 
 ```yaml
-published:
+peer_reviewed:
   - id: zhou2025ranking
     year: 2025
-    type: "journal"
     type_en: "Journal Article"
     type_zh: "期刊论文"
     title: "English title"
@@ -162,6 +202,7 @@ published:
     abstract_zh: "中文摘要。"
     doi: "10.xxxx/xxxxx"
     pdf: "/files/papers/zhou2025ranking.pdf"
+    github: "https://github.com/JoeYi666/repo-name"
     bibtex: |
       @article{...}
 ```
@@ -181,7 +222,7 @@ Edit [`_data/navigation.yml`](../_data/navigation.yml). Each entry has `title` (
 
 ### Theme modes
 
-Click the theme button in the top navigation to cycle through **system → light → dark → system**. The choice is persisted in `localStorage` and survives refreshes.
+Click the theme button in the top navigation to toggle between **light** and **dark** modes. The choice is persisted in `localStorage` and survives refreshes. An inline script in [`_includes/head/custom.html`](../_includes/head/custom.html) restores the theme before first paint to avoid a flash.
 
 ### Markdown and HTML includes
 
@@ -217,23 +258,35 @@ Jekyll will rebuild and reload the page automatically when you edit a source fil
 
 ### Verification checklist
 
-- Visit `/`, `/research/`, `/publications/`, `/patents/`, `/skills/`, `/contact/` and confirm each page renders correctly.
-- Click every link in the top navigation and confirm the routing is correct.
+- Visit `/`, `/research/`, `/publications/`, and `/skills/` and confirm each page renders correctly.
+- Click every link in the top navigation and confirm the routing is correct (note the project-site sub-path `/Jiayi-Zhou.github.io/`).
 - Switch languages across multiple pages and confirm only the selected language is shown and the choice persists.
-- Switch themes and refresh; confirm no flash and that system mode follows the OS theme.
-- On `/publications/`, confirm: peer-reviewed papers, Working Papers, descriptions, expandable abstracts/BibTeX, and DOI/PDF links all work.
+- Switch themes and refresh; confirm no flash.
+- On `/publications/`, confirm: Working Papers, peer-reviewed papers, patents, descriptions, expandable abstracts/BibTeX, and DOI/PDF/GitHub links all work.
 
 ---
 
 ## Build and deploy
 
-The site is deployed automatically with GitHub Pages from the `main` branch.
+The site is deployed automatically with GitHub Pages from the `main` branch. The actual live URL is:
+
+```text
+https://joeyi666.github.io/Jiayi-Zhou.github.io/
+```
+
+Because this is a project site (not a user site), [`_config.yml`](../_config.yml) sets `baseurl: "/Jiayi-Zhou.github.io"`. All internal links should be generated with Jekyll's `relative_url` filter, for example:
+
+```liquid
+{{ '/files/papers/zhou2025ranking.pdf' | relative_url }}
+```
+
+### Deploy steps
 
 1. Commit your changes:
 
    ```bash
    git add .
-   git commit -m "Update site content"
+   git commit -m "Update homepage content"
    ```
 
 2. Push to the remote `main` branch:
@@ -244,11 +297,11 @@ The site is deployed automatically with GitHub Pages from the `main` branch.
 
 3. GitHub Pages will rebuild the site. Check the **Actions** tab for build status.
 
-4. Visit https://Jiayi-Zhou.github.io after the build completes.
+4. After the build completes, visit https://joeyi666.github.io/Jiayi-Zhou.github.io/.
 
 ### Custom domain
 
-No custom domain is currently configured. If you add one later, update the `url` in [`_config.yml`](../_config.yml) and document it here.
+No custom domain is currently configured. If you add one later, update the `url` and `baseurl` in [`_config.yml`](../_config.yml) and document it here.
 
 ---
 
@@ -308,17 +361,17 @@ For typography, fonts are loaded in [`_includes/head/custom.html`](../_includes/
 ### Theme switching not working or flashing
 
 - Check that `assets/js/theme.js` is loaded (see [`_includes/scripts.html`](_includes/scripts.html)).
-- Verify the inline theme script in [`_includes/head/custom.html`](_includes/head/custom.html) runs inside `<head>` and before first paint.
+- Verify the inline theme script in [`_includes/head/custom.html`](../_includes/head/custom.html) runs inside `<head>` and before first paint.
 
 ### Mixed-language content
 
-- Ensure every entry in `_data/*.yml` has both `en:` and `zh:` fields.
+- Ensure every entry in `_data/*.yml` has both an English and a Chinese version.
 - Check that [`_includes/bi.html`](_includes/bi.html) is used consistently instead of inline `{{ ... | markdownify }}` for bilingual text.
 
 ### Chinese fonts not loading
 
 - Confirm network access to `fonts.googleapis.com` and `fonts.gstatic.com`.
-- The Chinese font `Noto Serif SC` is loaded in [`_includes/head/custom.html`](_includes/head/custom.html).
+- The Chinese font `Noto Serif SC` is loaded in [`_includes/head/custom.html`](../_includes/head/custom.html).
 
 ### Citation badge not updating
 
@@ -332,18 +385,20 @@ For typography, fonts are loaded in [`_includes/head/custom.html`](../_includes/
 
 ### Before every content update
 
-- [ ] I edited both `en:` and `zh:` fields for every changed entry in the relevant `_data/*.yml`.
+- [ ] I edited both the English and Chinese versions for every changed entry in the relevant `_data/*.yml`.
 - [ ] I used valid YAML indentation (2 spaces per level).
 - [ ] I previewed the site locally with `bash run_server.sh`.
 - [ ] I clicked the language toggle and confirmed both languages render correctly.
 - [ ] I switched pages and confirmed language and theme choices persist across pages.
+- [ ] New paper PDFs have been placed in `files/papers/` and the paths are correct.
+- [ ] New paper GitHub repository links have been filled in.
 
 ### Before every deployment
 
 - [ ] `git status` shows only intended changes.
 - [ ] I committed with a clear message.
 - [ ] I pushed to `main` and the GitHub Pages build succeeded.
-- [ ] I visited the live site and confirmed the updates appear.
+- [ ] I visited the live site https://joeyi666.github.io/Jiayi-Zhou.github.io/ and confirmed the updates appear.
 
 ### Periodic checks
 
