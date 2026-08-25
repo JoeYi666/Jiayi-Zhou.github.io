@@ -39,7 +39,7 @@ author_profile: true
       <a class="paper-card__link" href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noopener">DOI</a>
       {% endif %}
       {% if paper.pdf != "" %}
-      <a class="paper-card__link" href="{{ paper.pdf }}" target="_blank" rel="noopener">PDF</a>
+      <a class="paper-card__link" href="{{ paper.pdf | relative_url }}" target="_blank" rel="noopener">PDF</a>
       {% endif %}
       <button class="paper-card__toggle" type="button" aria-expanded="false" data-toggle="abstract-{{ paper.id }}">
         <span class="i18n" data-lang-block="en">Abstract</span>
@@ -95,7 +95,7 @@ author_profile: true
       <a class="paper-card__link" href="https://doi.org/{{ paper.doi }}" target="_blank" rel="noopener">DOI</a>
       {% endif %}
       {% if paper.pdf != "" %}
-      <a class="paper-card__link" href="{{ paper.pdf }}" target="_blank" rel="noopener">PDF</a>
+      <a class="paper-card__link" href="{{ paper.pdf | relative_url }}" target="_blank" rel="noopener">PDF</a>
       {% endif %}
       <button class="paper-card__toggle" type="button" aria-expanded="false" data-toggle="abstract-{{ paper.id }}">
         <span class="i18n" data-lang-block="en">Abstract</span>

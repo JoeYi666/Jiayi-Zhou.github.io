@@ -45,7 +45,7 @@ redirect_from:
     </div>
     </div>
     <div class="hero__avatar">
-      <img src="{{ site.author.avatar }}" alt="{{ site.author.name }}">
+      <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
     </div>
   </div>
 </section>
