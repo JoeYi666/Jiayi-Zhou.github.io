@@ -36,13 +36,6 @@ redirect_from:
       <span class="hero__chip"><span class="i18n" data-lang-block="en">{{ kw.en }}</span><span class="i18n" data-lang-block="zh">{{ kw.zh }}</span></span>
       {% endfor %}
     </div>
-    <div class="hero__actions">
-      <a class="hero__btn hero__btn--gold" href="{{ site.author.googlescholar }}"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-      <a class="hero__btn" href="mailto:{{ site.author.email }}"><i class="fas fa-envelope"></i> Email</a>
-      <a class="hero__btn" href="https://github.com/{{ site.author.github }}"><i class="fab fa-github"></i> GitHub</a>
-      <a class="hero__btn hero__btn--icon" href="{{ site.author.orcid }}" aria-label="ORCID"><i class="ai ai-orcid"></i></a>
-      <a class="hero__btn hero__btn--icon" href="{{ site.author.researchgate }}" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
-    </div>
     </div>
     <div class="hero__avatar">
       <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
@@ -79,9 +72,10 @@ redirect_from:
   <p class="contact-social-hint">{% include bi.html en=c.social_hint.en zh=c.social_hint.zh %}</p>
   <div class="hero__actions hero__actions--center">
     <a class="hero__btn" href="{{ site.author.googlescholar }}"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+    <a class="hero__btn" href="mailto:{{ site.author.email }}"><i class="fas fa-envelope"></i> Email</a>
     <a class="hero__btn" href="https://github.com/{{ site.author.github }}"><i class="fab fa-github"></i> GitHub</a>
     <a class="hero__btn" href="{{ site.author.orcid }}"><i class="ai ai-orcid"></i> ORCID</a>
-    <a class="hero__btn" href="{{ site.author.researchgate }}"><i class="fab fa-researchgate"></i> ResearchGate</a>
+    <a class="hero__btn" href="https://x.com/CycleE9"><i class="fab fa-x-twitter"></i> X / Twitter</a>
   </div>
 </section>
 
@@ -151,10 +145,4 @@ redirect_from:
     {% include bi.html en=hb.en zh=hb.zh %}
   </div>
   {% endfor %}
-</section>
-
-<!-- =========================== REFERENCES =========================== -->
-<section class="section">
-  <h2 class="section__title"><span class="i18n" data-lang-block="en">References</span><span class="i18n" data-lang-block="zh">推荐人</span></h2>
-  {% include bi.html en=a.references.en zh=a.references.zh %}
 </section>

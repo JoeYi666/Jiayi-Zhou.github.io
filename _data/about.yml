@@ -152,16 +152,16 @@ education:
 hobbies:
   - name_en: "Swimming"
     name_zh: "游泳"
-    en: "Proficient in all four competitive strokes: freestyle, breaststroke, backstroke, and butterfly."
-    zh: "熟练掌握全部四种竞技泳姿：自由泳、蛙泳、仰泳与蝶泳。"
+    en: "All four competitive strokes: freestyle, breaststroke, backstroke, and butterfly."
+    zh: "掌握全部四种竞技泳姿：自由泳、蛙泳、仰泳与蝶泳。"
   - name_en: "Reading & History"
     name_zh: "阅读与历史"
-    en: "I read widely, with a particular interest in Chinese history, world history, and the history of economic thought."
-    zh: "阅读面较广，尤其对中国历史、世界历史与经济思想史感兴趣。"
+    en: "Extensive reading in ancient Chinese history and the history of the Chinese Communist Party; see [my Goodreads profile](https://www.goodreads.com/user/show/203794463-jia-yi)."
+    zh: "广泛阅读中国古代史、中国共产党历史相关书籍；详见[我的 Goodreads 主页](https://www.goodreads.com/user/show/203794463-jia-yi)。"
   - name_en: "Chinese Political Economy"
     name_zh: "中国政治经济研究"
-    en: "I study the institutions and power structures of China's party-state system and am building an organizational database of party, government, military, SOE, university, and hospital organizations. The data can be converted into Neo4j format for graph visualization and network analysis."
-    zh: "研究中国党政体制的机构与权力结构。我正在构建一个涵盖党、政、军、央企、高校、医院等组织的数据库，数据可转化为 Neo4j 格式进行可视化与图研究。"
+    en: "I study the institutions and power structures of China's party-state system and am building an organizational database of party, government, military, SOE, university, and hospital organizations."
+    zh: "研究中国党政体制的机构与权力结构。我正在构建一个涵盖党、政、军、央企、高校、医院等组织的数据库。"
   - name_en: "GIS & Satellite Imagery"
     name_zh: "GIS 与卫星影像"
     en: "I enjoy exploring the world through satellite imagery, spatial data, and remote sensing."
@@ -170,7 +170,3 @@ hobbies:
     name_zh: "电影与游戏"
     en: 'Avid cinephile with 1,000+ films and TV series watched; see [my Douban profile](https://www.douban.com/people/dbzjy). I also enjoy real-time strategy games.'
     zh: '资深影迷，观影量逾 1000 部电影与电视剧；详见[我的豆瓣主页](https://www.douban.com/people/dbzjy)。同时喜欢即时战略游戏。'
-
-references:
-  en: "Available upon request."
-  zh: "推荐人信息可应要求提供。"
